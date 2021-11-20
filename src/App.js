@@ -1,9 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Top from "./components/Top";
+import TopMobile from "./components/TopMobile";
+import PageContainer from "./components/PageContainer";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App w3-theme-15">
+      <Top />
+      <TopMobile />
+      <PageContainer />
+      <Footer />
+      {/*
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,6 +27,7 @@ function App() {
           Learn React
         </a>
       </header>
+      */}
     </div>
   );
 }
