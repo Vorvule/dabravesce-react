@@ -2,16 +2,18 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div>
-      <footer className="w3-container w3-theme-d3 w3-bottom">
-        <p>
-          Powered by{" "}
-          <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">
-            w3.css
-          </a>
-        </p>
-      </footer>
-    </div>
+    <footer className="w3-bottom w3-container w3-center w3-theme-d5">
+      <p>
+        Powered by{" "}
+        <a
+          href="https://www.w3schools.com/w3css/default.asp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          w3.css
+        </a>
+      </p>
+    </footer>
   );
 };
 

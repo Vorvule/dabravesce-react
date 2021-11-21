@@ -1,13 +1,25 @@
+/* linked Comfortaa google font fails to show accents in Edge */
+@font-face {
+  font-family: "Comfortaa";
+  src: url(fonts/comfortaa-regular.ttf);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-size: 16px;
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Comfortaa", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.page-container {
+  max-width: 1400px;
+  margin-top: 67px;
+}
+
+.bottom-arrows {
+  margin: 0 -16px;
 }
