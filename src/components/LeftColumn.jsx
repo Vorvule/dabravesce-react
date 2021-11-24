@@ -1,4 +1,9 @@
 import React from "react";
+import newTestament from "../tomes/new_testament_new";
+
+const Menu = (props) => {
+  return <li>{props.book}</li>;
+};
 
 const LeftColumn = () => {
   return (
@@ -8,18 +13,11 @@ const LeftColumn = () => {
           <strong>Змест</strong>
         </h4>
         <hr />
-        <p>
-          <i className="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i>{" "}
-          Designer, UI
-        </p>
-        <p>
-          <i className="fa fa-home fa-fw w3-margin-right w3-text-theme"></i>{" "}
-          London, UK
-        </p>
-        <p>
-          <i className="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i>{" "}
-          April 1, 1988
-        </p>
+        <ul>
+          {newTestament.map((chapter) => (
+            <Menu book={chapter[0][0]} />
+          ))}
+        </ul>
       </div>
     </div>
   );
