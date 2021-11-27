@@ -1,4 +1,4 @@
-export default [
+const apostleBooks = [
   "Апостал",
   [
     [
@@ -5155,3 +5155,5 @@ export default [
     ],
   ],
 ];
+
+export default apostleBooks;
