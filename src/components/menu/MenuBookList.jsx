@@ -8,7 +8,7 @@ const MenuBookList = ({ bookList }) =>
     return (
       <>
         <li>{bookHeader}</li>
-        <ul className="w3-ul">
+        <ul className="w3-ul w3-hide">
           <MenuChapterList chapterList={bookContent} />
         </ul>
       </>

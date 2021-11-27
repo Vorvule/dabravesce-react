@@ -8,7 +8,7 @@ const MenuVolumeList = ({ volumeList }) =>
     return (
       <>
         <li>{volumeHeader}</li>
-        <ul className="w3-ul">
+        <ul className="w3-ul w3-hide">
           <MenuBookList bookList={volumeContent} />
         </ul>
       </>
