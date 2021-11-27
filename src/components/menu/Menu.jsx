@@ -1,9 +1,11 @@
 import React from "react";
 import MenuVolumes from "./MenuVolumes";
+import allVolumes from "../../tomes/all_volumes";
 
-const Menu = ({ volumeList }) =>
-  volumeList.map((oneVolume, index) => {
-    return <MenuVolumes volume={oneVolume} index={index} />;
-  });
+const Menu = () => (
+  <ul className="w3-ul">
+    <MenuVolumes volumeList={allVolumes} />
+  </ul>
+);
 
 export default Menu;

@@ -1,12 +1,16 @@
 import React from "react";
 import MenuBooks from "./MenuBooks";
 
-const MenuVolumes = ({ volume, index }) => {
-  return (
-    <ul className="w3-ul">
-      <li key={"volume-" + index}>{volume[0]}</li>
-      <MenuBooks bookList={volume[1]} />
-    </ul>
-  );
-};
+const MenuVolumes = ({ volumeList }) =>
+  volumeList.map((oneVolume, volumeIndex) => {
+    return (
+      <>
+        <li key={"volume-" + volumeIndex}>{oneVolume[0]}</li>
+        <ul className="w3-ul">
+          <MenuBooks bookList={oneVolume[1]} />
+        </ul>
+      </>
+    );
+  });
+
 export default MenuVolumes;
