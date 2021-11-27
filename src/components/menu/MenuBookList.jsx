@@ -2,12 +2,14 @@ import React from "react";
 import MenuChapterList from "./MenuChapterList";
 
 const MenuBookList = ({ bookList }) =>
-  bookList.map((oneBook, bookIndex) => {
+  bookList.map((oneBook) => {
+    const bookHeader = oneBook[0][0];
+    const bookContent = oneBook[1];
     return (
       <>
-        <li key={"book-" + bookIndex}>{oneBook[0][0]}</li>
+        <li>{bookHeader}</li>
         <ul className="w3-ul">
-          <MenuChapterList chapterList={oneBook[1]} />
+          <MenuChapterList chapterList={bookContent} />
         </ul>
       </>
     );

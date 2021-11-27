@@ -1,8 +1,9 @@
 import React from "react";
 
 const MenuChapterList = ({ chapterList }) =>
-  chapterList.map((oneChapter, chapterIndex) => {
-    return <li key={"chapter-" + chapterIndex}>{oneChapter[0]}</li>;
+  chapterList.map((oneChapter) => {
+    const chapterHeader = oneChapter[0];
+    return <li>{chapterHeader}</li>;
   });
 
 export default MenuChapterList;

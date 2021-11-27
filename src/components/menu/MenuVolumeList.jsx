@@ -2,12 +2,14 @@ import React from "react";
 import MenuBookList from "./MenuBookList";
 
 const MenuVolumeList = ({ volumeList }) =>
-  volumeList.map((oneVolume, volumeIndex) => {
+  volumeList.map((oneVolume) => {
+    const volumeHeader = oneVolume[0];
+    const volumeContent = oneVolume[1];
     return (
       <>
-        <li key={"volume-" + volumeIndex}>{oneVolume[0]}</li>
+        <li>{volumeHeader}</li>
         <ul className="w3-ul">
-          <MenuBookList bookList={oneVolume[1]} />
+          <MenuBookList bookList={volumeContent} />
         </ul>
       </>
     );
