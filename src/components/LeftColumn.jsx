@@ -1,9 +1,8 @@
 import React from "react";
-import newTestament from "../tomes/new_testament_new";
+import Menu from "./Menu";
 
-const Menu = (props, index) => {
-  return <li key={index.toString()}>{props.book[0]}</li>;
-};
+import testament from "../tomes/new_testament_gospels";
+import apostols from "../tomes/new_testament_apostles";
 
 const LeftColumn = () => {
   return (
@@ -13,11 +12,8 @@ const LeftColumn = () => {
           <strong>Змест</strong>
         </h4>
         <hr />
-        <ul>
-          {newTestament.map((chapter) => (
-            <Menu key="0" book={chapter[0]} />
-          ))}
-        </ul>
+        <Menu volume={testament} />
+        <Menu volume={apostols} />
       </div>
     </div>
   );

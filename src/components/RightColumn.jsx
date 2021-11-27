@@ -1,31 +1,4 @@
 import React from "react";
-import testament from "../tomes/new_testament_gospels";
-import apostols from "../tomes/new_testament_apostles";
-
-const Menu = (props) => {
-  const volumeName = <li>{props.volume[0]}</li>;
-  const volumeContent = props.volume[1];
-
-  let bookNames = volumeContent.map((aVolume, ind) => {
-    let chapterNames = aVolume[1].map((bookContent, index) => {
-      return <li key={"chapter-" + index}>{bookContent[0]}</li>;
-    });
-
-    return (
-      <>
-        <li key={"book-" + ind}>{aVolume[0][0]}</li>
-        {chapterNames}
-      </>
-    );
-  });
-
-  return (
-    <div>
-      {volumeName}
-      <ul>{bookNames}</ul>
-    </div>
-  );
-};
 
 function RightColumn() {
   return (
@@ -35,9 +8,6 @@ function RightColumn() {
           <strong>Запаветы</strong>
         </h4>
         <hr />
-        <Menu volume={testament} />
-        <Menu volume={apostols} />
-
         <p>Upcoming Events</p>
       </div>
     </div>

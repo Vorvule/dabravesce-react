@@ -1,4 +1,4 @@
-const newTestament = [
+export default [
   "Апостал",
   [
     [
@@ -5155,5 +5155,3 @@ const newTestament = [
     ],
   ],
 ];
-
-export default newTestament;
