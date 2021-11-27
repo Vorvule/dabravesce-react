@@ -1,11 +1,10 @@
 import React from "react";
 import MenuBooks from "./MenuBooks";
 
-const MenuVolumes = ({ volume }) => {
-  // console.log(volume);
+const MenuVolumes = ({ volume, index }) => {
   return (
     <ul className="w3-ul">
-      <li key={"volume-0"}>{volume[0]}</li>
+      <li key={"volume-" + index}>{volume[0]}</li>
       <MenuBooks bookList={volume[1]} />
     </ul>
   );
