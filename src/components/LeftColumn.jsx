@@ -1,5 +1,5 @@
 import React from "react";
-import Menu from "./Menu";
+import Menu from "./menu/Menu";
 
 import testament from "../tomes/new_testament_gospels";
 import apostols from "../tomes/new_testament_apostles";
