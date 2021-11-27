@@ -1,8 +1,13 @@
 import React from "react";
+import MenuVolumes from "./menu/MenuVolumes";
 import Menu from "./menu/Menu";
 
-import testament from "../tomes/new_testament_gospels";
+import content from "../tomes/content";
+
+import gospels from "../tomes/new_testament_gospels";
 import apostols from "../tomes/new_testament_apostles";
+
+// const volumes = [gospels, apostols];
 
 const LeftColumn = () => {
   return (
@@ -12,8 +17,9 @@ const LeftColumn = () => {
           <strong>Змест</strong>
         </h4>
         <hr />
-        <Menu volume={testament} />
-        <Menu volume={apostols} />
+        <Menu volumeList={content} />
+        <MenuVolumes volume={gospels} />
+        <MenuVolumes volume={apostols} />
       </div>
     </div>
   );
