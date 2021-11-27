@@ -1,8 +1,6 @@
 import React from "react";
 import Menu from "./menu/Menu";
 
-import allVolumes from "../tomes/all_volumes";
-
 const LeftColumn = () => {
   return (
     <div className="w3-col m3">
@@ -11,7 +9,7 @@ const LeftColumn = () => {
           <strong>Змест</strong>
         </h4>
         <hr />
-        <Menu volumeList={allVolumes} />
+        <Menu />
       </div>
     </div>
   );
