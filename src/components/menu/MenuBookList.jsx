@@ -1,15 +1,14 @@
 import React from "react";
 import MenuChapterList from "./MenuChapterList";
 
-const MenuBookList = ({ bookList }) =>
-  bookList.map((oneBook) => {
-    const bookHeader = oneBook[0][0];
-    const bookContent = oneBook[1];
+const MenuBookList = ({ bookList, volumeKey }) =>
+  bookList.map((book) => {
+    const bookKey = volumeKey + "-" + book.abEn;
     return (
       <>
-        <li>{bookHeader}</li>
-        <ul className="w3-ul w3-hide">
-          <MenuChapterList chapterList={bookContent} />
+        <li key={bookKey}>{book.name}</li>
+        <ul key="chapters" className="w3-ul w3-hide">
+          <MenuChapterList chapterList={book.text} bookKey={bookKey} />
         </ul>
       </>
     );

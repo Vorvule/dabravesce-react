@@ -7,14 +7,16 @@ const MenuVolumeList = ({ volumeList }) => {
     setMenuBookListHidden(!menuBookListHidden);
   };
 
-  return volumeList.map((oneVolume) => {
-    const volumeHeader = oneVolume[0];
-    const volumeContent = oneVolume[1];
+  return volumeList.map((volume) => {
     return (
       <>
-        <li onClick={toggleHideVolumeBookList}>{volumeHeader}</li>
+        <li onClick={toggleHideVolumeBookList}>{volume.name}</li>
         <ul className={`w3-ul ${menuBookListHidden ? "w3-hide" : ""}`}>
-          <MenuBookList bookList={volumeContent} />
+          <MenuBookList
+            key={volume.abEn}
+            bookList={volume.text}
+            volumeKey={volume.abEn}
+          />
         </ul>
       </>
     );

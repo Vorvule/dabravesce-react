@@ -1,9 +1,12 @@
-const apostleBooks = [
-  "Дзеянні Апосталаў",
-  [
-    [
-      ["Дзеянні Святых Апосталаў", "Дзеян."],
-      [
+const apostleActs = {
+  name: "Дзеянні Апосталаў",
+  abEn: "Apostles",
+  text: [
+    {
+      name: "Дзеянні Святых Апосталаў",
+      abBe: "Дзеян.",
+      abEn: "Acts",
+      text: [
         [
           "Раздзел 1",
           [
@@ -1151,8 +1154,8 @@ const apostleBooks = [
           ],
         ],
       ],
-    ],
+    },
   ],
-];
+};
 
-export default apostleBooks;
+export default apostleActs;
