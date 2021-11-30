@@ -1,11 +1,11 @@
 const apostleEpistles = {
   name: "Пасланні Апосталаў",
-  abEn: "Epistles",
+  idEn: "Epistles",
   text: [
     {
       name: "Саборнае Пасланне святога Апостала Іакава",
-      abBe: "Іак.",
-      abEn: "James",
+      idBe: "Іак.",
+      idEn: "James",
       text: [
         [
           "Раздзел 1",
@@ -144,8 +144,8 @@ const apostleEpistles = {
     },
     {
       name: "Першае Саборнае Пасланне святога Апостала Пятра",
-      abBe: "1 Пт.",
-      abEn: "1Pet",
+      idBe: "1 Пт.",
+      idEn: "1Pet",
       text: [
         [
           "Раздзел 1",
@@ -281,8 +281,8 @@ const apostleEpistles = {
     },
     {
       name: "Другое Саборнае Пасланне святога Апостала Пятра",
-      abBe: "2 Пт.",
-      abEn: "2Pet",
+      idBe: "2 Пт.",
+      idEn: "2Pet",
       text: [
         [
           "Раздзел 1",
@@ -364,8 +364,8 @@ const apostleEpistles = {
     },
     {
       name: "Першае Саборнае Пасланне святога Апостала Іаана Багаслова",
-      abBe: "1 Ін.",
-      abEn: "1John",
+      idBe: "1 Ін.",
+      idEn: "1John",
       text: [
         [
           "Раздзел 1",
@@ -501,8 +501,8 @@ const apostleEpistles = {
     },
     {
       name: "Друго́е Саборнае Пасланне святога Апостала Іаана Багаслова",
-      abBe: "2 Ін.",
-      abEn: "2John",
+      idBe: "2 Ін.",
+      idEn: "2John",
       text: [
         [
           "Раздзел 1",
@@ -526,8 +526,8 @@ const apostleEpistles = {
     },
     {
       name: "Трэцяе Саборнае Пасланне святога Апостала Іаана Багаслова",
-      abBe: "3 Ін.",
-      abEn: "3John",
+      idBe: "3 Ін.",
+      idEn: "3John",
       text: [
         [
           "Раздзел 1",
@@ -553,8 +553,8 @@ const apostleEpistles = {
     },
     {
       name: "Саборнае Пасланне святога Апостала Іуды",
-      abBe: "Іуд.",
-      abEn: "Jude",
+      idBe: "Іуд.",
+      idEn: "Jude",
       text: [
         [
           "Раздзел 1",
@@ -590,8 +590,8 @@ const apostleEpistles = {
     },
     {
       name: "Да Ры́млян Пасланне святога Апостала Паўла",
-      abBe: "Рым.",
-      abEn: "Rome",
+      idBe: "Рым.",
+      idEn: "Rome",
       text: [
         [
           "Раздзел 1",
@@ -1110,8 +1110,8 @@ const apostleEpistles = {
     },
     {
       name: "Да Кары́нфян першае Пасланне святога Апостала Паўла",
-      abBe: "1 Кар.",
-      abEn: "1Cor",
+      idBe: "1 Кар.",
+      idEn: "1Cor",
       text: [
         [
           "Раздзел 1",
@@ -1634,8 +1634,8 @@ const apostleEpistles = {
     },
     {
       name: "Да Кары́нфян другое Пасланне святога Апостала Паўла",
-      abBe: "2 Кар.",
-      abEn: "2Cor",
+      idBe: "2 Кар.",
+      idEn: "2Cor",
       text: [
         [
           "Раздзел 1",
@@ -1961,8 +1961,8 @@ const apostleEpistles = {
     },
     {
       name: "Да Гала́таў Пасланне святога Апостала Паўла",
-      abBe: "Гал.",
-      abEn: "Gal",
+      idBe: "Гал.",
+      idEn: "Gal",
       text: [
         [
           "Раздзел 1",
@@ -2147,8 +2147,8 @@ const apostleEpistles = {
     },
     {
       name: "Да Эфе́сян Пасланне святога Апостала Паўла",
-      abBe: "Еф.",
-      abEn: "Eph",
+      idBe: "Еф.",
+      idEn: "Eph",
       text: [
         [
           "Раздзел 1",
@@ -2339,8 +2339,8 @@ const apostleEpistles = {
     },
     {
       name: "Да Філіпійцаў Пасланне святога Апостала Паўла",
-      abBe: "Флп.",
-      abEn: "Phlp",
+      idBe: "Флп.",
+      idEn: "Phlp",
       text: [
         [
           "Раздзел 1",
@@ -2470,8 +2470,8 @@ const apostleEpistles = {
     },
     {
       name: "Да Кало́сян Пасланне святога Апостала Паўла",
-      abBe: "Кол.",
-      abEn: "Col",
+      idBe: "Кол.",
+      idEn: "Col",
       text: [
         [
           "Раздзел 1",
@@ -2592,8 +2592,8 @@ const apostleEpistles = {
     },
     {
       name: "Да Фесаланікійцаў (Салу́нян) першае Пасланне святога Апостала Паўла",
-      abBe: "1 Фес.",
-      abEn: "1Thes",
+      idBe: "1 Фес.",
+      idEn: "1Thes",
       text: [
         [
           "Раздзел 1",
@@ -2713,8 +2713,8 @@ const apostleEpistles = {
     },
     {
       name: "Да Фесаланікійцаў (Салу́нян) другое Пасланне святога Апостала Паўла",
-      abBe: "2 Фес.",
-      abEn: "2Thes",
+      idBe: "2 Фес.",
+      idEn: "2Thes",
       text: [
         [
           "Раздзел 1",
@@ -2782,8 +2782,8 @@ const apostleEpistles = {
     },
     {
       name: "Да Цімафея першае Пасланне святога Апостала Паўла",
-      abBe: "1 Цім.",
-      abEn: "1Tim",
+      idBe: "1 Цім.",
+      idEn: "1Tim",
       text: [
         [
           "Раздзел 1",
@@ -2932,8 +2932,8 @@ const apostleEpistles = {
     },
     {
       name: "Да Цімафея другое Пасланне святога Апостала Паўла",
-      abBe: "2 Цім.",
-      abEn: "2Tim",
+      idBe: "2 Цім.",
+      idEn: "2Tim",
       text: [
         [
           "Раздзел 1",
@@ -3042,8 +3042,8 @@ const apostleEpistles = {
     },
     {
       name: "Да Ціта Пасланне святога Апостала Паўла",
-      abBe: "Ціт.",
-      abEn: "Tit",
+      idBe: "Ціт.",
+      idEn: "Tit",
       text: [
         [
           "Раздзел 1",
@@ -3110,8 +3110,8 @@ const apostleEpistles = {
     },
     {
       name: "Да Філімона Пасланне святога Апостала Паўла",
-      abBe: "Флм.",
-      abEn: "Phlm",
+      idBe: "Флм.",
+      idEn: "Phlm",
       text: [
         [
           "Раздзел 1",
@@ -3147,8 +3147,8 @@ const apostleEpistles = {
     },
     {
       name: "Да Яўрэяў Пасланне святога Апостала Паўла",
-      abBe: "Яўр.",
-      abEn: "Heb",
+      idBe: "Яўр.",
+      idEn: "Heb",
       text: [
         [
           "Раздзел 1",
@@ -3522,8 +3522,8 @@ const apostleEpistles = {
     },
     {
       name: "Апака́ліпсіс, або Адкраве́нне святога Апостала Іаана Багаслова",
-      abBe: "Апак.",
-      abEn: "Apoc",
+      idBe: "Апак.",
+      idEn: "Apoc",
       text: [
         [
           "Раздзел 1",

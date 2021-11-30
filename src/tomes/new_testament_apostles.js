@@ -1,11 +1,11 @@
 const apostleActs = {
   name: "Дзеянні Апосталаў",
-  abEn: "Apostles",
+  idEn: "Apostles",
   text: [
     {
       name: "Дзеянні Святых Апосталаў",
-      abBe: "Дзеян.",
-      abEn: "Acts",
+      idBe: "Дзеян.",
+      idEn: "Acts",
       text: [
         [
           "Раздзел 1",

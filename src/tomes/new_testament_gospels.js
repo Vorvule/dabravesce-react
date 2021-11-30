@@ -1,11 +1,11 @@
 const apostleGospels = {
   name: "Чатыры Евангеллі",
-  abEn: "Gospels",
+  idEn: "Gospels",
   text: [
     {
       name: "Святое Евангелле паводле Матфея",
-      abBe: "Мф.",
-      abEn: "Mattew",
+      idBe: "Мф.",
+      idEn: "Mattew",
       text: [
         [
           "Раздзел 1",
@@ -1220,8 +1220,8 @@ const apostleGospels = {
     },
     {
       name: "Святое Евангелле паводле Марка",
-      abBe: "Мк.",
-      abEn: "Mark",
+      idBe: "Мк.",
+      idEn: "Mark",
       text: [
         [
           "Раздзел 1",
@@ -1985,8 +1985,8 @@ const apostleGospels = {
     },
     {
       name: "Святое Евангелле паводле Лукі",
-      abBe: "Лк.",
-      abEn: "Luke",
+      idBe: "Лк.",
+      idEn: "Luke",
       text: [
         [
           "Раздзел 1",
@@ -3265,8 +3265,8 @@ const apostleGospels = {
     },
     {
       name: "Святое Евангелле паводле Іаана",
-      abBe: "Ін.",
-      abEn: "John",
+      idBe: "Ін.",
+      idEn: "John",
       text: [
         [
           "Раздзел 1",
