@@ -9,16 +9,12 @@ const MenuVolumeList = ({ volumeList }) => {
 
   return volumeList.map((volume) => {
     return (
-      <>
+      <div key={volume.abEn}>
         <li onClick={toggleHideVolumeBookList}>{volume.name}</li>
         <ul className={`w3-ul ${menuBookListHidden ? "w3-hide" : ""}`}>
-          <MenuBookList
-            key={volume.abEn}
-            bookList={volume.text}
-            volumeKey={volume.abEn}
-          />
+          <MenuBookList bookList={volume.text} />
         </ul>
-      </>
+      </div>
     );
   });
 };

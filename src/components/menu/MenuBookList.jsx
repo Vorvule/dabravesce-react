@@ -1,16 +1,15 @@
 import React from "react";
 import MenuChapterList from "./MenuChapterList";
 
-const MenuBookList = ({ bookList, volumeKey }) =>
+const MenuBookList = ({ bookList }) =>
   bookList.map((book) => {
-    const bookKey = volumeKey + "-" + book.abEn;
     return (
-      <>
-        <li key={bookKey}>{book.name}</li>
-        <ul key="chapters" className="w3-ul w3-hide">
-          <MenuChapterList chapterList={book.text} bookKey={bookKey} />
+      <div key={book.abEn}>
+        <li>{book.name}</li>
+        <ul className="w3-ul w3-hide">
+          <MenuChapterList chapterList={book.text} />
         </ul>
-      </>
+      </div>
     );
   });
 
