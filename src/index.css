@@ -27,3 +27,9 @@ body {
 footer p {
   margin: 12px 0;
 }
+
+summary {
+  /* hide arrows */
+  display: block;
+  cursor: pointer;
+}

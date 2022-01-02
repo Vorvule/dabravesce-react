@@ -4,12 +4,14 @@ import MenuChapterList from "./MenuChapterList";
 const MenuBookList = ({ bookList }) =>
   bookList.map((book) => {
     return (
-      <div key={book.idEn}>
-        <li>{book.name}</li>
-        <ul className="w3-ul w3-hide">
-          <MenuChapterList chapterList={book.text} />
-        </ul>
-      </div>
+      <li key={book.idEn}>
+        <details>
+          <summary>{book.name}</summary>
+          <ul className="w3-ul">
+            <MenuChapterList chapterList={book.text} />
+          </ul>
+        </details>
+      </li>
     );
   });
 
