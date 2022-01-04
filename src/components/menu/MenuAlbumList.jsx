@@ -2,13 +2,16 @@ import React from "react";
 import MenuBookList from "./MenuBookList";
 
 const MenuAlbumList = ({ albumList }) => {
-  return albumList.map((album) => {
+  return albumList.map((albumContent, albumIndex) => {
     return (
-      <li key={album.idEn}>
+      <li key={albumContent.idEn}>
         <details>
-          <summary>{album.name}</summary>
+          <summary>{albumContent.name}</summary>
           <ul className={"w3-ul"}>
-            <MenuBookList bookList={album.text} />
+            <MenuBookList
+              albumIndex={albumIndex}
+              bookList={albumContent.text}
+            />
           </ul>
         </details>
       </li>

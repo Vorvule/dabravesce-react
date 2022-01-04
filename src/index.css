@@ -33,3 +33,7 @@ summary {
   display: block;
   cursor: pointer;
 }
+
+li {
+  cursor: pointer;
+}

@@ -1,14 +1,18 @@
 import React from "react";
 import MenuChapterList from "./MenuChapterList";
 
-const MenuBookList = ({ bookList }) =>
-  bookList.map((book) => {
+const MenuBookList = ({ albumIndex, bookList }) =>
+  bookList.map((bookContent, bookIndex) => {
     return (
-      <li key={book.idEn}>
+      <li key={bookContent.idEn}>
         <details>
-          <summary>{book.name}</summary>
+          <summary>{bookContent.name}</summary>
           <ul className="w3-ul">
-            <MenuChapterList chapterList={book.text} />
+            <MenuChapterList
+              albumIndex={albumIndex}
+              bookIndex={bookIndex}
+              chapterList={bookContent.text}
+            />
           </ul>
         </details>
       </li>
