@@ -1,5 +1,5 @@
 import React from "react";
-import allAlbums from "../../tomes/all_albums";
+import { showMiddleColumnContent } from "../../functions/show_middle_column_content";
 
 const MenuChapterList = ({ albumIndex, bookIndex, chapterList }) =>
   chapterList.map((chapterContent, chapterIndex) => {
@@ -7,32 +7,13 @@ const MenuChapterList = ({ albumIndex, bookIndex, chapterList }) =>
     return (
       <li
         key={chapterIndex}
-        onClick={() => show(albumIndex, bookIndex, chapterIndex)}
+        onClick={() =>
+          showMiddleColumnContent(albumIndex, bookIndex, chapterIndex)
+        }
       >
         {chapterName}
       </li>
     );
   });
-
-const show = (albumIndex, bookIndex, chapterIndex) => {
-  const albumName = allAlbums[albumIndex].name;
-  const albumContent = allAlbums[albumIndex].text;
-
-  const bookName = albumContent[bookIndex].name;
-  const bookContent = albumContent[bookIndex].text;
-
-  const chapterName = bookContent[chapterIndex][0];
-  const chapterContent = bookContent[chapterIndex][1];
-
-  let chapterText = "";
-  chapterContent.forEach((chapter) => {
-    chapterText += `<p>${chapter}</p>`;
-  });
-
-  document.getElementById("MiddleColumn_AlbumName").innerHTML = albumName;
-  document.getElementById("MiddleColumn_BookName").innerHTML = bookName;
-  document.getElementById("MiddleColumn_ChapterName").innerHTML = chapterName;
-  document.getElementById("MiddleColumn_ChapterText").innerHTML = chapterText;
-};
 
 export default MenuChapterList;

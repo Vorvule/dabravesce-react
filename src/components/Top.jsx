@@ -8,7 +8,7 @@ const Top = () => {
           <i className="fa fa-bars"></i>
         </span>
         <span className="w3-bar-item w3-button w3-padding-large w3-theme-d4">
-          <i className="fa fa-home w3-margin-right"></i>Logo
+          <i className="fa fa-home w3-margin-right"></i>Дабравесце
         </span>
         <span
           className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
