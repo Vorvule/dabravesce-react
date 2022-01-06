@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import BottomArrows from "./BottomArrows";
 import { showMiddleColumnContent } from "../functions/show_middle_column_content";
 
-function MiddleColumn() {
+const MiddleColumn = () => {
   useEffect(() => {
     showMiddleColumnContent(0, 0, 0);
   });
@@ -25,6 +25,6 @@ function MiddleColumn() {
       </div>
     </div>
   );
-}
+};
 
 export default MiddleColumn;
