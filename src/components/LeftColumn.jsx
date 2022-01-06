@@ -1,5 +1,5 @@
 import React from "react";
-import Menu from "./menu/Menu";
+import Menu from "./LeftColumn/Menu";
 
 const LeftColumn = () => {
   return (

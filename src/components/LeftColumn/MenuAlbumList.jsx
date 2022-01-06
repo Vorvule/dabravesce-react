@@ -7,7 +7,7 @@ const MenuAlbumList = ({ albumList }) => {
       <li key={albumContent.idEn}>
         <details>
           <summary>{albumContent.name}</summary>
-          <ul className={"w3-ul"}>
+          <ul className="w3-ul w3-animate-left">
             <MenuBookList
               albumIndex={albumIndex}
               bookList={albumContent.text}

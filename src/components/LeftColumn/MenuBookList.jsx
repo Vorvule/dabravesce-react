@@ -7,7 +7,7 @@ const MenuBookList = ({ albumIndex, bookList }) =>
       <li key={bookContent.idEn}>
         <details>
           <summary>{bookContent.name}</summary>
-          <ul className="w3-ul">
+          <ul className="w3-ul w3-animate-left">
             <MenuChapterList
               albumIndex={albumIndex}
               bookIndex={bookIndex}
