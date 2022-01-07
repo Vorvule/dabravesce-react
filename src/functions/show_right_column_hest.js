@@ -7,14 +7,14 @@ const showRightColumn_Hest = () => {
   const randomHestIndex = randomInteger(0, hestCount);
   const randomHestKeys = hestKeys[randomHestIndex];
 
-  const albumIndex = randomHestKeys.albumKey;
+  // const albumIndex = randomHestKeys.albumKey;
   const bookIndex = randomHestKeys.bookKey;
   const chapterIndex = randomHestKeys.chapterKey;
   const versesArray = randomHestKeys.verseKeys;
 
   // const albumName = allAlbums[albumIndex].name;
-  const albumContent = allAlbums[albumIndex].text;
-  const bookName = albumContent[bookIndex].name;
+  const albumContent = allAlbums[0].text; // Gospel
+  const bookBriefName = albumContent[bookIndex].idBe;
   const bookContent = albumContent[bookIndex].text;
   const chapterName = bookContent[chapterIndex][0];
   const chapterContent = bookContent[chapterIndex][1];
@@ -27,8 +27,7 @@ const showRightColumn_Hest = () => {
   });
 
   const hestSource = `<strong>
-    ${bookName}, 
-    ${chapterName}:${versesArray[0]}
+    ${bookBriefName} ${chapterIndex + 1}:${versesArray[0] + 1}
     </strong>`;
 
   document.getElementById("RightColumn_HestVerses").innerHTML = hestVerses;
