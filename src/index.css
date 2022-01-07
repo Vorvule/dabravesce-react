@@ -37,3 +37,7 @@ summary {
 li {
   cursor: pointer;
 }
+
+.w3-ul {
+  padding-top: 4px;
+}
