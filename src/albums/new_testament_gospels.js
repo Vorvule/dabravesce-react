@@ -1,9 +1,9 @@
-const apostleGospels = {
-  name: "Чатыры Евангеллі",
+const fourGospels = {
+  name: "Чатыры Дабравесці",
   idEn: "Gospels",
   text: [
     {
-      name: "Святое Евангелле паводле Матфея",
+      name: "Святое Дабравесце паводле Матфея",
       idBe: "Мф.",
       idEn: "Mattew",
       text: [
@@ -1219,7 +1219,7 @@ const apostleGospels = {
       ],
     },
     {
-      name: "Святое Евангелле паводле Марка",
+      name: "Святое Дабравесце паводле Марка",
       idBe: "Мк.",
       idEn: "Mark",
       text: [
@@ -1984,7 +1984,7 @@ const apostleGospels = {
       ],
     },
     {
-      name: "Святое Евангелле паводле Лукі",
+      name: "Святое Дабравесце паводле Лукі",
       idBe: "Лк.",
       idEn: "Luke",
       text: [
@@ -3264,7 +3264,7 @@ const apostleGospels = {
       ],
     },
     {
-      name: "Святое Евангелле паводле Іаана",
+      name: "Святое Дабравесце паводле Іаана",
       idBe: "Ін.",
       idEn: "John",
       text: [
@@ -4257,4 +4257,4 @@ const apostleGospels = {
   ],
 };
 
-export default apostleGospels;
+export default fourGospels;

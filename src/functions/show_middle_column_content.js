@@ -1,4 +1,4 @@
-import allAlbums from "../tomes/all_albums";
+import allAlbums from "../albums/all_albums";
 
 const showMiddleColumnContent = (albumIndex, bookIndex, chapterIndex) => {
   const albumName = allAlbums[albumIndex].name;
