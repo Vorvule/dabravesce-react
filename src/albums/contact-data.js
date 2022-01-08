@@ -4,6 +4,7 @@ const contactData = {
   text: [
     {
       name: "Сувязь",
+      idEn: "Connection",
       text: [
         [
           "Стваральнікі",
@@ -22,6 +23,7 @@ const contactData = {
 
     {
       name: "Даведка",
+      idEn: "Report",
       text: [
         [
           "Пераклад",

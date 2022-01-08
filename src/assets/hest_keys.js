@@ -123,11 +123,11 @@ const hestKeys = [
     chapterKey: 15,
     verseKeys: [9],
   },
-  {
-    bookKey: 2,
-    chapterKey: 16,
-    verseKeys: [20],
-  },
+  // {
+  //   bookKey: 2,
+  //   chapterKey: 16,
+  //   verseKeys: [20],
+  // },
   {
     bookKey: 2,
     chapterKey: 17,

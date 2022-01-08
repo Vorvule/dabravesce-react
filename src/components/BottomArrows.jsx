@@ -7,7 +7,7 @@ const BottomArrows = () => {
       <strong className="w3-hide-small">Назад</strong>
       <i className="fa fa-arrow-up w3-margin"></i>
       <strong className="w3-hide-small w3-hide-medium">Уверх</strong>
-      <i className="fa fa-circle w3-margin"></i>
+      <i className="fa fa-circle w3-margin w3-hide-small"></i>
       <strong className="w3-hide-small w3-hide-medium">Долу</strong>
       <i className="fa fa-arrow-down w3-margin"></i>
       <strong className="w3-hide-small">Далей</strong>

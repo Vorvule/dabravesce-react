@@ -5,7 +5,7 @@ const prayerBook = {
     {
       name: "Малітвы штодзённыя",
       idBe: "Мал. штодз.",
-      idEn: "Daily Prayers",
+      idEn: "Daily",
       text: [
         [
           "Малітвы ранішнія",
@@ -31,7 +31,7 @@ const prayerBook = {
     {
       name: "Малітвы прычашчэння",
       idBe: "Мал. прыч.",
-      idEn: "Housel Prayers",
+      idEn: "Housel",
       text: [
         [
           "Паследаванне да Святога Прычашчэння Бажэственнай Тайны Цела і Крыві Хрыстовых",
@@ -51,7 +51,7 @@ const prayerBook = {
     {
       name: "Малітвы велікодныя",
       idBe: "Мал. велік.",
-      idEn: "Easter Prayers",
+      idEn: "Easter",
       text: [
         [
           "Пасхальныя гадзіны",
