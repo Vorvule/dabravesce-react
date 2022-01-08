@@ -1,7 +1,10 @@
 import allAlbums from "../albums/all_albums";
 import { outputMiddleColumnContent } from "./output_middle_column_content";
+import { updateLocalStorage } from "./update_local_storage"
 
 const showMiddleColumnContent = (albumIndex, bookIndex, chapterIndex) => {
+  updateLocalStorage(albumIndex, bookIndex, chapterIndex);
+  
   const albumName = allAlbums[albumIndex].name;
   const albumText = allAlbums[albumIndex].text;
 

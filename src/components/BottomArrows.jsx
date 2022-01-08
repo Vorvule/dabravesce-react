@@ -1,12 +1,11 @@
 import React from "react";
+import nextChapter from "../functions/footer/next_chapter";
+import prevChapter from "../functions/footer/prev_chapter";
 
 const BottomArrows = () => {
-  const nextChapter = () => {
-    
-  }
   return (
     <div className="w3-center bottom-arrows">
-      <span>
+      <span onClick={prevChapter}>
         <i className="fa fa-arrow-left w3-margin-right"></i>
         <strong className="w3-hide-small">Назад</strong>
       </span>
