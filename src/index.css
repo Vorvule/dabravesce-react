@@ -20,14 +20,6 @@ body {
   margin-top: 67px;
 }
 
-.bottom-arrows {
-  margin: 0 -16px;
-}
-
-footer p {
-  margin: 12px 0;
-}
-
 summary {
   /* hide arrows */
   display: block;
@@ -40,4 +32,8 @@ li {
 
 .w3-ul {
   padding-top: 4px;
+}
+
+.bottom-arrows i, .bottom-arrows strong {
+  cursor: pointer;
 }

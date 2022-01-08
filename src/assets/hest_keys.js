@@ -72,11 +72,6 @@ const hestKeys = [
 
   {
     bookKey: 1,
-    chapterKey: 0,
-    verseKeys: [16],
-  },
-  {
-    bookKey: 1,
     chapterKey: 1,
     verseKeys: [26],
   },

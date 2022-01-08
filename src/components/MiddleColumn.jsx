@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import BottomArrows from "./BottomArrows";
 import { showMiddleColumnContent } from "../functions/show_middle_column_content";
 
 const MiddleColumn = () => {
@@ -21,7 +20,6 @@ const MiddleColumn = () => {
           <strong id="MiddleColumn_ChapterName"></strong>
         </h6>
         <div id="MiddleColumn_ChapterText"></div>
-        {/* <BottomArrows /> */}
       </div>
       <br></br>
       <br></br>
