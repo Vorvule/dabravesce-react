@@ -15,7 +15,7 @@ const contactData = {
         [
           "Форма для сувязі",
           [
-            "<p>Форма для сувязі з Брацтвам у гонар Віленскіх мучанікаў у г. Мінску<p><form method='post' id='MailForm'><input class='w3-input w3-section w3-border' type='text' placeholder='Імя' required name='Name'><input class='w3-input w3-section w3-border' type='text' placeholder='E-mail' required name='Email'><input class='w3-input w3-section w3-border' type='text' placeholder='Тэма' required name='Subject'><input class='w3-input w3-section w3-border' type='text' placeholder='Допіс' required name='Comment'><div class='w3-input w3-border w3-border-blue w3-text-blue w3-hover-text-blue' id='sendMail' onclick='site.sendMail();' style='cursor:pointer'>Даслаць</div></form>",
+            "<p>Форма для сувязі з Брацтвам у гонар Віленскіх мучанікаў у г. Мінску<p><form method='post' id='MailForm'><input class='w3-input w3-section w3-border' type='text' placeholder='Імя' required name='Name'><input class='w3-input w3-section w3-border' type='text' placeholder='E-mail' required name='Email'><input class='w3-input w3-section w3-border' type='text' placeholder='Тэма' required name='Subject'><input class='w3-input w3-section w3-border' type='text' placeholder='Допіс' required name='Comment'><div class='w3-input w3-border w3-border-blue w3-text-theme w3-hover-text-blue' id='sendMail' onclick='site.sendMail();' style='cursor:pointer'>Даслаць</div></form>",
           ],
         ],
       ],
@@ -34,7 +34,7 @@ const contactData = {
         [
           "Падзякі",
           [
-            "<p>Стылі <span class='w3-text-blue' style='cursor:pointer' onclick='location.href=\"https://www.w3schools.com/w3css/\"'>w3.css</span></p><p>Іконкі <span class='w3-text-blue' style='cursor:pointer' onclick='location.href=\"https://fontawesome.com/v4.7.0/icons/\"'>Fontawesome</span></p>",
+            "<p>Стылі <span class='w3-text-theme' style='cursor:pointer' onclick='location.href=\"https://www.w3schools.com/w3css/\"'>w3.css</span></p><p>Іконкі <span class='w3-text-theme' style='cursor:pointer' onclick='location.href=\"https://fontawesome.com/v4.7.0/icons/\"'>Fontawesome</span></p>",
           ],
         ],
       ],

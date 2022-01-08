@@ -1,24 +1,17 @@
 import allAlbums from "../albums/all_albums";
+import { outputMiddleColumnContent } from "./output_middle_column_content";
 
 const showMiddleColumnContent = (albumIndex, bookIndex, chapterIndex) => {
   const albumName = allAlbums[albumIndex].name;
-  const albumContent = allAlbums[albumIndex].text;
+  const albumText = allAlbums[albumIndex].text;
 
-  const bookName = albumContent[bookIndex].name;
-  const bookContent = albumContent[bookIndex].text;
+  const bookName = albumText[bookIndex].name;
+  const bookText = albumText[bookIndex].text;
 
-  const chapterName = bookContent[chapterIndex][0];
-  const chapterContent = bookContent[chapterIndex][1];
+  const chapterName = bookText[chapterIndex][0];
+  const chapterText = bookText[chapterIndex][1];
 
-  let chapterText = "";
-  chapterContent.forEach((chapter) => {
-    chapterText += `<p>${chapter}</p>`;
-  });
-
-  document.getElementById("MiddleColumn_AlbumName").innerHTML = albumName;
-  document.getElementById("MiddleColumn_BookName").innerHTML = bookName;
-  document.getElementById("MiddleColumn_ChapterName").innerHTML = chapterName;
-  document.getElementById("MiddleColumn_ChapterText").innerHTML = chapterText;
+  outputMiddleColumnContent(albumName, bookName, chapterName, chapterText);
 };
 
 export { showMiddleColumnContent };
