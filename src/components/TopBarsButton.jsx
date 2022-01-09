@@ -1,4 +1,6 @@
 import React from "react";
+import { getWindowWidth } from "../functions/get_window_width";
+import { toggleMenuAndCore } from "../functions/toggle_menu_and_core";
 
 const TopBarsButton = () => {
   return (
@@ -12,11 +14,13 @@ const TopBarsButton = () => {
 };
 
 const handleBarsButtonClick = () => {
-  console.log('bars button click')
-  document.getElementById("LeftColumn").classList.toggle("w3-hide-small")
-  document.getElementById("LeftColumn").classList.toggle("w3-hide-medium")
-  document.getElementById("MiddleColumn").classList.toggle("w3-hide")
+  toggleMenuAndCore();
 
-}
+  if (getWindowWidth() < 993) {
+    document
+      .getElementById("LeftColumn_Content")
+      .classList.remove("w3-margin-right");
+  }
+};
 
 export default TopBarsButton;
