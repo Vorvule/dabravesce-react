@@ -6,8 +6,8 @@ const RightColumn = () => {
     showRightColumn_Hest();
   });
   return (
-    <div className="w3-col m3">
-      <div className="w3-card w3-round w3-white w3-container">
+    <div className="w3-col l3 w3-hide-medium w3-hide-small">
+      <div className="w3-card w3-round w3-white w3-container w3-margin-left">
         <h4 className="w3-center">
           <strong>Слова Божае</strong>
         </h4>
