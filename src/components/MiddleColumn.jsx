@@ -7,7 +7,7 @@ const MiddleColumn = () => {
   });
 
   return (
-    <div className="w3-col m8 l6">
+    <div className="w3-col l6" id="MiddleColumn">
       <div className="w3-card w3-round w3-white w3-container">
         <h4 className="w3-center">
           <strong id="MiddleColumn_AlbumName"></strong>
