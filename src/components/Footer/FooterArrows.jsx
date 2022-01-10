@@ -1,10 +1,10 @@
 import React from "react";
-import nextChapter from "../functions/footer/next_chapter";
-import prevChapter from "../functions/footer/prev_chapter";
+import nextChapter from "../../functions/footer/next_chapter";
+import prevChapter from "../../functions/footer/prev_chapter";
 
-const BottomArrows = () => {
+const FooterArrows = () => {
   return (
-    <div className="w3-center bottom-arrows">
+    <div className="w3-center">
       <span onClick={prevChapter}>
         <i className="fa fa-arrow-left w3-margin-right"></i>
         <strong className="w3-hide-small">Назад</strong>
@@ -30,4 +30,4 @@ const BottomArrows = () => {
   );
 };
 
-export default BottomArrows;
+export default FooterArrows;
