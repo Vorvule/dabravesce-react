@@ -1,6 +1,6 @@
 import "./App.css";
 import Top from "./components/Top";
-import TopMobile from "./components/TopMobile";
+import TopMobile from "./components/Top/TopMobile";
 import ColumnsContainer from "./components/ColumnsContainer";
 import Footer from "./components/Footer";
 
