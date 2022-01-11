@@ -3,7 +3,7 @@ import { shareSocial } from "./FooterShares_shareSocial";
 
 const FooterShares = () => {
   return (
-    <div className="w3-center">
+    <div className="w3-center w3-hide">
       <span onClick={() => shareSocial("twitter")}>
         <i className="fa fa-twitter w3-margin"></i>
         <strong className="w3-hide-small">Twitter</strong>

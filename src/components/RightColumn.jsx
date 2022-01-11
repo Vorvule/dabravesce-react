@@ -14,6 +14,7 @@ const RightColumn = () => {
         <hr />
         <div id="RightColumn_HestVerses"></div>
         <div id="RightColumn_HestSource" className="w3-right-align"></div>
+        <br />
       </div>
     </div>
   );

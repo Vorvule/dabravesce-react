@@ -15,6 +15,7 @@ const LeftColumn = () => {
         </h4>
         <hr />
         <Menu />
+        <br />
       </div>
     </div>
   );

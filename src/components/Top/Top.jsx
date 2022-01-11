@@ -8,10 +8,10 @@ const Top = () => {
   return (
     <div className="w3-top">
       <div className="w3-bar w3-theme-d2 w3-left-align">
-        <TopHomeButton />
+        {/* <TopHomeButton /> */}
         <TopTabButtons />
-        <TopOutButtons />
         <TopBarsButton />
+        <TopOutButtons />
       </div>
     </div>
   );
