@@ -1,6 +1,7 @@
 import React from "react";
 import TopBarsButton from "./TopBarsButton";
 import TopHomeButton from "./TopHomeButton";
+import TopSearchMenu from "./TopSearchMenu";
 import TopOutButtons from "./TopOutButtons";
 import TopTabButtons from "./TopTabButtons";
 
@@ -12,6 +13,7 @@ const Top = () => {
         <TopTabButtons />
         <TopBarsButton />
         <TopOutButtons />
+        <TopSearchMenu />
       </div>
     </div>
   );

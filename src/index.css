@@ -26,14 +26,10 @@ summary {
   cursor: pointer;
 }
 
-li {
+li, footer span, label {
   cursor: pointer;
 }
 
 .w3-ul {
   padding-top: 4px;
-}
-
-footer span {
-  cursor: pointer;
 }
