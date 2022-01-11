@@ -34,11 +34,6 @@ const hestKeys = [
   },
   {
     bookKey: 0,
-    chapterKey: 7,
-    verseKeys: [21],
-  },
-  {
-    bookKey: 0,
     chapterKey: 9,
     verseKeys: [7],
   },

@@ -8,7 +8,7 @@ const TopHomeButton = () => {
       onClick={() => showMiddleColumnContent(0, 0, 0)}
     >
       <i className="fa fa-home w3-margin-right"></i>
-      Дабравесце
+      <strong>Дабравесце</strong>
     </span>
   );
 };
