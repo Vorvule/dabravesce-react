@@ -8,6 +8,7 @@ const TopOutButtons = () => {
     <>
       <span
         className="w3-bar-item w3-button w3-right w3-padding-large w3-hover-white w3-theme-d2 w3-large"
+        title="Мабільнае дачыненне"
         onClick={() => window.open(android)}
       >
         <strong className="w3-hide-medium w3-hide-small w3-margin-right">
@@ -17,6 +18,7 @@ const TopOutButtons = () => {
       </span>
       <span
         className="w3-bar-item w3-button w3-right w3-padding-large w3-hover-white w3-theme-d2 w3-large"
+        title="Рэпазіторый сайта на Gihub"
         onClick={() => window.open(github)}
       >
         <strong className="w3-hide-medium w3-hide-small w3-margin-right">

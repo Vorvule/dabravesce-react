@@ -4,7 +4,7 @@ import prevChapter from "../../functions/footer/prev_chapter";
 
 const FooterArrows = () => {
   return (
-    <div className="w3-center">
+    <div className="w3-center footer-tab">
       <span onClick={prevChapter}>
         <i className="fa fa-arrow-left w3-margin-right"></i>
         <strong className="w3-hide-small">Назад</strong>
