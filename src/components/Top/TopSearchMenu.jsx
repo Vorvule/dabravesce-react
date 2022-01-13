@@ -2,7 +2,7 @@ import React from "react";
 
 const TopSearchMenu = () => {
   return (
-    <div id="navDemo" className="w3-bar-block w3-theme-d2 w3-large">
+    <div id="searchMenu" className="w3-bar-block w3-theme-d2 w3-large w3-hide">
       <input
         className="w3-bar-item w3-input"
         id="FooterSearch"

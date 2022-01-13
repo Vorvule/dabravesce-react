@@ -33,3 +33,7 @@ li, footer span, label {
 .w3-ul {
   padding-top: 4px;
 }
+
+.w3-top {
+  z-index: 100;
+}
