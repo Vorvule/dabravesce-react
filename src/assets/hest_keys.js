@@ -60,7 +60,7 @@ const hestKeys = [
   {
     bookKey: 0,
     chapterKey: 21,
-    verseKeys: [38],
+    verseKeys: [34, 35, 36, 37, 38, 39],
   },
 
   // Mark
