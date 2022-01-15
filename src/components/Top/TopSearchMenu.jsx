@@ -6,7 +6,7 @@ const TopSearchMenu = () => {
       <input
         className="w3-bar-item w3-input"
         id="FooterSearch"
-        placeholder="Пошук па сайце"
+        placeholder="Пошук ..."
       ></input>
       <span className="w3-bar-item w3-button w3-padding w3-center w3-border-bottom">
         Шукаць
@@ -17,6 +17,7 @@ const TopSearchMenu = () => {
           type="checkbox"
           name="testament"
           id="TestamentCheckbox"
+          defaultChecked
         ></input>
         <label htmlFor="TestamentCheckbox">Новы Запавет</label>
       </span>
@@ -26,6 +27,7 @@ const TopSearchMenu = () => {
           type="checkbox"
           name="prayerbook"
           id="PrayerbookCheckbox"
+          defaultChecked
         ></input>
         <label htmlFor="PrayerbookCheckbox">Малітоўнік</label>
       </span>
@@ -35,6 +37,7 @@ const TopSearchMenu = () => {
           type="checkbox"
           name="songbook"
           id="SongbookCheckbox"
+          defaultChecked
         ></input>
         <label htmlFor="SongbookCheckbox">Спевы</label>
       </span>

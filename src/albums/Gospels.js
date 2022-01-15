@@ -4,7 +4,7 @@ import Mark from "./Gospels/Mark";
 import Matthew from "./Gospels/Matthew";
 
 const fourGospels = {
-  name: "Чатыры Дабравесці",
+  name: "Евангелле",
   idEn: "Gospels",
   text: [
     {

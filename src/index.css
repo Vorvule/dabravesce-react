@@ -26,7 +26,7 @@ summary {
   cursor: pointer;
 }
 
-li, footer span, label {
+li, footer span, .w3-top span, label {
   cursor: pointer;
 }
 
