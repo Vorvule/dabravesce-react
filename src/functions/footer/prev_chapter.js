@@ -5,12 +5,8 @@ const prevChapter = () => {
   const albumIndex = +localStorage.albumIndex;
   const bookIndex = +localStorage.bookIndex;
   const chapterIndex = +localStorage.chapterIndex;
-  console.log(albumIndex);
-  console.log(bookIndex);
-  console.log(chapterIndex);
 
   const nextChapterExists = allAlbums[albumIndex].text[bookIndex].text[chapterIndex - 1];
-  console.log(nextChapterExists);
 
   if (nextChapterExists) {
     showMiddleColumnContent(albumIndex, bookIndex, chapterIndex - 1);

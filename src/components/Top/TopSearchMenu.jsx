@@ -18,7 +18,7 @@ const TopSearchMenu = () => {
           name="testament"
           id="TestamentCheckbox"
         ></input>
-        <label for="TestamentCheckbox">Новы Запавет</label>
+        <label htmlFor="TestamentCheckbox">Новы Запавет</label>
       </span>
       <span className="w3-bar-item">
         <input
@@ -27,7 +27,7 @@ const TopSearchMenu = () => {
           name="prayerbook"
           id="PrayerbookCheckbox"
         ></input>
-        <label for="PrayerbookCheckbox">Малітоўнік</label>
+        <label htmlFor="PrayerbookCheckbox">Малітоўнік</label>
       </span>
       <span className="w3-bar-item">
         <input
@@ -36,7 +36,7 @@ const TopSearchMenu = () => {
           name="songbook"
           id="SongbookCheckbox"
         ></input>
-        <label for="SongbookCheckbox">Спевы</label>
+        <label htmlFor="SongbookCheckbox">Спевы</label>
       </span>
       <span className="w3-bar-item w3-border-top">
         <input
@@ -45,7 +45,7 @@ const TopSearchMenu = () => {
           name="lettercase"
           id="LetterCase"
         ></input>
-        <label for="LetterCase">Улічваць рэгіст літар</label>
+        <label htmlFor="LetterCase">Улічваць рэгіст літар</label>
       </span>
     </div>
   );
