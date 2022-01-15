@@ -7,25 +7,21 @@ const MiddleColumn = () => {
   });
 
   return (
-    <div className="w3-col l6" id="MiddleColumn">
-      <div className="w3-card w3-round w3-white w3-container">
-        <h4 className="w3-center">
-          <strong id="MiddleColumn_AlbumName"></strong>
-        </h4>
-        <hr />
-        <h5 className="w3-center">
-          <strong id="MiddleColumn_BookName"></strong>
-        </h5>
-        <h6 className="w3-center">
-          <strong id="MiddleColumn_ChapterName"></strong>
-        </h6>
-        <br />
-        <div id="MiddleColumn_ChapterCore"></div>
-        <br />
-      </div>
-      <br />
-      <br />
-      <br />
+    <div
+      id="MiddleColumn"
+      className="w3-col l6 w3-padding w3-border-left w3-border-right"
+    >
+      <h4 className="w3-center">
+        <strong id="MiddleColumn_AlbumName"></strong>
+      </h4>
+      <hr />
+      <h5 className="w3-center">
+        <strong id="MiddleColumn_BookName"></strong>
+      </h5>
+      <h6 className="w3-center w3-padding-16">
+        <strong id="MiddleColumn_ChapterName"></strong>
+      </h6>
+      <div id="MiddleColumn_ChapterCore"></div>
     </div>
   );
 };

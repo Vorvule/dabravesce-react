@@ -5,7 +5,7 @@ import RightColumn from "./RightColumn";
 
 const ColumnsContainer = () => {
   return (
-    <div className="w3-container w3-content page-container">
+    <div className="w3-content page-container">
       <div className="w3-row">
         <LeftColumn />
         <MiddleColumn />
