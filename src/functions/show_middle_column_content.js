@@ -17,8 +17,12 @@ const showMiddleColumnContent = (albumIndex, bookIndex, chapterIndex) => {
   const chapterText = bookText[chapterIndex][1];
 
   outputMiddleColumnContent(albumName, bookName, chapterName, chapterText);
-  if (document.getElementById("MiddleColumn").classList.contains("w3-hide"))
+  const middleColumnIsHidden = document
+    .getElementById("MiddleColumn")
+    .classList.contains("w3-hide");
+  if (middleColumnIsHidden) {
     toggleMenuAndCore();
+  }
 };
 
 export { showMiddleColumnContent };

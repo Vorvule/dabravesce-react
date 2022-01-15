@@ -19,11 +19,13 @@ const MiddleColumn = () => {
         <h6 className="w3-center">
           <strong id="MiddleColumn_ChapterName"></strong>
         </h6>
+        <br />
         <div id="MiddleColumn_ChapterCore"></div>
+        <br />
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
+      <br />
+      <br />
+      <br />
     </div>
   );
 };
