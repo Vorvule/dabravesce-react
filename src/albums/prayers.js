@@ -4,7 +4,7 @@ import Easter from "./Prayers/Easter";
 import Housel from "./Prayers/Housel";
 import Lithurgy from "./Prayers/Lithurgy";
 
-const prayers = {
+const Prayers = {
   name: "Малітоўнік",
   idEn: "Prayers",
   text: [
@@ -45,4 +45,4 @@ const prayers = {
   ],
 };
 
-export default prayers;
+export default Prayers;

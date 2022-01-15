@@ -1,4 +1,4 @@
-import allAlbums from "../albums/all_albums";
+import allAlbums from "../albums/Albums";
 import { outputMiddleColumnContent } from "./output_middle_column_content";
 import { updateLocalStorage } from "./update_local_storage";
 import { toggleMenuAndCore } from "./toggle_menu_and_core";

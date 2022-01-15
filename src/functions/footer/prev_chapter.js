@@ -1,4 +1,4 @@
-import allAlbums from "../../albums/all_albums";
+import allAlbums from "../../albums/Albums";
 import { showMiddleColumnContent } from "../show_middle_column_content"
 
 const prevChapter = () => {
