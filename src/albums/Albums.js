@@ -1,10 +1,10 @@
-import Gospels from "./Gospels";
-import Apostles from "./Apostles";
-import Epistles from "./Epistles";
-import Prayers from "./Prayers";
-import Songs from "./Songs";
-import Contacts from "./Contacts";
+import apostles from "./apostles";
+import contacts from "./contacts";
+import epistles from "./epistles";
+import gospels from "./gospels";
+import prayers from "./prayers";
+import songs from "./songs";
 
-const allAlbums = [Gospels, Apostles, Epistles, Prayers, Songs, Contacts];
+const allAlbums = [gospels, apostles, epistles, prayers, songs, contacts];
 
 export default allAlbums;

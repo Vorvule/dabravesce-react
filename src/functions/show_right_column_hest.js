@@ -1,4 +1,4 @@
-import allAlbums from "../albums/Albums";
+import allAlbums from "../albums/albums";
 import hestKeys from "../assets/hest_keys";
 import { randomInteger } from "./random_integer";
 

@@ -1,4 +1,4 @@
-import allAlbums from "../../albums/Albums";
+import allAlbums from "../../albums/albums";
 
 const shareSocial = (socialNetwork) => {
   let href;
