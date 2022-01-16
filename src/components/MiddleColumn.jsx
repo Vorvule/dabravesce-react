@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import { showMiddleColumnContent } from "../functions/show_middle_column_content";
+import { showMiddleColumnContent } from "./MiddleColumn/show_middle_column_content";
+import AudioPlayer from "./Audio/AudioPlayer";
 
 const MiddleColumn = () => {
   useEffect(() => {
@@ -21,6 +22,7 @@ const MiddleColumn = () => {
       <h6 className="w3-center w3-padding-16">
         <strong id="MiddleColumn_ChapterName"></strong>
       </h6>
+      <AudioPlayer />
       <div id="MiddleColumn_ChapterCore"></div>
     </div>
   );

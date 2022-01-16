@@ -33,3 +33,12 @@ li, footer span, .w3-top span, label {
 .w3-ul {
   padding-top: 4px;
 }
+
+audio {
+  outline: none;
+  height: 40px!important;
+  border-radius: 20px;
+  width: 100%;
+  margin: 16px 0;
+  z-index: 200;
+}

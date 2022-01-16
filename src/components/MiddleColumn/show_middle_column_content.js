@@ -1,7 +1,8 @@
-import allAlbums from "../albums/albums";
+import allAlbums from "../../albums/albums";
 import { outputMiddleColumnContent } from "./output_middle_column_content";
 import { updateLocalStorage } from "./update_local_storage";
-import { toggleMenuAndCore } from "./toggle_menu_and_core";
+import { toggleMenuAndCore } from "../../functions/toggle_menu_and_core";
+import { setAudio } from "../Audio/set_audio";
 
 const showMiddleColumnContent = (albumIndex, bookIndex, chapterIndex) => {
   updateLocalStorage(albumIndex, bookIndex, chapterIndex);
@@ -20,9 +21,11 @@ const showMiddleColumnContent = (albumIndex, bookIndex, chapterIndex) => {
   const middleColumnIsHidden = document
     .getElementById("MiddleColumn")
     .classList.contains("w3-hide");
+  
   if (middleColumnIsHidden) {
     toggleMenuAndCore();
   }
+  setAudio();
 };
 
 export { showMiddleColumnContent };

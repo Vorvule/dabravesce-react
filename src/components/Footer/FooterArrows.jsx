@@ -1,6 +1,6 @@
 import React from "react";
-import nextChapter from "../../functions/footer/next_chapter";
-import prevChapter from "../../functions/footer/prev_chapter";
+import nextChapter from "../Footer/FooterArrows/next_chapter";
+import prevChapter from "../Footer/FooterArrows/prev_chapter";
 
 const FooterArrows = () => {
   return (
