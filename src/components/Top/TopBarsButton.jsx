@@ -1,6 +1,6 @@
 import React from "react";
-import { getWindowWidth } from "../../functions/get_window_width";
-import { toggleMenuAndCore } from "../../functions/toggle_menu_and_core";
+import { getWindowWidth } from "./get_window_width";
+import { toggleMenuAndCore } from "../Common/toggle_menu_and_core";
 
 const TopBarsButton = () => {
   return (

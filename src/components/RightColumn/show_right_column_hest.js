@@ -1,5 +1,5 @@
-import allAlbums from "../albums/albums";
-import hestKeys from "../assets/hest_keys";
+import allAlbums from "../../albums/albums";
+import hestKeys from "./hest_keys";
 import { randomInteger } from "./random_integer";
 
 const showRightColumn_Hest = () => {
