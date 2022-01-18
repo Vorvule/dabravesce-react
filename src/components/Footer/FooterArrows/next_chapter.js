@@ -1,5 +1,5 @@
 import allAlbums from "../../../albums/albums";
-import { showMiddleColumnContent } from "../../MiddleColumn/show_middle_column_content"
+import { showCore } from "../../MiddleColumn/show_core"
 
 const nextChapter = () => {
   const albumIndex = +localStorage.albumIndex;
@@ -9,7 +9,7 @@ const nextChapter = () => {
   const nextChapterExists = allAlbums[albumIndex].text[bookIndex].text[chapterIndex + 1];
 
   if (nextChapterExists) {
-    showMiddleColumnContent(albumIndex, bookIndex, chapterIndex + 1);
+    showCore(albumIndex, bookIndex, chapterIndex + 1);
     return;
   }
 };

@@ -1,5 +1,7 @@
 import React from "react";
-import { showMiddleColumnContent } from "../MiddleColumn/show_middle_column_content";
+import { showCore } from "../MiddleColumn/show_core";
+import { getWindowWidth } from "../Top/get_window_width";
+import { toggleShowCore } from "../Common/toggle_show_core";
 
 const MenuChapterList = ({ albumIndex, bookIndex, chapterList }) =>
   chapterList.map((chapterContent, chapterIndex) => {
@@ -8,7 +10,10 @@ const MenuChapterList = ({ albumIndex, bookIndex, chapterList }) =>
       <li
         key={chapterIndex}
         onClick={() => {
-          showMiddleColumnContent(albumIndex, bookIndex, chapterIndex);
+          if (getWindowWidth() < 993) {
+            toggleShowCore();
+          }
+          showCore(albumIndex, bookIndex, chapterIndex);
         }}
       >
         {chapterName}

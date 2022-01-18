@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { showRightColumn_Hest } from "./RightColumn/show_right_column_hest";
+import { showRightColumn_Hest } from "./RightColumn/show_hest";
 
 const RightColumn = () => {
   useEffect(() => {

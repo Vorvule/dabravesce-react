@@ -1,6 +1,6 @@
 import React from "react";
 import { getWindowWidth } from "./get_window_width";
-import { toggleLeftAndMiddleColumns } from "../Common/toggle_left_and_middle_columns";
+import { toggleShowCore } from "../Common/toggle_show_core";
 
 const TopBarsButton = () => {
   return (
@@ -14,7 +14,7 @@ const TopBarsButton = () => {
 };
 
 const handleBarsButtonClick = () => {
-  toggleLeftAndMiddleColumns();
+  toggleShowCore();
 
   if (getWindowWidth() < 993) {
     document

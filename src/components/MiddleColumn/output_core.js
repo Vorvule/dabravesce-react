@@ -1,12 +1,7 @@
-import { reduceChapterParagraphs } from "./reduce_chapter_paragraphs";
+import { reduceParagraphs } from "./reduce_paragraphs";
 
-const outputMiddleColumnContent = (
-  albumName,
-  bookName,
-  chapterName,
-  chapterText
-) => {
-  const chapterParagraphs = reduceChapterParagraphs(chapterText);
+const outputCore = (albumName, bookName, chapterName, chapterText) => {
+  const chapterParagraphs = reduceParagraphs(chapterText);
 
   document.getElementById("MiddleColumn_AlbumName").innerHTML = albumName;
   document.getElementById("MiddleColumn_BookName").innerHTML = bookName;
@@ -15,4 +10,4 @@ const outputMiddleColumnContent = (
     chapterParagraphs;
 };
 
-export { outputMiddleColumnContent };
+export { outputCore };

@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
-import { showMiddleColumnContent } from "./MiddleColumn/show_middle_column_content";
+import { showCore } from "./MiddleColumn/show_core";
+import { getUrlKeys } from "./MiddleColumn/keys/get_url_keys";
 import AudioPlayer from "./Audio/AudioPlayer";
 
 const MiddleColumn = () => {
   useEffect(() => {
-    showMiddleColumnContent(0, 0, 0);
+    showCore(...getUrlKeys());
   });
 
   return (

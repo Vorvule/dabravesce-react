@@ -1,6 +1,9 @@
 const setAudio = () => {
   const AudioElement = document.getElementById("AudioPlayer");
+  AudioElement.classList.add("w3-hide");
+
   const SourceElement = document.getElementById("AudioSource");
+  SourceElement.src = "";
 
   const albumIndex = +localStorage.albumIndex;
   const bookIndex = +localStorage.bookIndex;
@@ -24,7 +27,6 @@ const setAudio = () => {
           BookFolder = "john";
           break;
         default:
-          AudioElement.classList.add("w3-hide");
           return;
       }
       FileName = (chapterIndex + 1).toString();
@@ -46,7 +48,6 @@ const setAudio = () => {
               break;
             // 2. Different prayers: no audio
             default:
-              AudioElement.classList.add("w3-hide");
               return;
           }
           break;
@@ -66,12 +67,10 @@ const setAudio = () => {
               FileName = "requiem";
               break;
             default:
-              AudioElement.classList.add("w3-hide");
               return; // fallback
           }
           break;
         default:
-          AudioElement.classList.add("w3-hide");
           return;
       }
       break;
@@ -96,7 +95,6 @@ const setAudio = () => {
       break;
 
     default:
-      AudioElement.classList.add("w3-hide");
       return; // contacts and fallback
   }
 
@@ -104,7 +102,7 @@ const setAudio = () => {
 
   AudioElement.classList.remove("w3-hide");
   const audioUrl = `https://www.dabravesce.by/audio/${BookFolder}/${FileName}.mp3`;
-  SourceElement.src = audioUrl
+  SourceElement.src = audioUrl;
   AudioElement.load();
 };
 
