@@ -1,11 +1,11 @@
 import React from "react";
 
-const FooterTitle = () => {
+const FooterWrench = () => {
   const android = "https://play.google.com/store/apps/details?id=by.dabravesce";
   const github = "https://github.com/Vorvule/dabravesce-react";
 
   return (
-    <div className="w3-center footer-tab">
+    <div className="w3-center footer-tab w3-hide">
       <span
         className="w3-large w3-padding"
         title="Мабільная версія"
@@ -26,4 +26,4 @@ const FooterTitle = () => {
   );
 };
 
-export default FooterTitle;
+export default FooterWrench;

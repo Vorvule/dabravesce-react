@@ -3,7 +3,7 @@ import LeftColumn from "./LeftColumn";
 import MiddleColumn from "./MiddleColumn";
 import RightColumn from "./RightColumn";
 
-const ColumnsContainer = () => {
+const Columns = () => {
   return (
     <div className="w3-content page-container">
       <div className="w3-row">
@@ -15,4 +15,4 @@ const ColumnsContainer = () => {
   );
 };
 
-export default ColumnsContainer;
+export default Columns;
