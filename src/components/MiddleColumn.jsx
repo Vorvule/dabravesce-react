@@ -23,7 +23,7 @@ const MiddleColumn = () => {
         <strong id="MiddleColumn_ChapterName"></strong>
       </h6>
       <AudioPlayer />
-      <div id="MiddleColumn_ChapterCore"></div>
+      <div id="MiddleColumn_ChapterParagraphs"></div>
     </div>
   );
 };
