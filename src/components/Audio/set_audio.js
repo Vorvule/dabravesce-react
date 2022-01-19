@@ -1,9 +1,10 @@
 const setAudio = () => {
   const AudioElement = document.getElementById("AudioPlayer");
-  AudioElement.classList.add("w3-hide");
-
   const SourceElement = document.getElementById("AudioSource");
+
   SourceElement.src = "";
+  AudioElement.load();
+  AudioElement.classList.add("w3-hide");
 
   const albumIndex = +localStorage.albumIndex;
   const bookIndex = +localStorage.bookIndex;

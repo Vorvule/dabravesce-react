@@ -1,5 +1,4 @@
 import React from "react";
-import { getWindowWidth } from "./get_window_width";
 import { toggleShowCore } from "../Common/toggle_show_core";
 
 const TopBarsButton = () => {
@@ -16,7 +15,7 @@ const TopBarsButton = () => {
 const handleBarsButtonClick = () => {
   toggleShowCore();
 
-  if (getWindowWidth() < 993) {
+  if (window.innerWidth < 993) {
     document
       .getElementById("LeftColumn_Content")
       .classList.remove("w3-margin-right");
