@@ -1,8 +1,8 @@
-import allAlbums from "../../albums/albums";
+import allAlbums from "../../../albums/albums";
 import hestKeys from "./hest_keys";
-import { randomInteger } from "./random_integer";
+import { randomInteger } from "../../Common/random_integer";
 
-const showRightColumn_Hest = () => {
+const showHest = () => {
   const hestCount = hestKeys.length;
   const randomHestIndex = randomInteger(0, hestCount);
   const randomHestKeys = hestKeys[randomHestIndex];
@@ -34,4 +34,4 @@ const showRightColumn_Hest = () => {
   document.getElementById("RightColumn_HestSource").innerHTML = hestSource;
 };
 
-export { showRightColumn_Hest };
+export { showHest };
