@@ -6,7 +6,7 @@ const Hest = () => {
     showHest();
   });
   return (
-    <div className="w3-white w3-padding">
+    <div className="w3-padding">
       <h4 className="w3-center">
         <strong>Слова Божае</strong>
       </h4>

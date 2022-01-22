@@ -21,3 +21,7 @@ reportWebVitals();
 window.onhashchange = () => {
   showCore(...getUrlKeys());
 };
+
+window.onresize = () => {
+  window.location.reload();
+};

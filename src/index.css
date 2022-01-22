@@ -26,7 +26,7 @@ summary {
   cursor: pointer;
 }
 
-li, footer span, .w3-top span, label {
+li, footer span, .w3-top span, label, #RightColumn_DailyGospel {
   cursor: pointer;
 }
 
