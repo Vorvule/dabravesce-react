@@ -33,12 +33,12 @@ const TopTabButtons = () => {
 
       <span
         className="w3-bar-item w3-padding-large w3-large"
-        title="Рух"
+        title="Спасылкі"
         onClick={() => handleTabButtonClick(2)}
       >
-        <i className="fa fa-wrench"></i>
+        <i class="fa fa-external-link" aria-hidden="true"></i>
         <strong className="w3-hide-medium w3-hide-small w3-margin-left">
-          Прылады
+          Спасылкі
         </strong>
       </span>
       {/* <span
