@@ -6,6 +6,7 @@ import AudioPlayer from "./Audio/AudioPlayer";
 const MiddleColumn = () => {
   useEffect(() => {
     showCore(...getUrlKeys());
+    localStorage.innerWidth = window.innerWidth;
   });
 
   return (

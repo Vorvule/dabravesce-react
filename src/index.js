@@ -23,5 +23,8 @@ window.onhashchange = () => {
 };
 
 window.onresize = () => {
-  window.location.reload();
+  if (window.innerWidth !== +localStorage.innerWidth) {
+    window.location.reload();
+    localStorage.innerWidth = window.innerWidth;
+  }
 };
