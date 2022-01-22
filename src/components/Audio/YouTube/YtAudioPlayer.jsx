@@ -2,7 +2,7 @@ import React from "react";
 
 const YtAudioPlayer = () => {
   return (
-    <div class="plyr__video-embed" id="AudioPlayer">
+    <div className="plyr__video-embed" id="AudioPlayer">
       <iframe
         title="YtAudioPlayer"
         id="AudioSource"

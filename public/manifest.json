@@ -5,7 +5,7 @@
   "display": "fullscreen",
   "display_": "standalone",
   "theme_color": "#2196f3",
-  "theme_color_": "#000000",
+  "theme_color_": "#ffffff",
   "background_color": "#ffffff",
   "description": "Біблія, Малітоўнік і Пабожныя спевы",
   "orientation": "portrait-primary",
@@ -13,13 +13,14 @@
     {
       "src": "./icons/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
       "src": "./icons/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     }
   ],
   "related_applications": [

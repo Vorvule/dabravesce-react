@@ -36,7 +36,7 @@ const TopTabButtons = () => {
         title="Спасылкі"
         onClick={() => handleTabButtonClick(2)}
       >
-        <i class="fa fa-external-link" aria-hidden="true"></i>
+        <i className="fa fa-external-link" aria-hidden="true"></i>
         <strong className="w3-hide-medium w3-hide-small w3-margin-left">
           Спасылкі
         </strong>
