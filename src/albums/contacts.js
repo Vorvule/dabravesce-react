@@ -19,7 +19,7 @@ const contacts = {
         //   "Форма для сувязі",
         //   [
         //     "Форма для сувязі з Брацтвам у гонар Віленскіх мучанікаў у г. Мінску",
-        //     "<form method='post' id='MailForm'><input className='w3-input w3-section w3-border' type='text' placeholder='Імя' required name='Name'><input className='w3-input w3-section w3-border' type='text' placeholder='E-mail' required name='Email'><input className='w3-input w3-section w3-border' type='text' placeholder='Тэма' required name='Subject'><input className='w3-input w3-section w3-border' type='text' placeholder='Допіс' required name='Comment'><div className='w3-input w3-border w3-border-blue w3-text-theme w3-hover-text-blue' id='sendMail' onclick='site.sendMail();' style='cursor:pointer'>Даслаць</div></form>",
+        //     "<form method='post' id='MailForm'><input className='w3-input w3-section w3-border' type='text' placeholder='Імя' required name='Name'><input className='w3-input w3-section w3-border' type='text' placeholder='E-mail' required name='Email'><input className='w3-input w3-section w3-border' type='text' placeholder='Тэма' required name='Subject'><input className='w3-input w3-section w3-border' type='text' placeholder='Допіс' required name='Comment'><div className='w3-input w3-border w3-border-blue w3-text-dark-gray w3-hover-text-blue' id='sendMail' onclick='site.sendMail();' style='cursor:pointer'>Даслаць</div></form>",
         //   ],
         // ],
       ],
@@ -41,8 +41,8 @@ const contacts = {
         // [
         //   "Падзякі",
         //   [
-        //     "<p>Стылі <span className='w3-text-theme' style='cursor:pointer' onclick='location.href=\"https://www.w3schools.com/w3css/\"'>w3.css</span>",
-        //     "Іконкі <span className='w3-text-theme' style='cursor:pointer' onclick='location.href=\"https://fontawesome.com/v4.7.0/icons/\"'>Fontawesome</span></p>",
+        //     "<p>Стылі <span className='w3-text-dark-gray' style='cursor:pointer' onclick='location.href=\"https://www.w3schools.com/w3css/\"'>w3.css</span>",
+        //     "Іконкі <span className='w3-text-dark-gray' style='cursor:pointer' onclick='location.href=\"https://fontawesome.com/v4.7.0/icons/\"'>Fontawesome</span></p>",
         //   ],
         // ],
       ],

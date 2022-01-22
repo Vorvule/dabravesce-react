@@ -5,7 +5,7 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <div className="App w3-theme-15">
+    <div className="App">
       <Top />
       <Columns />
       <Footer />
