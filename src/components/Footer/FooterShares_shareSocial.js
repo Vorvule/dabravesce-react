@@ -1,4 +1,5 @@
 import allAlbums from "../../albums/albums";
+import { pairIndex } from "./../Common/pair-index";
 
 const shareSocial = (socialNetwork) => {
   let href;
@@ -7,7 +8,10 @@ const shareSocial = (socialNetwork) => {
   const bookIndex = localStorage.bookIndex;
   const chapterIndex = localStorage.chapterIndex;
 
-  const shareUrl = `https://www.dabravesce.by/index.html?i=${albumIndex}-${bookIndex}-${chapterIndex}`;
+  const hashes =
+    pairIndex(albumIndex) + pairIndex(bookIndex) + pairIndex(chapterIndex);
+  // %23 = # url encoded
+  const shareUrl = "https://www.dabravesce.by/index.html%23" + hashes;
 
   const bookName = allAlbums[albumIndex].text[bookIndex].name;
   const chapterName =
