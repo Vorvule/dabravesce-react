@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Menu from "./LeftColumn/Menu";
 import DailyGospel from "./RightColumn/DailyGospel";
 
 const LeftColumn = () => {
-  useEffect(() => {});
 
   return (
     <div id="LeftColumn" className="w3-col l3 w3-hide-small w3-hide-medium">

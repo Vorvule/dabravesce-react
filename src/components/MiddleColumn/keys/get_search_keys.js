@@ -5,7 +5,7 @@ const getSearchKeys = () => {
 
   if (parameters.has("i")) {
     const pars = parameters.get("i").split("-"); // ['0', '1', '10']
-    
+
     const keys = [
       Number.parseInt(pars[0]),
       Number.parseInt(pars[1]),
