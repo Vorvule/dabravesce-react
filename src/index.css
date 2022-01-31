@@ -11,6 +11,8 @@ body {
 
 * {
   font-family: -apple-system, BlinkMacSystemFont, "Comfortaa", sans-serif;
+  font-style: normal;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -26,7 +28,11 @@ summary {
   cursor: pointer;
 }
 
-li, footer span, .w3-top span, label, #RightColumn_DailyGospel {
+li,
+footer span,
+.w3-top span,
+label,
+#RightColumn_DailyGospel {
   cursor: pointer;
 }
 
@@ -36,7 +42,7 @@ li, footer span, .w3-top span, label, #RightColumn_DailyGospel {
 
 audio {
   outline: none;
-  height: 40px!important;
+  height: 40px !important;
   border-radius: 20px;
   width: 100%;
   margin: 16px 0;
