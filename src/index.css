@@ -10,7 +10,7 @@ body {
 }
 
 * {
-  font-family: -apple-system, BlinkMacSystemFont, "Comfortaa", sans-serif;
+  font-family: "Comfortaa", sans-serif, -apple-system, BlinkMacSystemFont;
   font-style: normal;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
