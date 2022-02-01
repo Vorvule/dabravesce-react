@@ -5,6 +5,7 @@ const FooterShares = () => {
   return (
     <div className="w3-center w3-hide footer-tab">
       <span
+        target="_blank"
         className="w3-large w3-padding"
         onClick={() => shareSocial("twitter")}
       >
@@ -22,6 +23,7 @@ const FooterShares = () => {
       </span>
 
       <span
+        target="_blank"
         className="w3-large w3-padding"
         onClick={() => shareSocial("facebook")}
       >
