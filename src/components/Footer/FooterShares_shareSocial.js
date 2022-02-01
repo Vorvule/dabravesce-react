@@ -17,8 +17,8 @@ const shareSocial = (socialNetwork) => {
   const chapterName =
     allAlbums[albumIndex].text[bookIndex].text[chapterIndex][0];
   const shareInfo = `${bookName}. ${chapterName}`;
-  const hashTags =
-    "%23Біблія+%23Евангелле+%23Библия+%23Евангелие+%23Bible+%23Gospel";
+  const hashTags = "";
+//    "%23Біблія+%23Евангелле+%23Библия+%23Евангелие+%23Bible+%23Gospel";
   // %0A : line break; %23 : hash
   switch (socialNetwork) {
     case "twitter":

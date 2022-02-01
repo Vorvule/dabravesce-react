@@ -13,6 +13,7 @@ const FooterShares = () => {
       </span>
 
       <span
+        target="_blank"
         className="w3-large w3-padding"
         onClick={() => shareSocial("telegram")}
       >
