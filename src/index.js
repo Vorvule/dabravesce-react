@@ -28,3 +28,16 @@ window.onresize = () => {
     localStorage.innerWidth = window.innerWidth;
   }
 };
+
+window.addEventListener("load", async () => {
+  if (navigator.serviceWorker) {
+    try {
+      const regInfo = await navigator.serviceWorker.register(
+        "./service-worker.js"
+      );
+      console.log('Service Worker register success', regInfo)
+    } catch (e) {
+      console.log('Service Worker register fail')
+    }
+  }
+});
