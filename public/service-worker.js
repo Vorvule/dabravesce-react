@@ -1,7 +1,3 @@
-import { precacheAndRoute } from "workbox-precaching";
-
-precacheAndRoute(self.__WB_MANIFEST);
-
 // change static cache name after the app changed
 const staticCacheName = "dabravesce-sw-v3";
 const dynamicCacheName = "dabravesce-sw-d-v3";
