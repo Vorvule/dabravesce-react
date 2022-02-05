@@ -22,6 +22,18 @@ const TopTabButtons = () => {
 
       <span
         className="w3-bar-item w3-padding-large w3-large"
+        title="Спасылкі"
+        onClick={() => handleTabButtonClick(1)}
+      >
+        <i className="fa fa-external-link" aria-hidden="true"></i>
+        <strong className="w3-hide-medium w3-hide-small w3-margin-left">
+          Спасылкі
+        </strong>
+      </span>
+
+      {/*
+      <span
+        className="w3-bar-item w3-padding-large w3-large"
         title="Шырыць"
         onClick={() => handleTabButtonClick(1)}
       >
@@ -30,18 +42,8 @@ const TopTabButtons = () => {
           Шырыць
         </strong>
       </span>
-
+      
       <span
-        className="w3-bar-item w3-padding-large w3-large"
-        title="Спасылкі"
-        onClick={() => handleTabButtonClick(2)}
-      >
-        <i className="fa fa-external-link" aria-hidden="true"></i>
-        <strong className="w3-hide-medium w3-hide-small w3-margin-left">
-          Спасылкі
-        </strong>
-      </span>
-      {/* <span
         className="w3-bar-item w3-button w3-padding-large w3-hover-white w3-large"
         title="Пошук"
         onClick={() =>
@@ -53,6 +55,7 @@ const TopTabButtons = () => {
           Пошук
         </strong>
       </span> */}
+      
     </>
   );
 };
