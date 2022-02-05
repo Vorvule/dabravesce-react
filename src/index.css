@@ -46,3 +46,9 @@ audio {
   margin: 16px 0;
   z-index: 200;
 }
+
+.icon-container > div {
+  display: inline-block;
+  cursor: pointer;
+  width: 84px;
+}

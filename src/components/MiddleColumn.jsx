@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { showCore } from "./MiddleColumn/show_core";
 import { getUrlKeys } from "./MiddleColumn/keys/get_url_keys";
 import AudioPlayer from "./Audio/AudioPlayer";
+import ShareIcons from "./MiddleColumn/ShareIcons";
 
 const MiddleColumn = () => {
   useEffect(() => {
@@ -18,12 +19,13 @@ const MiddleColumn = () => {
         <strong id="MiddleColumn_AlbumName"></strong>
       </h4>
       <hr />
-      <h5 className="w3-center">
+      <h5 className="w3-center w3-section">
         <strong id="MiddleColumn_BookName"></strong>
       </h5>
-      <h6 className="w3-center w3-padding-16">
+      <h6 className="w3-center">
         <strong id="MiddleColumn_ChapterName"></strong>
       </h6>
+      <ShareIcons />
       <AudioPlayer />
       <div id="MiddleColumn_ChapterParagraphs"></div>
     </div>
