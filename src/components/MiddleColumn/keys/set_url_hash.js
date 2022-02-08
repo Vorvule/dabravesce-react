@@ -2,9 +2,9 @@ import { pairIndex } from "./../../Common/pair-index";
 
 const setUrlHash = (albumIndex, bookIndex, chapterIndex) => {
   // deleteLocationSearch();
-  window.location.hash =
+  const searchKeys =
     pairIndex(albumIndex) + pairIndex(bookIndex) + pairIndex(chapterIndex);
-  // window.history.pushState({}, document.title, window.location);
+  window.history.pushState({}, document.title, "index.html?k=" + searchKeys);
 };
 
 export { setUrlHash };
