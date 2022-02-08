@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { getUrlKeys } from "./components/MiddleColumn/keys/get_url_keys";
+import { getSearchKeys } from "./components/MiddleColumn/keys/get_search_keys";
 import { showCore } from "./components/MiddleColumn/show_core";
 
 ReactDOM.render(
@@ -20,7 +20,7 @@ reportWebVitals();
 
 window.onpopstate = () => {
   localStorage.keysFromHistory = "true";
-  showCore(...getUrlKeys());
+  showCore(...getSearchKeys());
 };
 
 window.onresize = () => {

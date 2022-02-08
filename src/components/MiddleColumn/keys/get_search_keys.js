@@ -1,5 +1,7 @@
 import { keysAreValid } from "./keys_are_valid";
 
+// index.js :: window.onpopstate
+
 const getSearchKeys = () => {
   const parameters = new URLSearchParams(window.location.search); // 000110
 
@@ -14,6 +16,8 @@ const getSearchKeys = () => {
 
     if (keysAreValid(keys)) {
       return keys;
+    } else {
+      return [];
     }
   }
 };

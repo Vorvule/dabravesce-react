@@ -11,7 +11,7 @@ const showCore = (albumIndex = 0, bookIndex = 0, chapterIndex = 0) => {
 
   window.scrollTo(0, 0);
 
-  if (localStorage.keysFromHistory == "true") {
+  if (localStorage.keysFromHistory === "true") {
     localStorage.keysFromHistory = "false";
   } else {
     pushKeysToHistory(albumIndex, bookIndex, chapterIndex);
