@@ -8,8 +8,14 @@ const showCore = (albumIndex = 0, bookIndex = 0, chapterIndex = 0) => {
   outputCore(...getCore(albumIndex, bookIndex, chapterIndex));
   updateLocalStorage(albumIndex, bookIndex, chapterIndex);
   setAudio();
+
   window.scrollTo(0, 0);
-  pushKeysToHistory(albumIndex, bookIndex, chapterIndex);
+
+  if (localStorage.keysFromHistory == "true") {
+    localStorage.keysFromHistory = "false";
+  } else {
+    pushKeysToHistory(albumIndex, bookIndex, chapterIndex);
+  }
 };
 
 export { showCore };

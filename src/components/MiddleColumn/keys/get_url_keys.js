@@ -1,6 +1,5 @@
-import { getHashKeys } from "./get_hash_keys";
 import { getSearchKeys } from "./get_search_keys";
-
-const getUrlKeys = () => getHashKeys() || getSearchKeys() || [];
+// index.js :: window.onpopstate
+const getUrlKeys = () => getSearchKeys() || [];
 
 export { getUrlKeys };

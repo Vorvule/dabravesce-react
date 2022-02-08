@@ -18,7 +18,8 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-window.onhashchange = () => {
+window.onpopstate = () => {
+  localStorage.keysFromHistory = "true";
   showCore(...getUrlKeys());
 };
 
