@@ -1,13 +1,13 @@
-import { pairIndex } from "./../../Common/pair-index";
+import { pairIndex } from "../../Common/pair-index";
 
-const setUrlHash = (albumIndex, bookIndex, chapterIndex) => {
+const pushKeysToHistory = (albumIndex, bookIndex, chapterIndex) => {
   // deleteLocationSearch();
   const searchKeys =
     pairIndex(albumIndex) + pairIndex(bookIndex) + pairIndex(chapterIndex);
   window.history.pushState({}, document.title, "index.html?k=" + searchKeys);
 };
 
-export { setUrlHash };
+export { pushKeysToHistory };
 
 const deleteLocationSearch = () => {
   // delete location search parameters with the question mark
