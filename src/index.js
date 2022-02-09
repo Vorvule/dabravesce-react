@@ -19,8 +19,9 @@ ReactDOM.render(
 reportWebVitals();
 
 window.onpopstate = () => {
-  localStorage.keysFromHistory = "true";
-  showCore(...getSearchKeys());
+  // false = when we show core from history,
+  // don't push keys there any more
+  showCore(...getSearchKeys(), false);
 };
 
 window.onresize = () => {
