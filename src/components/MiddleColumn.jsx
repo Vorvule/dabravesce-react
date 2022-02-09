@@ -1,12 +1,14 @@
 import React, { useEffect } from "react";
 import { showCore } from "./MiddleColumn/show_core";
-import { getDailyKeys } from "./RightColumn/daily/get_daily_keys"
+import { getDailyKeys } from "./RightColumn/daily/get_daily_keys";
 import AudioPlayer from "./Audio/AudioPlayer";
 import ShareIcons from "./MiddleColumn/ShareIcons";
+import { getSearchKeys } from "./MiddleColumn/keys/get_search_keys";
 
 const MiddleColumn = () => {
   useEffect(() => {
-    showCore(0, ...getDailyKeys());
+    const searchKeys = getSearchKeys();
+    searchKeys ? showCore(...searchKeys) : showCore(0, ...getDailyKeys());
     localStorage.innerWidth = window.innerWidth;
   });
 

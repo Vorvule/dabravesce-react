@@ -16,8 +16,6 @@ const getSearchKeys = () => {
 
     if (keysAreValid(keys)) {
       return keys;
-    } else {
-      return [];
     }
   }
 };
