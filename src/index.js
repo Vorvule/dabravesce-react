@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { getUrlKeys } from "./components/MiddleColumn/keys/get_url_keys";
+import { getSearchKeys } from "./components/MiddleColumn/keys/get_search_keys";
 import { showCore } from "./components/MiddleColumn/show_core";
 
 ReactDOM.render(
@@ -18,8 +18,10 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-window.onhashchange = () => {
-  showCore(...getUrlKeys());
+window.onpopstate = () => {
+  // false = when we show core from history,
+  // don't push keys there any more
+  showCore(...getSearchKeys(), false);
 };
 
 window.onresize = () => {
