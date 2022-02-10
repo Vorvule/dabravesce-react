@@ -8,17 +8,17 @@ const shareSocial = (socialNetwork) => {
   const bookIndex = localStorage.bookIndex;
   const chapterIndex = localStorage.chapterIndex;
 
-  const hashes =
+  const keys =
     pairIndex(albumIndex) + pairIndex(bookIndex) + pairIndex(chapterIndex);
   // %23 = # url encoded
-  const shareUrl = "https://www.dabravesce.by/index.html%23" + hashes;
+  const shareUrl = "https://www.dabravesce.by/index.html?k=" + keys;
 
   const bookName = allAlbums[albumIndex].text[bookIndex].name;
   const chapterName =
     allAlbums[albumIndex].text[bookIndex].text[chapterIndex][0];
-  const shareInfo = `${bookName}. ${chapterName}`;
+  const shareInfo = `Прапануем Вашай увазе ${bookName}, ${chapterName}`;
   const hashTags = "%23Біблія+%23Евангелле+%23Библия+%23Евангелие+%23Bible+%23Gospel";
-  // %0A = \n; %23 = #
+  // %0A = \n url encoded
   switch (socialNetwork) {
     case "twitter":
       href = `https://twitter.com/intent/tweet?text=${shareInfo}:&url=${shareUrl}%0A%0A`;
