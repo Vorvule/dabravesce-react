@@ -4,10 +4,10 @@
 * Nachetite Apostol
 
 ## Footer
-* Scroznia navigatia
+* Scrosenia navigatia
 
 ## CSS
-* Font size -> rem
+* Font size -> rem | vh/vw = 1% of vh/vw
 
 ## Scrolling
 * Nezaleagenay dly tregh colonoc
@@ -17,8 +17,8 @@
 * Algorithm
 
 ## Drevo 
-* Podswetca
-* Rasworachevannie
+* Podswettca
+* Rasworachevannee
 * filtratia
 
 ## Peremennue
