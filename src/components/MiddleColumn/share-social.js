@@ -32,10 +32,10 @@ const shareSocial = (socialNetwork) => {
       href = `https://t.me/share/url?url=${shareUrl}%0A&text=${shareInfo}%0A%0A${hashTags}`;
       break;
     default:
-      href = window.location.href;
+      href = document.location.href;
   }
 
-  window.location.href = href;
+  document.location.href = href; // try .assign(href)
 };
 
 export { shareSocial };
