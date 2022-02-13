@@ -3,7 +3,7 @@ import { getDayOfYearIndex } from "./get_day_of_year_index";
 const getDailyKeys = () => {
   const zeroBasedDayOfYearIndex = getDayOfYearIndex();
 
-  // return [bookIndex, chapterIndex];
+  // return [albumIndex, bookIndex, chapterIndex];
   if (zeroBasedDayOfYearIndex < 358) {
     const modulus = zeroBasedDayOfYearIndex % 89;
     switch (true) {

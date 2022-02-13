@@ -1,5 +1,5 @@
 import { getDailyKeys } from "./get_daily_keys";
-import { getCore } from "../../MiddleColumn/get_core";
+import { getCore } from "../MiddleColumn/get_core";
 
 const showDailyGospel = () => {
   // [albumName, bookName, chapterName, chapterText]

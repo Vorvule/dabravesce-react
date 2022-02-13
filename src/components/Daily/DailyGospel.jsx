@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { showDailyGospel } from "./daily/show_daily_gospel";
+import { showDailyGospel } from "./show_daily_gospel";
 import { showCore } from "../MiddleColumn/show_core";
-import { getDailyKeys } from "./daily/get_daily_keys";
+import { getDailyKeys } from "./get_daily_keys";
 import { toggleShowCore } from "./../Common/toggle_show_core";
 
 const DailyGospel = () => {

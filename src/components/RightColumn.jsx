@@ -1,5 +1,5 @@
 import React from "react";
-import DailyGospel from "./RightColumn/DailyGospel";
+import DailyGospel from "./Daily/DailyGospel";
 import Hest from "./RightColumn/Hest";
 
 const RightColumn = () => {
