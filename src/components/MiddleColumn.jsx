@@ -7,8 +7,8 @@ import { getSearchKeys } from "./MiddleColumn/keys/get_search_keys";
 
 const MiddleColumn = () => {
   useEffect(() => {
-    const searchKeys = getSearchKeys();
-    searchKeys ? showCore(...searchKeys) : showCore(0, ...getDailyKeys());
+    const keys = getSearchKeys() || getDailyKeys();
+    showCore(...keys);
     localStorage.innerWidth = window.innerWidth;
   });
 

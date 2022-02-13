@@ -20,8 +20,8 @@ const DailyGospel = () => {
           className="w3-hover-text-blue-gray"
           id="RightColumn_DailyGospel"
           onClick={() => {
-            showCore(0, ...getDailyKeys());
-            if (window.innerWidth < 993) toggleShowCore();
+            showCore(...getDailyKeys());
+            window.innerWidth < 993 && toggleShowCore();
           }}
         ></span>
       </div>
