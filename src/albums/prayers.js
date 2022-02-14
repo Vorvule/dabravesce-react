@@ -3,6 +3,7 @@ import Daily from "./Prayers/Daily";
 import Easter from "./Prayers/Easter";
 import Housel from "./Prayers/Housel";
 import Lithurgy from "./Prayers/Lithurgy";
+import Acathisti from "./Prayers/Acathisti";
 
 const Prayers = {
   name: "Малітоўнік",
@@ -41,6 +42,12 @@ const Prayers = {
       idBe: "Кан.",
       idEn: "Canons",
       text: Canons
+    },
+    {
+      name: "Акафісты",
+      idBe: "Акаф.",
+      idEn: "Acathisti",
+      text: Acathisti
     },
   ],
 };
