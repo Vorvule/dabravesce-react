@@ -640,4 +640,4 @@ const Lithurgy = [
   ],
 ];
 
-export default Lithurgy;
+export { Lithurgy };

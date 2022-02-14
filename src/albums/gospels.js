@@ -1,9 +1,9 @@
-import John from "./Gospels/John";
-import Luke from "./Gospels/Luke";
-import Mark from "./Gospels/Mark";
-import Matthew from "./Gospels/Matthew";
+import { John } from "./Gospels/John";
+import { Luke } from "./Gospels/Luke";
+import { Mark } from "./Gospels/Mark";
+import { Matthew } from "./Gospels/Matthew";
 
-const fourGospels = {
+const gospels = {
   name: "Евангелле",
   idEn: "Gospels",
   text: [
@@ -34,4 +34,4 @@ const fourGospels = {
   ],
 };
 
-export default fourGospels;
+export { gospels };

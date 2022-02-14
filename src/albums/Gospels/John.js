@@ -985,4 +985,4 @@ const John = [
   ],
 ];
 
-export default John;
+export { John };

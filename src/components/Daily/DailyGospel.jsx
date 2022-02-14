@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { showDailyGospel } from "./daily/show_daily_gospel";
+import { showDailyGospel } from "./show_daily_gospel";
 import { showCore } from "../MiddleColumn/show_core";
-import { getDailyKeys } from "./daily/get_daily_keys";
+import { getDailyKeys } from "./get_daily_keys";
 import { toggleShowCore } from "./../Common/toggle_show_core";
 
 const DailyGospel = () => {
@@ -20,8 +20,8 @@ const DailyGospel = () => {
           className="w3-hover-text-blue-gray"
           id="RightColumn_DailyGospel"
           onClick={() => {
-            showCore(0, ...getDailyKeys());
-            if (window.innerWidth < 993) toggleShowCore();
+            showCore(...getDailyKeys());
+            window.innerWidth < 993 && toggleShowCore();
           }}
         ></span>
       </div>

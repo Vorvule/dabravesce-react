@@ -43,4 +43,4 @@ const Folk = [
   ],
 ];
 
-export default Folk;
+export { Folk };

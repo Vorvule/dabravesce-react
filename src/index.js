@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import { App } from "./App";
+import { reportWebVitals } from "./reportWebVitals";
 import { getSearchKeys } from "./components/MiddleColumn/keys/get_search_keys";
 import { showCore } from "./components/MiddleColumn/show_core";
 
@@ -37,9 +37,9 @@ window.addEventListener("load", async () => {
       const regInfo = await navigator.serviceWorker.register(
         "./service-worker.js"
       );
-      console.log('Service Worker register success', regInfo)
+      console.log("Service Worker register success", regInfo);
     } catch (e) {
-      console.log('Service Worker register fail')
+      console.log("Service Worker register fail");
     }
   }
 });

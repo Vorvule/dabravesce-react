@@ -1,9 +1,9 @@
-import Easters from "./Songs/Easters";
-import Christmas from "./Songs/Christmas";
-import Prayal from "./Songs/Prayal";
-import Folk from "./Songs/Folk";
+import { Christmas } from "./Songs/Christmas";
+import { Easters } from "./Songs/Easters";
+import { Folk } from "./Songs/Folk";
+import { Prayal } from "./Songs/Prayal";
 
-const Songs = {
+const songs = {
   name: "Пабожныя Спевы",
   idEn: "Songs",
   text: [
@@ -30,4 +30,4 @@ const Songs = {
   ],
 };
 
-export default Songs;
+export { songs };
