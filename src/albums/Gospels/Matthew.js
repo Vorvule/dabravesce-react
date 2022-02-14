@@ -1212,4 +1212,4 @@ const Matthew = [
   ],
 ];
 
-export default Matthew;
+export { Matthew };

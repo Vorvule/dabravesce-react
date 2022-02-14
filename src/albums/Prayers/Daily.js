@@ -1,4 +1,4 @@
-const Morning = [
+const Daily = [
   [
     "Малітвы ранішнія",
     [
@@ -248,4 +248,4 @@ const Morning = [
     ],
   ],
 ];
-export default Morning;
+export { Daily };

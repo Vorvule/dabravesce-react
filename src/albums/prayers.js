@@ -1,11 +1,11 @@
-import Canons from "./Prayers/Canons";
-import Daily from "./Prayers/Daily";
-import Easter from "./Prayers/Easter";
-import Housel from "./Prayers/Housel";
-import Lithurgy from "./Prayers/Lithurgy";
-import Acathisti from "./Prayers/Acathisti";
+import { Acathisti } from "./Prayers/Acathisti";
+import { Canons } from "./Prayers/Canons";
+import { Daily } from "./Prayers/Daily";
+import { Easter } from "./Prayers/Easter";
+import { Housel } from "./Prayers/Housel";
+import { Lithurgy } from "./Prayers/Lithurgy";
 
-const Prayers = {
+const prayers = {
   name: "Малітоўнік",
   idEn: "Prayers",
   text: [
@@ -13,43 +13,43 @@ const Prayers = {
       name: "Малітвы штодзённыя",
       idBe: "Мал. штодз.",
       idEn: "Daily",
-      text: Daily
+      text: Daily,
     },
 
     {
       name: "Малітвы прычашчэння",
       idBe: "Мал. прыч.",
       idEn: "Housel",
-      text: Housel
+      text: Housel,
     },
 
     {
       name: "Малітвы велікодныя",
       idBe: "Мал. велік.",
       idEn: "Easter",
-      text: Easter
+      text: Easter,
     },
 
     {
       name: "Богаслужэнні",
       idBe: "Богасл.",
       idEn: "Lithurgy",
-      text: Lithurgy
+      text: Lithurgy,
     },
 
     {
       name: "Каноны",
       idBe: "Кан.",
       idEn: "Canons",
-      text: Canons
+      text: Canons,
     },
     {
       name: "Акафісты",
       idBe: "Акаф.",
       idEn: "Acathisti",
-      text: Acathisti
+      text: Acathisti,
     },
   ],
 };
 
-export default Prayers;
+export { prayers };

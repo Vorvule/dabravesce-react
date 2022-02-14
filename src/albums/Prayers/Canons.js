@@ -330,4 +330,4 @@ const Canons = [
   ],
 ];
 
-export default Canons;
+export { Canons };

@@ -759,4 +759,4 @@ const Mark = [
   ],
 ];
 
-export default Mark;
+export { Mark };

@@ -50,4 +50,4 @@ const contacts = {
   ],
 };
 
-export default contacts;
+export { contacts };

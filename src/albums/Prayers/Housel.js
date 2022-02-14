@@ -237,4 +237,4 @@ const Housel = [
   ],
 ];
 
-export default Housel;
+export { Housel };

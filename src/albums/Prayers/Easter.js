@@ -40,4 +40,4 @@ const Easter = [
   ],
 ];
 
-export default Easter;
+export { Easter };

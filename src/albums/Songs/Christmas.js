@@ -165,4 +165,4 @@ const Christmas = [
   ],
 ];
 
-export default Christmas;
+export { Christmas };

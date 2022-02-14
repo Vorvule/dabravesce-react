@@ -118,4 +118,4 @@ const Easters = [
   ],
 ];
 
-export default Easters;
+export { Easters };

@@ -299,4 +299,4 @@ const Acathisti = [
   ],
 ];
 
-export default Acathisti;
+export { Acathisti };

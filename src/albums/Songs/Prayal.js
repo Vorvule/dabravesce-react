@@ -168,4 +168,4 @@ const Prayal = [
   ],
 ];
 
-export default Prayal;
+export { Prayal };
