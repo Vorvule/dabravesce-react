@@ -4,7 +4,7 @@ import TopHomeButton from "./TopHomeButton";
 import TopSearchMenu from "./TopSearchMenu";
 import TopTabButtons from "./TopTabButtons";
 
-const Top = () => {
+export const Top = () => {
   return (
     <div className="w3-top">
       <div className="w3-bar w3-blue-gray w3-left-align">
@@ -16,5 +16,3 @@ const Top = () => {
     </div>
   );
 };
-
-export default Top;

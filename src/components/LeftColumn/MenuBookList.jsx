@@ -1,22 +1,21 @@
 import React from "react";
-import MenuChapterList from "./MenuChapterList";
+import { MenuChapterList } from "./MenuChapterList";
+import { toggleShow } from "./../Common/toggle-show";
 
-const MenuBookList = ({ albumIndex, bookList }) =>
-  bookList.map((bookContent, bookIndex) => {
+export const MenuBookList = ({ albumIndex, bookList }) => {
+  return bookList.map((bookContent, bookIndex) => {
+    const id = bookContent.idEn;
     return (
-      <li key={bookContent.idEn}>
-        <details>
-          <summary>{bookContent.name}</summary>
-          <ul className="w3-ul w3-animate-right">
-            <MenuChapterList
-              albumIndex={albumIndex}
-              bookIndex={bookIndex}
-              chapterList={bookContent.text}
-            />
-          </ul>
-        </details>
+      <li key={id}>
+        <div onClick={() => toggleShow(id)}>{bookContent.name}</div>
+        <ul id={id} className="w3-ul w3-animate-right w3-hide">
+          <MenuChapterList
+            albumIndex={albumIndex}
+            bookIndex={bookIndex}
+            chapterList={bookContent.text}
+          />
+        </ul>
       </li>
     );
   });
-
-export default MenuBookList;
+};
