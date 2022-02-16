@@ -8,7 +8,7 @@ export const MenuBookList = ({ albumIndex, bookList }) => {
     return (
       <li key={id}>
         <div onClick={() => toggleShow(id)}>{bookContent.name}</div>
-        <ul id={id} className="w3-ul w3-animate-right w3-hide">
+        <ul id={id} className="w3-ul w3-hide">
           <MenuChapterList
             albumIndex={albumIndex}
             bookIndex={bookIndex}
