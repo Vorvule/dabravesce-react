@@ -1,6 +1,6 @@
 // change static cache name after the app changed
-const staticCacheName = "dabravesce-sw-v3";
-const dynamicCacheName = "dabravesce-sw-d-v3";
+const staticCacheName = "dabravesce-sw-v4";
+const dynamicCacheName = "dabravesce-sw-d-v4";
 
 const assetsToCache = [
   ".", // or 'index.html' | ?i=0-0-0-0
@@ -32,6 +32,7 @@ self.addEventListener("install", async () => {
 });
 
 // uncomment on app change to delete the cached versions of SW
+/*
 self.addEventListener("activate", async (event) => {
   const cacheNames = await caches.keys();
   // delete all SW cached versions except for the current one
@@ -42,6 +43,7 @@ self.addEventListener("activate", async (event) => {
       .map((name) => caches.delete(name))
   );
 });
+*/
 
 self.addEventListener("fetch", (event) => {
   const { request } = event;

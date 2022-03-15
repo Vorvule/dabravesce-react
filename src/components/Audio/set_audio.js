@@ -47,6 +47,9 @@ const setAudio = () => {
             case 1:
               FileName = "evening";
               break;
+            case 2:
+              FileName = "evening-plus";
+              break;
             // 2. Different prayers: no audio
             default:
               return;
