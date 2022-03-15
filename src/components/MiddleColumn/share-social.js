@@ -1,4 +1,4 @@
-import allAlbums from "../../albums/albums";
+import { allAlbums } from "../../albums/albums";
 import { pairIndex } from "../Common/pair-index";
 
 const shareSocial = (socialNetwork) => {
@@ -17,7 +17,8 @@ const shareSocial = (socialNetwork) => {
   const chapterName =
     allAlbums[albumIndex].text[bookIndex].text[chapterIndex][0];
   const shareInfo = `Прапануем Вашай увазе ${bookName}, ${chapterName}`;
-  const hashTags = "%23Біблія+%23Евангелле+%23Библия+%23Евангелие+%23Bible+%23Gospel";
+  const hashTags =
+    "%23Біблія+%23Евангелле+%23Библия+%23Евангелие+%23Bible+%23Gospel";
   // %0A = \n url encoded
   switch (socialNetwork) {
     case "twitter":

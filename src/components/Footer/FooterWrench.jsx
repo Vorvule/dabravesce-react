@@ -26,4 +26,4 @@ const FooterWrench = () => {
   );
 };
 
-export default FooterWrench;
+export { FooterWrench };

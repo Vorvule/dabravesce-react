@@ -18,4 +18,4 @@ const Hest = () => {
   );
 };
 
-export default Hest;
+export { Hest };

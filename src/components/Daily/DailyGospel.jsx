@@ -31,4 +31,4 @@ const DailyGospel = () => {
   );
 };
 
-export default DailyGospel;
+export { DailyGospel };

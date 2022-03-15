@@ -8,13 +8,9 @@ const AudioPlayer = () => {
       controls
       preload="auto"
     >
-      <source
-        id="AudioSource"
-        src=""
-        type="audio/mpeg"
-      ></source>
+      <source id="AudioSource" src="" type="audio/mpeg"></source>
     </audio>
   );
 };
 
-export default AudioPlayer;
+export { AudioPlayer };

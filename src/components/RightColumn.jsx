@@ -1,6 +1,6 @@
 import React from "react";
-import DailyGospel from "./Daily/DailyGospel";
-import Hest from "./RightColumn/Hest";
+import { DailyGospel } from "./Daily/DailyGospel";
+import { Hest } from "./RightColumn/Hest";
 
 const RightColumn = () => {
   return (
@@ -11,4 +11,4 @@ const RightColumn = () => {
   );
 };
 
-export default RightColumn;
+export { RightColumn };

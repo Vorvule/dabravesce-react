@@ -11,4 +11,4 @@ const FooterSearch = () => {
   );
 };
 
-export default FooterSearch;
+export { FooterSearch };

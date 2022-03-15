@@ -15,4 +15,4 @@ const YtAudioPlayer = () => {
   );
 };
 
-export default YtAudioPlayer;
+export { YtAudioPlayer };

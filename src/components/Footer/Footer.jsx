@@ -1,6 +1,6 @@
 import React from "react";
-import FooterArrows from "./FooterArrows";
-import FooterWrench from "./FooterWrench";
+import { FooterArrows } from "./FooterArrows";
+import { FooterWrench } from "./FooterWrench";
 
 export const Footer = () => {
   return (

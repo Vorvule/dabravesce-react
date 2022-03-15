@@ -180,4 +180,4 @@ const audioYoutube = [
   ],
 ];
 
-export default audioYoutube;
+export { audioYoutube };

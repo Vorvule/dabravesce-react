@@ -34,4 +34,4 @@ const FooterShares = () => {
   );
 };
 
-export default FooterShares;
+export { FooterShares };

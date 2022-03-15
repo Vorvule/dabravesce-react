@@ -1,8 +1,8 @@
 import React from "react";
-import TopBarsButton from "./TopBarsButton";
-import TopHomeButton from "./TopHomeButton";
-import TopSearchMenu from "./TopSearchMenu";
-import TopTabButtons from "./TopTabButtons";
+import { TopBarsButton } from "./TopBarsButton";
+import { TopHomeButton } from "./TopHomeButton";
+import { TopSearchMenu } from "./TopSearchMenu";
+import { TopTabButtons } from "./TopTabButtons";
 
 export const Top = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
-import nextChapter from "../Footer/FooterArrows/next_chapter";
-import prevChapter from "../Footer/FooterArrows/prev_chapter";
+import { nextChapter } from "../Footer/FooterArrows/next_chapter";
+import { prevChapter } from "../Footer/FooterArrows/prev_chapter";
 
 const FooterArrows = () => {
   return (
@@ -31,4 +31,4 @@ const FooterArrows = () => {
   );
 };
 
-export default FooterArrows;
+export { FooterArrows };

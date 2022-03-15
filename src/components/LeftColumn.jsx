@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu } from "./LeftColumn/Menu";
-import DailyGospel from "./Daily/DailyGospel";
+import { DailyGospel } from "./Daily/DailyGospel";
 
 export const LeftColumn = () => {
   return (

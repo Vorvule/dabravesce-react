@@ -1,5 +1,5 @@
-import allAlbums from "../../../albums/albums";
-import hestKeys from "./hest_keys";
+import { allAlbums } from "../../../albums/albums";
+import { hestKeys } from "./hest_keys";
 import { randomInteger } from "../../Common/random_integer";
 
 const showHest = () => {

@@ -1,4 +1,4 @@
-import allAlbums from "../../albums/albums";
+import { allAlbums } from "../../albums/albums";
 
 const getCore = (albumIndex, bookIndex, chapterIndex) => {
   const albumName = allAlbums[albumIndex].name;

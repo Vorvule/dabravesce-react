@@ -1,5 +1,4 @@
 const hestKeys = [
-
   // Matthew
 
   {
@@ -153,4 +152,4 @@ const hestKeys = [
   },
 ];
 
-export default hestKeys;
+export { hestKeys };

@@ -7,4 +7,4 @@ import { songs } from "./songs";
 
 const allAlbums = [gospels, apostles, epistles, prayers, songs, contacts];
 
-export default allAlbums;
+export { allAlbums };

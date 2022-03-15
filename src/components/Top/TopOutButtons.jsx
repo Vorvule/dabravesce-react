@@ -30,4 +30,4 @@ const TopOutButtons = () => {
   );
 };
 
-export default TopOutButtons;
+export { TopOutButtons };

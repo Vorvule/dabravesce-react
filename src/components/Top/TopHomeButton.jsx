@@ -14,4 +14,4 @@ const TopHomeButton = () => {
   );
 };
 
-export default TopHomeButton;
+export { TopHomeButton };

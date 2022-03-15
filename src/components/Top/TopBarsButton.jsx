@@ -22,4 +22,4 @@ const handleBarsButtonClick = () => {
   }
 };
 
-export default TopBarsButton;
+export { TopBarsButton };

@@ -55,9 +55,8 @@ const TopTabButtons = () => {
           Пошук
         </strong>
       </span> */}
-      
     </>
   );
 };
 
-export default TopTabButtons;
+export { TopTabButtons };

@@ -54,4 +54,4 @@ const TopSearchMenu = () => {
   );
 };
 
-export default TopSearchMenu;
+export { TopSearchMenu };
