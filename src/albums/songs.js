@@ -4,7 +4,7 @@ import { Folk } from "./Songs/Folk";
 import { Prayal } from "./Songs/Prayal";
 
 const songs = {
-  name: "Пабожныя Спевы",
+  name: "Духоўныя Спевы",
   idEn: "Songs",
   text: [
     {

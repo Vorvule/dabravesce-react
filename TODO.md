@@ -1,7 +1,11 @@
 # TO DO
 
+# Psalteere
+* Doluchete
+
 ## Audio
 * Nachetite Apostol
+* Se Youtube'a tee Soundclouda
 
 ## Footer
 * Scrosenia navigatia
@@ -10,7 +14,7 @@
 * Font size -> rem | vh/vw = 1% of vh/vw
 
 ## Scrolling
-* Nezaleagenay dly tregh colonoc
+* Nezaleagenay dly tregh colono
 
 ## Poshock  
 * Kneegue bes natiscove
@@ -30,6 +34,8 @@
 
 ## Settings
 * Font size = Arrow Value Arrow: Text will look like this
+* Font type (Arial, Tahoma etc)
+* Theme = Black | White
 * Menu color
 * Show Share buttons = Checkbox
 * Show Audio

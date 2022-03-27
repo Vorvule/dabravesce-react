@@ -1,5 +1,5 @@
 const epistles = {
-  name: "Пасланні Апосталаў",
+  name: "Пасланні Апосталаў і Апакаліпсіс",
   idEn: "Epistles",
   text: [
     {
