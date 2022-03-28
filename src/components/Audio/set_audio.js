@@ -35,8 +35,9 @@ const setAudio = () => {
 
     // case 2: apostles
     // case 3: epistles
+    // case 4: psalter
 
-    case 3: // prayers
+    case 4: // prayers
       BookFolder = "pray";
       switch (bookIndex) {
         case 0: // everyday prayers
@@ -79,7 +80,7 @@ const setAudio = () => {
       }
       break;
 
-    case 4: // songs
+    case 5: // songs
       BookFolder = "song";
       let correctionNumber = 0;
       switch (bookIndex) {
