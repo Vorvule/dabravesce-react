@@ -8,22 +8,22 @@ const songs = {
   idEn: "Songs",
   text: [
     {
-      name: "Велікодныя",
+      name: "Велікодныя спевы",
       idEn: "Easters",
       text: Easters,
     },
     {
-      name: "Калядныя",
+      name: "Калядныя спевы",
       idEn: "Christmas",
       text: Christmas,
     },
     {
-      name: "Малітоўныя",
+      name: "Малітоўныя спевы",
       idEn: "Prayal",
       text: Prayal,
     },
     {
-      name: "Народныя",
+      name: "Народныя спевы",
       idEn: "Folk",
       text: Folk,
     },

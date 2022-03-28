@@ -15,9 +15,10 @@ const shareSocial = (socialNetwork) => {
 
   const bookName = allAlbums[albumIndex].text[bookIndex].name;
   const chapterName =
-    allAlbums[albumIndex].text[bookIndex].text[chapterIndex][0];
+    allAlbums[albumIndex].text[bookIndex].text[chapterIndex].name;
   const shareInfo = `${bookName}. ${chapterName}`;
-  const hashTags = "%23Біблія+%23Евангелле+%23Библия+%23Евангелие+%23Bible+%23Gospel";
+  const hashTags =
+    "%23Біблія+%23Евангелле+%23Библия+%23Евангелие+%23Bible+%23Gospel";
   // %0A = \n; %23 = #
   switch (socialNetwork) {
     case "twitter":

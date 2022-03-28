@@ -1,7 +1,7 @@
-const reduceParagraphs = (chapterText) => {
+const getChapterText = (chapterText) => {
   const reducer = (paragraphs, paragraph) => paragraphs + `<p>${paragraph}</p>`;
 
   return chapterText.reduce(reducer, "");
 };
 
-export { reduceParagraphs };
+export { getChapterText };

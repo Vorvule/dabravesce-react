@@ -7,8 +7,8 @@ const getCore = (albumIndex, bookIndex, chapterIndex) => {
   const bookName = albumText[bookIndex].name;
   const bookText = albumText[bookIndex].text;
 
-  const chapterName = bookText[chapterIndex][0];
-  const chapterText = bookText[chapterIndex][1];
+  const chapterName = bookText[chapterIndex].name;
+  const chapterText = bookText[chapterIndex].text;
 
   return [albumName, bookName, chapterName, chapterText];
 };

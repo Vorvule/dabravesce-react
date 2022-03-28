@@ -16,8 +16,9 @@ const showHest = () => {
   const albumContent = allAlbums[0].text; // Gospel
   const bookBriefName = albumContent[bookIndex].idBe;
   const bookContent = albumContent[bookIndex].text;
-  // const chapterName = bookContent[chapterIndex][0];
-  const chapterContent = bookContent[chapterIndex][1];
+  // const chapterName = bookContent[chapterIndex].name;
+  const chapterContent =
+    bookContent[chapterIndex][1] || bookContent[chapterIndex].text;
 
   let hestVerses = "";
   const pattern = new RegExp(/\d+\. /);
