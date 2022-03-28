@@ -4,7 +4,7 @@ import { toggleShowCore } from "../Common/toggle_show_core";
 
 export const MenuChapterList = ({ albumIndex, bookIndex, chapterList }) => {
   return chapterList.map((chapterContent, chapterIndex) => {
-    const chapterName = chapterContent.name;
+    const chapterName = chapterContent.name.replace(/<br \/>.+/, "");
     return (
       <li
         key={chapterIndex}
