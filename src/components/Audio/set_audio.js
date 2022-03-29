@@ -13,7 +13,8 @@ const setAudio = () => {
   let BookFolder, FileName;
 
   switch (albumIndex) {
-    case 0: // gospels
+    // case 0: gospels
+    case 0:
       switch (bookIndex) {
         case 0:
           BookFolder = "matt";
@@ -33,9 +34,9 @@ const setAudio = () => {
       FileName = (chapterIndex + 1).toString();
       break;
 
-    // case 2: apostles
-    // case 3: epistles
-    // case 4: psalter
+    // case 1: apostles
+    // case 2: epistles
+    // case 3: psalter
 
     case 4: // prayers
       BookFolder = "pray";
