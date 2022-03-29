@@ -1,11 +1,9 @@
 # TO DO
 
-# Psalteere
-* Doluchete
-
 ## Audio
 * Nachetite Apostol
-* Se Youtube'a tee Soundclouda
+* Se Youtube'a tie Soundclouda
+* Proegreavate po probelow
 
 ## Footer
 * Scrosenia navigatia

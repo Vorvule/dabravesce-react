@@ -13,14 +13,14 @@ const FooterArrows = () => {
         className="w3-large w3-padding"
         onClick={() => window.scrollTo(0, 0)}
       >
-        <i className="fa fa-arrow-up w3-margin"></i>
+        <i className="fa fa-chevron-up w3-margin"></i>
         <strong className="w3-hide-medium w3-hide-small">Уверх</strong>
       </span>
       <span
         className="w3-large w3-padding"
         onClick={() => window.scrollTo(0, document.body.scrollHeight)}
       >
-        <i className="fa fa-arrow-down w3-margin"></i>
+        <i className="fa fa-chevron-down w3-margin"></i>
         <strong className="w3-hide-medium w3-hide-small">Долу</strong>
       </span>
       <span className="w3-large w3-padding" onClick={nextChapter}>
