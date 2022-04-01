@@ -1,6 +1,6 @@
 import { outputCore } from "./output_core";
 import { updateLocalStorage } from "./update_local_storage";
-import { setAudio } from "../Audio/set_audio";
+import { showAudio } from "../Audio/showAudio";
 import { getCore } from "./get_core";
 import { pushKeysToHistory } from "./keys/showCore-pushKeysToHistory";
 
@@ -11,13 +11,11 @@ const showCore = (
   keysToBePushedInHistory = true
 ) => {
   outputCore(...getCore(albumIndex, bookIndex, chapterIndex));
-  updateLocalStorage(albumIndex, bookIndex, chapterIndex);
-  setAudio();
-
+  showAudio(albumIndex, bookIndex, chapterIndex);
   window.scrollTo(0, 0);
-
   keysToBePushedInHistory &&
     pushKeysToHistory(albumIndex, bookIndex, chapterIndex);
+  updateLocalStorage(albumIndex, bookIndex, chapterIndex);
 };
 
 export { showCore };
