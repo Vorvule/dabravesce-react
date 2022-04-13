@@ -16,7 +16,7 @@ const shareSocial = (socialNetwork) => {
   const bookName = allAlbums[albumIndex].text[bookIndex].name;
   const chapterName =
     allAlbums[albumIndex].text[bookIndex].text[chapterIndex].name;
-  const shareInfo = `Прапануем Вашай увазе ${bookName}, ${chapterName}`;
+  const shareInfo = `Сёння Вашай увазе прапануецца ${bookName}, ${chapterName}`;
   const hashTags =
     "%23Біблія+%23Евангелле+%23Библия+%23Евангелие+%23Bible+%23Gospel";
   // %0A = \n url encoded
