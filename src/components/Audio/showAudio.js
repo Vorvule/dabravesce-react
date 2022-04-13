@@ -7,16 +7,13 @@ const showAudio = (albumIndex, bookIndex, chapterIndex) => {
   const audioSource =
     allAlbums[albumIndex].text[bookIndex].text[chapterIndex].audio;
 
-  if (audioSource) {
-    // const audioUrl = `https://www.dabravesce.by/audio/${BookFolder}/${FileName}.mp3`;
-    SourceElement.src = "/audio/" + audioSource;
-    AudioElement.load();
-    AudioElement.classList.remove("w3-hide");
-  } else {
-    SourceElement.src = "";
-    AudioElement.load();
-    AudioElement.classList.add("w3-hide");
-  }
+  SourceElement.src = audioSource ? "/audio/" + audioSource : "";
+  
+  audioSource
+    ? AudioElement.classList.remove("w3-hide")
+    : AudioElement.classList.add("w3-hide");
+
+  AudioElement.load();
 };
 
 export { showAudio };
