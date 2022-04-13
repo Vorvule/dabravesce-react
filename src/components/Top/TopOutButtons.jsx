@@ -7,24 +7,25 @@ const TopOutButtons = () => {
   return (
     <>
       <span
-        className="w3-bar-item w3-large w3-padding-large w3-right"
-        title="Мабільнае дачыненне"
+        className="w3-bar-item w3-large w3-padding-large"
+        title="Дачыненне на Android"
         onClick={() => window.open(android)}
       >
-        <strong className="w3-hide-medium w3-hide-small w3-margin-right">
+        <i className="fa fa-android" aria-hidden="true"></i>
+        <strong className="w3-hide-medium w3-hide-small w3-margin-left">
           Android
         </strong>
-        <i className="fa fa-android"></i>
       </span>
+
       <span
-        className="w3-bar-item w3-right w3-large w3-padding-large"
-        title="Рэпазіторый сайта на Gihub"
+        className="w3-bar-item w3-large w3-padding-large"
+        title="Рэпазіторый на Gihub"
         onClick={() => window.open(github)}
       >
-        <strong className="w3-hide-medium w3-hide-small w3-margin-right">
+        <i className="fa fa-github" aria-hidden="true"></i>
+        <strong className="w3-hide-medium w3-hide-small w3-margin-left">
           Github
         </strong>
-        <i className="fa fa-github"></i>
       </span>
     </>
   );

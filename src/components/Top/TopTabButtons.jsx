@@ -14,7 +14,7 @@ const TopTabButtons = () => {
         title="Рух"
         onClick={() => handleTabButtonClick(0)}
       >
-        <i className="fa fa-arrows"></i>
+        <i className="fa fa-arrows" aria-hidden="true"></i>
         <strong className="w3-hide-medium w3-hide-small w3-margin-left">
           Рух
         </strong>

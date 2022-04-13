@@ -20,6 +20,11 @@ body {
   margin: 64px 0;
 }
 
+/* For the sake of borders on low content pages like Doweddca */
+#MiddleColumn {
+  min-height: 82vh;
+}
+
 summary {
   /* hide arrows */
   display: block;
