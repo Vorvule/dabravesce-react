@@ -4,10 +4,10 @@ import { Hest } from "./RightColumn/Hest";
 
 const RightColumn = () => {
   return (
-    <div className="w3-col l3 w3-hide-medium w3-hide-small">
+    <aside className="w3-col l3 w3-hide-medium w3-hide-small">
       <DailyGospel />
       <Hest />
-    </div>
+    </aside>
   );
 };
 

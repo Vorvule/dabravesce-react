@@ -4,7 +4,7 @@ import { DailyGospel } from "./Daily/DailyGospel";
 
 export const LeftColumn = () => {
   return (
-    <div id="LeftColumn" className="w3-col l3 w3-hide-small w3-hide-medium">
+    <nav id="LeftColumn" className="w3-col l3 w3-hide-small w3-hide-medium">
       <div id="LeftColumn_Content" className="w3-round w3-padding">
         <h4 className="w3-center">
           <strong>Змест</strong>
@@ -14,6 +14,6 @@ export const LeftColumn = () => {
         {window.innerWidth < 993 ? <DailyGospel /> : ""}
         <br />
       </div>
-    </div>
+    </nav>
   );
 };
