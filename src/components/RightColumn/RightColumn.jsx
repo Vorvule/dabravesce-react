@@ -1,6 +1,6 @@
 import React from "react";
-import { DailyGospel } from "./Daily/DailyGospel";
-import { Hest } from "./RightColumn/Hest";
+import { DailyGospel } from "../Daily/DailyGospel";
+import { Hest } from "./Hest/Hest";
 
 const RightColumn = () => {
   return (

@@ -1,8 +1,8 @@
-import { outputCore } from "./output_core";
-import { updateLocalStorage } from "./update_local_storage";
+import { outputCore } from "./outputCore";
+import { updateLocalStorage } from "./updateLocalStorage";
 import { showAudio } from "../Audio/showAudio";
-import { getCore } from "./get_core";
-import { pushKeysToHistory } from "./keys/showCore-pushKeysToHistory";
+import { getCore } from "./getCore";
+import { pushKeysToHistory } from "./keys/pushKeysToHistory";
 
 const showCore = (
   albumIndex = 0,

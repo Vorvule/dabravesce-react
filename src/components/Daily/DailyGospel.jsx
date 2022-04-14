@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import { showDailyGospel } from "./show_daily_gospel";
-import { showCore } from "../MiddleColumn/show_core";
-import { getDailyKeys } from "./get_daily_keys";
-import { toggleShowCore } from "./../Common/toggle_show_core";
+import { showDailyGospel } from "./showDailyGospel";
+import { showCore } from "../MiddleColumn/showCore";
+import { getDailyKeys } from "./getDailyKeys";
+import { toggleShowCore } from "../Common/toggleShowCore";
 
 const DailyGospel = () => {
   useEffect(() => {

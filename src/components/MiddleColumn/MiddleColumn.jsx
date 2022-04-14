@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import { getSearchKeys } from "./MiddleColumn/keys/get_search_keys";
-import { getDailyKeys } from "./Daily/get_daily_keys";
-import { showCore } from "./MiddleColumn/show_core";
-import { ShareIcons } from "./MiddleColumn/ShareIcons";
-import { AudioPlayer } from "./Audio/AudioPlayer";
+import { getSearchKeys } from "./keys/getSearchKeys";
+import { getDailyKeys } from "../Daily/getDailyKeys";
+import { showCore } from "./showCore";
+import { ShareIcons } from "./ShareIcons/ShareIcons";
+import { AudioPlayer } from "../Audio/AudioPlayer";
 
 const MiddleColumn = () => {
   useEffect(() => {

@@ -1,5 +1,5 @@
-import { allAlbums } from "../../albums/albums";
-import { pairIndex } from "../Common/pair-index";
+import { allAlbums } from "../../../albums/albums";
+import { pairIndex } from "../../Common/pairIndex";
 
 const shareSocial = (socialNetwork) => {
   let href;

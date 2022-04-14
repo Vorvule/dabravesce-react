@@ -1,4 +1,4 @@
-import { getDayOfYearIndex } from "./get_day_of_year_index";
+import { getDayOfYearIndex } from "./getDayOfYearIndex";
 
 const getDailyKeys = () => {
   const zeroBasedDayOfYearIndex = getDayOfYearIndex();

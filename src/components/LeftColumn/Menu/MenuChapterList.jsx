@@ -1,6 +1,6 @@
 import React from "react";
-import { showCore } from "../MiddleColumn/show_core";
-import { toggleShowCore } from "../Common/toggle_show_core";
+import { showCore } from "../../MiddleColumn/showCore";
+import { toggleShowCore } from "../../Common/toggleShowCore";
 
 export const MenuChapterList = ({ albumIndex, bookIndex, chapterList }) => {
   return chapterList.map((chapterContent, chapterIndex) => {

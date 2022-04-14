@@ -1,6 +1,6 @@
 import { allAlbums } from "../../../albums/albums";
-import { hestKeys } from "./hest_keys";
-import { randomInteger } from "../../Common/random_integer";
+import { hestKeys } from "./hestKeys";
+import { randomInteger } from "../../Common/randomInteger";
 
 const showHest = () => {
   const hestCount = hestKeys.length;
