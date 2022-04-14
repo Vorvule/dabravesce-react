@@ -1,6 +1,6 @@
 import React from "react";
 import { MenuChapterList } from "./MenuChapterList";
-import { toggleShow } from "./../Common/toggle-show";
+import { toggleShow } from "../../Common/toggleShow";
 
 export const MenuBookList = ({ albumIndex, bookList }) => {
   return bookList.map((bookContent, bookIndex) => {

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { showHest } from "./hest/show_hest";
+import { showHest } from "./showHest";
 
 const Hest = () => {
   useEffect(() => {

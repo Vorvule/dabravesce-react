@@ -1,7 +1,7 @@
 import React from "react";
-import { LeftColumn } from "./LeftColumn";
-import { MiddleColumn } from "./MiddleColumn";
-import { RightColumn } from "./RightColumn";
+import { LeftColumn } from "./LeftColumn/LeftColumn";
+import { MiddleColumn } from "./MiddleColumn/MiddleColumn";
+import { RightColumn } from "./RightColumn/RightColumn";
 
 export const Columns = () => {
   return (

@@ -1,4 +1,4 @@
-import { keysAreValid } from "./keys_are_valid";
+import { keysAreValid } from "./keysAreValid";
 
 // index.js :: window.onpopstate
 

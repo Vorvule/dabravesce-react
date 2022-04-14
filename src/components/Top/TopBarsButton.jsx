@@ -1,5 +1,5 @@
 import React from "react";
-import { toggleShowCore } from "../Common/toggle_show_core";
+import { toggleShowCore } from "../Common/toggleShowCore";
 
 const TopBarsButton = () => {
   return (

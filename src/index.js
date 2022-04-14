@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import { App } from "./App";
 import { reportWebVitals } from "./reportWebVitals";
-import { getSearchKeys } from "./components/MiddleColumn/keys/get_search_keys";
-import { showCore } from "./components/MiddleColumn/show_core";
+import { getSearchKeys } from "./components/MiddleColumn/keys/getSearchKeys";
+import { showCore } from "./components/MiddleColumn/showCore";
 
 ReactDOM.render(
   <React.StrictMode>

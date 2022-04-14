@@ -1,5 +1,5 @@
 import { allAlbums } from "../../../albums/albums";
-import { showCore } from "../../MiddleColumn/show_core";
+import { showCore } from "../../MiddleColumn/showCore";
 
 const nextChapter = () => {
   const albumIndex = +localStorage.albumIndex;

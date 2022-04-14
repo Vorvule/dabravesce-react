@@ -1,5 +1,5 @@
 import React from "react";
-import { showCore } from "../MiddleColumn/show_core";
+import { showCore } from "../MiddleColumn/showCore";
 
 const TopHomeButton = () => {
   return (

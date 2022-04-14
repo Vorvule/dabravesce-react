@@ -1,4 +1,4 @@
-import { getChapterText } from "./get-chapter-text";
+import { getChapterText } from "./getChapterText";
 
 const outputCore = (albumName, bookName, chapterName, chapterText) => {
   document.getElementById("MiddleColumn_AlbumName").innerHTML = albumName;

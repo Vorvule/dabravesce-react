@@ -1,4 +1,4 @@
-import { getCore } from "../get_core";
+import { getCore } from "../getCore";
 
 const keysAreValid = (keys) => {
   try {
