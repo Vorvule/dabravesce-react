@@ -1,4 +1,4 @@
-import { allAlbums } from "../../albums/albums";
+import { allAlbums } from "../../../albums/albums";
 
 const showAudio = (albumIndex, bookIndex, chapterIndex) => {
   const AudioElement = document.getElementById("AudioPlayer");
