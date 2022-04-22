@@ -7,6 +7,7 @@ import { Lithurgy } from "./Prayers/Lithurgy";
 
 const prayers = {
   name: "Малітоўнік",
+  idBe: "Малітоўнік",
   idEn: "Prayers",
   text: [
     {

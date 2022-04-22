@@ -5,6 +5,7 @@ import { Matthew } from "./Gospels/Matthew";
 
 const gospels = {
   name: "Евангелле",
+  idBe: "Евангелле",
   idEn: "Gospels",
   text: [
     {
