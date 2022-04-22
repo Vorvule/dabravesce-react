@@ -4,6 +4,7 @@ const contacts = {
   text: [
     {
       name: "Сувязь",
+      idBe: "Сувязь",
       idEn: "Connection",
       text: [
         {
@@ -27,6 +28,7 @@ const contacts = {
 
     {
       name: "Даведка",
+      idBe: "Даведка",
       idEn: "Report",
       text: [
         {

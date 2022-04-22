@@ -2,6 +2,7 @@ import { Psalms } from "./Psalter/Psalms";
 
 const psalter = {
   name: "Псалтыр",
+  idBe: "Псалтыр",
   idEn: "Psalter",
   text: [
     {

@@ -1,6 +1,6 @@
 import { outputCore } from "./outputCore";
 import { updateLocalStorage } from "./updateLocalStorage";
-import { showAudio } from "../Audio/showAudio";
+import { showAudio } from "./audio/showAudio";
 import { getCore } from "./getCore";
 import { pushKeysToHistory } from "./keys/pushKeysToHistory";
 

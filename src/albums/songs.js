@@ -5,6 +5,7 @@ import { Prayal } from "./Songs/Prayal";
 
 const songs = {
   name: "Духоўныя Спевы",
+  idBe: "Спевы",
   idEn: "Songs",
   text: [
     {
