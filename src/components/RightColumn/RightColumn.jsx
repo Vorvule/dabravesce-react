@@ -1,5 +1,5 @@
 import React from "react";
-import { DailyGospel } from "../Daily/DailyGospel";
+import { DailyGospel } from "./Daily/DailyGospel";
 import { Hest } from "./Hest/Hest";
 import { Relations } from "./Relations/Relations";
 

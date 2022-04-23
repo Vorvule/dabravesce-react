@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { getSearchKeys } from "./keys/getSearchKeys";
-import { getDailyKeys } from "../Daily/getDailyKeys";
+import { getDailyKeys } from "../RightColumn/Daily/getDailyKeys";
 import { showCore } from "./core/showCore";
 
 import { ShareIcons } from "./share/ShareIcons";

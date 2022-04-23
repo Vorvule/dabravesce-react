@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { showDailyGospel } from "./showDailyGospel";
-import { showCore } from "../MiddleColumn/core/showCore";
+import { showCore } from "../../MiddleColumn/core/showCore";
 import { getDailyKeys } from "./getDailyKeys";
-import { toggleShowCore } from "../Common/toggleShowCore";
+import { toggleShowCore } from "../../Common/toggleShowCore";
 
 export const DailyGospel = () => {
   useEffect(() => {
@@ -16,7 +16,7 @@ export const DailyGospel = () => {
       </h4>
       <hr />
       <div>
-        <i className="fa fa-bell w3-margin-right" aria-hidden="true"></i>
+        <i className="fa fa-bell-o w3-margin-right" aria-hidden="true"></i>
         <span
           className="w3-hover-text-blue-gray"
           id="RightColumn_DailyGospel"
