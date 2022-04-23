@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { showDailyGospel } from "./showDailyGospel";
-import { showCore } from "../MiddleColumn/showCore";
+import { showCore } from "../MiddleColumn/core/showCore";
 import { getDailyKeys } from "./getDailyKeys";
 import { toggleShowCore } from "../Common/toggleShowCore";
 
-const DailyGospel = () => {
+export const DailyGospel = () => {
   useEffect(() => {
     showDailyGospel();
   });
@@ -30,5 +30,3 @@ const DailyGospel = () => {
     </div>
   );
 };
-
-export { DailyGospel };

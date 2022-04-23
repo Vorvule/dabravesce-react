@@ -1,8 +1,6 @@
-import { keysAreValid } from "./keysAreValid";
+import { getCore } from "../core/getCore";
 
-// index.js :: window.onpopstate
-
-const getSearchKeys = () => {
+export const getSearchKeys = () => {
   const parameters = new URLSearchParams(window.location.search); // 000110
 
   if (parameters.has("k")) {
@@ -20,4 +18,13 @@ const getSearchKeys = () => {
   }
 };
 
-export { getSearchKeys };
+/* exported to index.js : window.onpopstate and MiddleColumn.jsx */
+
+const keysAreValid = (keys) => {
+  try {
+    const [albumName, bookName, chapterName, chapterText] = getCore(...keys);
+    if (albumName && bookName && chapterName && chapterText) return true;
+  } catch {
+    return false;
+  }
+};
