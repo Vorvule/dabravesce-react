@@ -5,7 +5,7 @@ const ShareIcons = () => {
   return (
     <div className="w3-center icon-container">
       <div className="w3-padding" onClick={() => shareSocial("twitter")}>
-        <i className="fa fa-twitter w3-xlarge"></i>
+        <i className="fa fa-twitter w3-large"></i>
         <div className="w3-small">Twitter</div>
       </div>
 

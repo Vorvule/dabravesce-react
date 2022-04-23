@@ -7,13 +7,13 @@ export const RelationsListItem = ({
   constantText,
   hidableText,
 }) => {
-  const classes = faClass + " fa w3-margin-right w3-xlarge";
+  const classes = faClass + " fa fa-fw w3-margin-right w3-large";
 
   return (
     <li title={title} onClick={() => window.open(url)}>
       <i className={classes} aria-hidden="true"></i>
-      <span>{constantText}</span>
       <span className="hidable">{hidableText}</span>
+      <span>{constantText}</span>
     </li>
   );
 };

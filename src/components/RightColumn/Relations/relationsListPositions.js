@@ -1,16 +1,51 @@
 export const relationsListPositions = [
   {
+    title: "Група ў Twitter",
+    url: "https://twitter.com/dabravesce",
+    faClass: "fa-twitter",
+    hidableText: "Група ў ",
+    constantText: "Twitter",
+  },
+  {
+    title: "Канал у Telegram",
+    url: "https://t.me/s/evangellie",
+    faClass: "fa-paper-plane",
+    hidableText: "Канал у ",
+    constantText: "Telegram",
+  },
+  {
+    title: "Група на Facebook",
+    url: "https://www.facebook.com/groups/dabravesce",
+    faClass: "fa-facebook",
+    hidableText: "Група на ",
+    constantText: "Facebook",
+  },
+  {
     title: "Дачыненне на Android",
     url: "https://play.google.com/store/apps/details?id=by.dabravesce",
     faClass: "fa-android",
+    hidableText: "Google Play | ",
     constantText: "Android",
-    hidableText: " на Google Play",
   },
   {
     title: "Рэпазіторый на Gihub",
     url: "https://github.com/Vorvule/dabravesce-react",
     faClass: "fa-github",
+    hidableText: "Рэпазіторый на ",
     constantText: "Github",
-    hidableText: "-рэпазіторый",
+  },
+  {
+    title: "Электронная Пошта",
+    url: "mailto:bpbtvm@tut.by",
+    faClass: "fa-envelope-o",
+    hidableText: "Электронная ",
+    constantText: "Пошта",
+  },
+  {
+    title: "Тэлефон",
+    url: "tel:+375172269815",
+    faClass: "fa-phone",
+    hidableText: "Кантактны ",
+    constantText: "Тэлефон",
   },
 ];

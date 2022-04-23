@@ -39,10 +39,6 @@ label,
   cursor: pointer;
 }
 
-.w3-ul {
-  padding-top: 4px;
-}
-
 audio {
   outline: none;
   height: 40px !important;
