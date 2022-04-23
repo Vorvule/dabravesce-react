@@ -1,7 +1,13 @@
 import React from "react";
 
-export const LinkItem = ({ title, url, fa, constantText, hidableText }) => {
-  const classes = fa + " fa w3-margin-right w3-xlarge";
+export const RelationsListItem = ({
+  title,
+  url,
+  faClass,
+  constantText,
+  hidableText,
+}) => {
+  const classes = faClass + " fa w3-margin-right w3-xlarge";
 
   return (
     <li title={title} onClick={() => window.open(url)}>
