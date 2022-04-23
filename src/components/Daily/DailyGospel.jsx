@@ -8,6 +8,7 @@ export const DailyGospel = () => {
   useEffect(() => {
     showDailyGospel();
   });
+  
   return (
     <div className="w3-padding">
       <h4 className="w3-center">
@@ -15,7 +16,7 @@ export const DailyGospel = () => {
       </h4>
       <hr />
       <div>
-        <i className="fa fa-link w3-margin-right" aria-hidden="true"></i>
+        <i className="fa fa-bell w3-margin-right" aria-hidden="true"></i>
         <span
           className="w3-hover-text-blue-gray"
           id="RightColumn_DailyGospel"

@@ -20,11 +20,12 @@ const showHest = () => {
   const chapterContent =
     bookContent[chapterIndex][1] || bookContent[chapterIndex].text;
 
-  let hestVerses = "";
+  let hestVerses =
+    "<i class='fa fa-quote-right w3-margin-right' aria-hidden='true'></i>";
   const pattern = new RegExp(/\d+\. /);
   versesArray.forEach((verse) => {
     const clearVerse = chapterContent[verse].replace(pattern, "");
-    hestVerses += `<p>${clearVerse}</p>`;
+    hestVerses += `<span>${clearVerse}</span>`;
   });
 
   const hestSource = `<strong>
