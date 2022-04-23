@@ -4,7 +4,7 @@ import "./index.css";
 import { App } from "./App";
 import { reportWebVitals } from "./reportWebVitals";
 import { getSearchKeys } from "./components/MiddleColumn/keys/getSearchKeys";
-import { showCore } from "./components/MiddleColumn/showCore";
+import { showCore } from "./components/MiddleColumn/core/showCore";
 
 ReactDOM.render(
   <React.StrictMode>

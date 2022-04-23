@@ -1,6 +1,4 @@
-import { getChapterText } from "./getChapterText";
-
-const outputCore = (albumName, bookName, chapterName, chapterText) => {
+export const outputCore = (albumName, bookName, chapterName, chapterText) => {
   const text = getChapterText(chapterText);
 
   document.getElementById("MiddleColumn_AlbumName").innerHTML = albumName;
@@ -12,7 +10,7 @@ const outputCore = (albumName, bookName, chapterName, chapterText) => {
   setDescription(albumName, bookName, chapterName);
 };
 
-// ======
+/* ****** */
 
 const setDescription = (albumName, bookName, chapterName) => {
   const description = albumName + ", " + bookName + ", " + chapterName;
@@ -27,6 +25,8 @@ const setTitle = (bookName, chapterName) => {
   document.title = title;
 };
 
-// ======
-
-export { outputCore };
+const getChapterText = (chapterText) => {
+  const reducer = (paragraphs, paragraph) => paragraphs + `<p>${paragraph}</p>`;
+  
+  return chapterText.reduce(reducer, "");
+};

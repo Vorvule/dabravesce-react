@@ -1,7 +1,7 @@
 import React from "react";
-import { showCore } from "../MiddleColumn/showCore";
+import { showCore } from "../MiddleColumn/core/showCore";
 
-const TopHomeButton = () => {
+export const TopHomeButton = () => {
   return (
     <span
       className="w3-bar-item w3-padding-large w3-large w3-hide-medium w3-hide-small w3-right"
@@ -13,5 +13,3 @@ const TopHomeButton = () => {
     </span>
   );
 };
-
-export { TopHomeButton };

@@ -1,4 +1,4 @@
-const contacts = {
+export const contacts = {
   name: "Кантакты",
   idEn: "Cont",
   text: [
@@ -51,5 +51,3 @@ const contacts = {
     },
   ],
 };
-
-export { contacts };

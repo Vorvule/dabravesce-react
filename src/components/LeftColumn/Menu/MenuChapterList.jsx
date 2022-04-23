@@ -1,5 +1,5 @@
 import React from "react";
-import { showCore } from "../../MiddleColumn/showCore";
+import { showCore } from "../../MiddleColumn/core/showCore";
 import { toggleShowCore } from "../../Common/toggleShowCore";
 
 export const MenuChapterList = ({ albumIndex, bookIndex, chapterList }) => {

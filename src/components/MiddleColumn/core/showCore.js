@@ -1,10 +1,9 @@
 import { outputCore } from "./outputCore";
-import { updateLocalStorage } from "./updateLocalStorage";
-import { showAudio } from "./audio/showAudio";
+import { showAudio } from "../audio/showAudio";
 import { getCore } from "./getCore";
-import { pushKeysToHistory } from "./keys/pushKeysToHistory";
+import { pushKeysToHistory } from "../keys/pushKeysToHistory";
 
-const showCore = (
+export const showCore = (
   albumIndex = 0,
   bookIndex = 0,
   chapterIndex = 0,
@@ -13,9 +12,19 @@ const showCore = (
   outputCore(...getCore(albumIndex, bookIndex, chapterIndex));
   showAudio(albumIndex, bookIndex, chapterIndex);
   window.scrollTo(0, 0);
+
   keysToBePushedInHistory &&
     pushKeysToHistory(albumIndex, bookIndex, chapterIndex);
+
   updateLocalStorage(albumIndex, bookIndex, chapterIndex);
 };
 
-export { showCore };
+/* ****** */
+
+const updateLocalStorage = (albumIndex, bookIndex, chapterIndex) => {
+  if (typeof Storage !== "undefined") {
+    localStorage.setItem("albumIndex", albumIndex);
+    localStorage.setItem("bookIndex", bookIndex);
+    localStorage.setItem("chapterIndex", chapterIndex);
+  }
+};

@@ -1,4 +1,4 @@
-const epistles = {
+export const epistles = {
   name: "Пасланні Апосталаў",
   idEn: "Epistles",
   text: [
@@ -3522,5 +3522,3 @@ const epistles = {
     },
   ],
 };
-
-export { epistles };

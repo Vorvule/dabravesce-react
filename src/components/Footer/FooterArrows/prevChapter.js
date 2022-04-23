@@ -1,7 +1,7 @@
 import { allAlbums } from "../../../albums/albums";
-import { showCore } from "../../MiddleColumn/showCore";
+import { showCore } from "../../MiddleColumn/core/showCore";
 
-const prevChapter = () => {
+export const prevChapter = () => {
   const albumIndex = +localStorage.albumIndex;
   const bookIndex = +localStorage.bookIndex;
   const chapterIndex = +localStorage.chapterIndex;
@@ -14,5 +14,3 @@ const prevChapter = () => {
     return;
   }
 };
-
-export { prevChapter };

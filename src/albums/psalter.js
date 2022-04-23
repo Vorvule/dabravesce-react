@@ -1,6 +1,6 @@
 import { Psalms } from "./Psalter/Psalms";
 
-const psalter = {
+export const psalter = {
   name: "Псалтыр",
   idBe: "Псалтыр",
   idEn: "Psalter",
@@ -12,5 +12,3 @@ const psalter = {
     },
   ],
 };
-
-export { psalter };

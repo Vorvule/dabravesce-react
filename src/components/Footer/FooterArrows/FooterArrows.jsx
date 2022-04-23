@@ -1,8 +1,8 @@
 import React from "react";
-import { nextChapter } from "../Footer/FooterArrows/next_chapter";
-import { prevChapter } from "../Footer/FooterArrows/prev_chapter";
+import { nextChapter } from "./nextChapter";
+import { prevChapter } from "./prevChapter";
 
-const FooterArrows = () => {
+export const FooterArrows = () => {
   return (
     <div className="w3-center footer-tab">
       <span className="w3-large w3-padding" onClick={prevChapter}>
@@ -30,5 +30,3 @@ const FooterArrows = () => {
     </div>
   );
 };
-
-export { FooterArrows };

@@ -1,5 +1,5 @@
 import React from "react";
-import { FooterArrows } from "./FooterArrows";
+import { FooterArrows } from "./FooterArrows/FooterArrows";
 
 export const Footer = () => {
   return (

@@ -1,4 +1,4 @@
-const apocalypse = {
+export const apocalypse = {
   name: "Апакаліпсіс",
   idEn: "Apocalypse",
   text: [
@@ -525,5 +525,3 @@ const apocalypse = {
     },
   ],
 };
-
-export { apocalypse };

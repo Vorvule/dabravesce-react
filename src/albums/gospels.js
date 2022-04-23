@@ -3,9 +3,9 @@ import { Luke } from "./Gospels/Luke";
 import { Mark } from "./Gospels/Mark";
 import { Matthew } from "./Gospels/Matthew";
 
-const gospels = {
-  name: "Евангелле",
-  idBe: "Евангелле",
+export const gospels = {
+  name: "Евангеллі",
+  idBe: "Евангеллі",
   idEn: "Gospels",
   text: [
     {
@@ -34,5 +34,3 @@ const gospels = {
     },
   ],
 };
-
-export { gospels };

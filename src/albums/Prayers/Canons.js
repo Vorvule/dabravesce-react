@@ -1,4 +1,4 @@
-const Canons = [
+export const Canons = [
   {
       "name": "Канон пакаянны да Госпада нашага Іісуса Хрыста",
       "text": [
@@ -329,5 +329,3 @@ const Canons = [
       ]
   }
 ];
-
-export { Canons };

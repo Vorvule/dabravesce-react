@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { getSearchKeys } from "./keys/getSearchKeys";
 import { getDailyKeys } from "../Daily/getDailyKeys";
-import { showCore } from "./showCore";
+import { showCore } from "./core/showCore";
 
 import { ShareIcons } from "./share/ShareIcons";
 import { AudioPlayer } from "./audio/AudioPlayer";
 
-const MiddleColumn = () => {
+export const MiddleColumn = () => {
   useEffect(() => {
     const keys = getSearchKeys() || getDailyKeys();
     showCore(...keys);
@@ -34,5 +34,3 @@ const MiddleColumn = () => {
     </div>
   );
 };
-
-export { MiddleColumn };

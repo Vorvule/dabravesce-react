@@ -1,6 +1,6 @@
-import { allAlbums } from "../../albums/albums";
+import { allAlbums } from "../../../albums/albums";
 
-const getCore = (albumIndex, bookIndex, chapterIndex) => {
+export const getCore = (albumIndex, bookIndex, chapterIndex) => {
   const albumName = allAlbums[albumIndex].name;
   const albumText = allAlbums[albumIndex].text;
 
@@ -12,5 +12,3 @@ const getCore = (albumIndex, bookIndex, chapterIndex) => {
 
   return [albumName, bookName, chapterName, chapterText];
 };
-
-export { getCore };
