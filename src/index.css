@@ -20,7 +20,7 @@ body {
   margin: 64px 0;
 }
 
-/* For the sake of borders on low content pages like Doweddca */
+/* For the sake of borders on low content pages like Dowedca */
 #MiddleColumn {
   min-height: 82vh;
 }
@@ -56,4 +56,9 @@ audio {
   display: inline-block;
   cursor: pointer;
   width: 84px;
+}
+
+#relations li {
+  border-bottom: none;
+  padding-left: 0;
 }

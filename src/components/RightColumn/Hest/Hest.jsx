@@ -20,8 +20,9 @@ export const Hest = () => {
       </div>
 
       <div className="w3-right-align">
-        <strong id="HestSource"></strong>
+        <span id="HestSource"></span>
       </div>
+      
       <br />
     </div>
   );

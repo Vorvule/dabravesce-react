@@ -1,6 +1,6 @@
 import React from "react";
 
-const TopOutButtons = () => {
+export const TopOutButtons = () => {
   const android = "https://play.google.com/store/apps/details?id=by.dabravesce";
   const github = "https://github.com/Vorvule/dabravesce-react";
 
@@ -30,5 +30,3 @@ const TopOutButtons = () => {
     </>
   );
 };
-
-export { TopOutButtons };

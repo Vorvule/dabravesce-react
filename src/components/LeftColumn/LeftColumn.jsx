@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu } from "./Menu/Menu";
-import { DailyGospel } from "./../Daily/DailyGospel";
+// import { DailyGospel } from "./../Daily/DailyGospel";
 
 export const LeftColumn = () => {
   return (
@@ -11,7 +11,7 @@ export const LeftColumn = () => {
         </h4>
         <hr />
         <Menu />
-        {window.innerWidth < 993 && <DailyGospel />}
+        {/* {window.innerWidth < 993 && <DailyGospel />} */}
         <br />
       </div>
     </nav>
