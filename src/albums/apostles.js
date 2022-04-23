@@ -1,4 +1,4 @@
-const apostles = {
+export const apostles = {
   name: "Дзеянні Апосталаў",
   idEn: "Apostles",
   text: [
@@ -1157,5 +1157,3 @@ const apostles = {
     },
   ],
 };
-
-export { apostles };

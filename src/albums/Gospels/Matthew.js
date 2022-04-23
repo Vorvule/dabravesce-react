@@ -1,4 +1,4 @@
-const Matthew = [
+export const Matthew = [
   {
     audio: "matt/01.mp3",
     name: "Раздзел 1",
@@ -1239,5 +1239,3 @@ const Matthew = [
     ],
   },
 ];
-
-export { Matthew };

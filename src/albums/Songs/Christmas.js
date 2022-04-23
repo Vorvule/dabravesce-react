@@ -1,4 +1,4 @@
-const Christmas = [
+export const Christmas = [
   {
     audio: "song/07.mp3",
     name: "Учора з вячора. Гарм. М.Куліковіч-Шчаглоў",
@@ -171,5 +171,3 @@ const Christmas = [
     ],
   },
 ];
-
-export { Christmas };

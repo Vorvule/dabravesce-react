@@ -1,4 +1,4 @@
-const Easter = [
+export const Easter = [
   {
     name: "Пасхальныя гадзіны",
     text: [
@@ -39,5 +39,3 @@ const Easter = [
     ],
   },
 ];
-
-export { Easter };

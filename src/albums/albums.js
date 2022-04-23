@@ -1,12 +1,21 @@
-import { gospels } from "./gospels";
+import { apocalypse } from "./apocalypse";
 import { apostles } from "./apostles";
-import { epistles } from "./epistles";
-import { apocalypse } from "./apocalypse"
-import { psalter } from "./psalter";
-import { prayers } from "./prayers";
-import { songs } from "./songs";
 import { contacts } from "./contacts";
+import { epistles } from "./epistles";
+import { gospels } from "./gospels";
+import { prayers } from "./prayers";
+import { psalter } from "./psalter";
+import { songs } from "./songs";
+import { worships } from "./worships";
 
-const allAlbums = [gospels, apostles, epistles, apocalypse, psalter, prayers, songs, contacts];
-
-export { allAlbums };
+export const allAlbums = [
+  gospels,
+  apostles,
+  epistles,
+  apocalypse,
+  psalter,
+  prayers,
+  worships,
+  songs,
+  contacts,
+];

@@ -1,4 +1,4 @@
-const Acathisti = [
+export const Acathisti = [
   {
       "name": "Акафіст Божай Маці ў гонар Яе цудатворнай іконы \"Выхаванне\"",
       "text": [
@@ -298,5 +298,3 @@ const Acathisti = [
       ]
   }
 ];
-
-export { Acathisti };

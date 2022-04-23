@@ -1,4 +1,4 @@
-const Mark = [
+export const Mark = [
   {
     audio: "mark/01.mp3",
     name: "Раздзел 1",
@@ -774,5 +774,3 @@ const Mark = [
     ],
   },
 ];
-
-export { Mark };

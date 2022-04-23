@@ -1,4 +1,4 @@
-const Folk = [
+export const Folk = [
   {
     "audio": "song/21.mp3",
     name: "А ў полі вярба. Апр. М.Равенскага",
@@ -44,5 +44,3 @@ const Folk = [
     ],
   },
 ];
-
-export { Folk };

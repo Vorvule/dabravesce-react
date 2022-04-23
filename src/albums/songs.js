@@ -3,7 +3,7 @@ import { Easters } from "./Songs/Easters";
 import { Folk } from "./Songs/Folk";
 import { Prayal } from "./Songs/Prayal";
 
-const songs = {
+export const songs = {
   name: "Духоўныя Спевы",
   idBe: "Спевы",
   idEn: "Songs",
@@ -30,5 +30,3 @@ const songs = {
     },
   ],
 };
-
-export { songs };

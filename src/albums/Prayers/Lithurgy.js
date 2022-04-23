@@ -1,4 +1,4 @@
-const Lithurgy = [
+export const Lithurgy = [
   {
     audio: "pray/lithurgy.mp3",
     name: "Бажэственная літургія Свяціцеля Іаана Златавустага",
@@ -642,5 +642,3 @@ const Lithurgy = [
     ],
   },
 ];
-
-export { Lithurgy };

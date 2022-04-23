@@ -1,4 +1,4 @@
-const Psalms = [
+export const Psalms = [
   {
     name: "Псалом 1<br />Псалом Давіда, не надпісаны ў Яўрэяў",
     text: [
@@ -1034,5 +1034,3 @@ const Psalms = [
     ],
   },
 ];
-
-export { Psalms };

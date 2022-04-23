@@ -1,4 +1,4 @@
-const Prayal = [
+export const Prayal = [
   {
     audio: "song/14.mp3",
     name: "Ойча наш",
@@ -174,5 +174,3 @@ const Prayal = [
     ],
   },
 ];
-
-export { Prayal };

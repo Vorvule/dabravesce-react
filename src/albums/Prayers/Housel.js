@@ -1,4 +1,4 @@
-const Housel = [
+export const Housel = [
   {
     name: "Паследаванне да Святога Прычашчэння Бажэственнай Тайны Цела і Крыві Хрыстовых",
     text: [
@@ -236,5 +236,3 @@ const Housel = [
     ],
   },
 ];
-
-export { Housel };

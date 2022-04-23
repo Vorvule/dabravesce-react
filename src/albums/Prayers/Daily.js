@@ -1,4 +1,4 @@
-const Daily = [
+export const Daily = [
   {
     "audio": "pray/morning.mp3",
     name: "Малітвы ранішнія",
@@ -250,5 +250,3 @@ const Daily = [
     ],
   },
 ];
-
-export { Daily };
