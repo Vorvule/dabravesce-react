@@ -58,3 +58,7 @@ audio {
   border-bottom: none;
   padding-left: 0;
 }
+
+.w3-top .w3-bar-item {
+  padding: 4px 16px;
+}
