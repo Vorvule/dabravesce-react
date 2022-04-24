@@ -9,13 +9,14 @@ export const relationsListPositions = [
   {
     title: "Канал у Telegram",
     url: "https://t.me/s/evangellie",
-    faClass: "fa-paper-plane",
+    faClass: "fa-telegram",
     hidableText: "Канал у ",
     constantText: "Telegram",
   },
   {
     title: "Група на Facebook",
-    url: "https://www.facebook.com/groups/dabravesce",
+    // url: "https://www.facebook.com/groups/dabravesce",
+    url: "https://www.facebook.com/groups/396324350426582/",
     faClass: "fa-facebook",
     hidableText: "Група на ",
     constantText: "Facebook",
@@ -37,7 +38,7 @@ export const relationsListPositions = [
   {
     title: "Электронная Пошта",
     url: "mailto:bpbtvm@tut.by",
-    faClass: "fa-envelope-o",
+    faClass: "fa-envelope",
     hidableText: "Электронная ",
     constantText: "Пошта",
   },

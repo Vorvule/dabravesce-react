@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { showDailyGospel } from "./showDailyGospel";
 import { showCore } from "../../MiddleColumn/core/showCore";
 import { getDailyKeys } from "./getDailyKeys";
-import { toggleShowCore } from "../../Common/toggleShowCore";
+import { toggleShowCore } from "../../context/toggleShowCore";
 
 export const DailyGospel = () => {
   useEffect(() => {

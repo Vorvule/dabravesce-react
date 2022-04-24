@@ -1,4 +1,4 @@
-import { pairIndex } from "../../Common/pairIndex";
+import { pairIndex } from "../../context/pairIndex";
 
 const pushKeysToHistory = (albumIndex, bookIndex, chapterIndex) => {
   const searchKeys =

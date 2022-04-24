@@ -1,6 +1,6 @@
 import React from "react";
 import { RelationsListItem } from "./RelationsListItem";
-import { relationsListPositions } from "./relationsListPositions";
+import { relationsListPositions } from "../../context/relationsListPositions";
 
 export const RelationsList = () => {
   return (

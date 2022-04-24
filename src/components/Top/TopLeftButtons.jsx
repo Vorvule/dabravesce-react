@@ -1,18 +1,16 @@
 import React from "react";
+import { relationsListPositions } from "../context/relationsListPositions";
 import { TopButton } from "./TopButton";
 
 export const TopLeftButtons = () => {
-  const android = "https://play.google.com/store/apps/details?id=by.dabravesce";
-  const github = "https://github.com/Vorvule/dabravesce-react";
-
-  return (
-    <>
+  return relationsListPositions.map((position) => {
+    return (
       <TopButton
-      addedClasses="w3-hide-medium w3-hide-small"
-        title="Дачыненне на Android"
-        clickHandler={() => window.open(android)}
-        fa="fa-android"
+        addedClasses="w3-hide-small w3-border-right"
+        title={position.title}
+        clickHandler={() => window.open(position.url)}
+        fa={position.faClass}
       />
-    </>
-  );
+    );
+  });
 };

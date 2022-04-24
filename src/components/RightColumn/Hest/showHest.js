@@ -1,6 +1,6 @@
 import { allAlbums } from "../../../albums/albums";
 import { hestKeys } from "./hestKeys";
-import { randomInteger } from "../../Common/randomInteger";
+import { randomInteger } from "../../context/randomInteger";
 
 export const showHest = () => {
   const randomIndex = randomInteger(0, hestKeys.length);
