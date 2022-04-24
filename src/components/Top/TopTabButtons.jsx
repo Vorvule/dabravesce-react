@@ -6,7 +6,7 @@ const handleTabButtonClick = (activeTabIndex) => {
   allFooterTabs[activeTabIndex].classList.remove("w3-hide");
 };
 
-const TopTabButtons = () => {
+export const TopTabButtons = () => {
   return (
     <>
       <span
@@ -58,5 +58,3 @@ const TopTabButtons = () => {
     </>
   );
 };
-
-export { TopTabButtons };
