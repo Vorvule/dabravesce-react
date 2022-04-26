@@ -13,9 +13,7 @@ export const TopRightButtons = () => {
         clickHandler={() => showCore(0, 0, 0)}
         fa="fa-home"
       />
-
       {/* medium and small screens:  */}
-
       <TopButton
         addedClasses="w3-right w3-border-left w3-hide-large"
         title="Змест"

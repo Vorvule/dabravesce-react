@@ -9,7 +9,7 @@ export const TopLeftButtons = () => {
         addedClasses="w3-hide-small w3-border-right"
         title={position.title}
         clickHandler={() => window.open(position.url)}
-        fa={position.faClass}
+        fa={position.extraClasses}
       />
     );
   });

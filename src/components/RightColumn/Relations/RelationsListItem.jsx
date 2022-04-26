@@ -3,17 +3,17 @@ import React from "react";
 export const RelationsListItem = ({
   title,
   url,
-  faClass,
-  constantText,
-  hidableText,
+  extraClasses,
+  briefText,
+  fullText,
 }) => {
-  const classes = faClass + " fa fa-fw w3-margin-right w3-large";
+  const classes = extraClasses + " fa fa-fw w3-margin-right w3-large";
 
   return (
     <li title={title} onClick={() => window.open(url)}>
       <i className={classes} aria-hidden="true"></i>
-      <span className="hidable">{hidableText}</span>
-      <span>{constantText}</span>
+      <span className="w3-hide-small w3-hide-medium">{fullText}</span>
+      <span className="w3-hide-large">{briefText}</span>
     </li>
   );
 };

@@ -23,6 +23,8 @@ body {
 /* For the sake of borders on low content pages like Dowedca */
 #MiddleColumn {
   min-height: 82vh;
+  border-right: 1px solid lightgray;
+  border-left: 1px solid lightgray;
 }
 
 summary {
@@ -61,4 +63,10 @@ audio {
 
 .w3-top .w3-bar-item {
   padding: 10px 20px;
+}
+
+@media screen and (max-width:992px) {
+  #MiddleColumn {
+    border: none;
+  }
 }
