@@ -6,7 +6,7 @@ export const TopLeftButtons = () => {
   return relationsListPositions.map((position) => {
     return (
       <TopButton
-        addedClasses="w3-hide-small w3-border-right"
+        addedClasses="w3-hide-small w3-hide-medium w3-border-right"
         title={position.title}
         clickHandler={() => window.open(position.url)}
         fa={position.extraClasses}
