@@ -10,7 +10,7 @@ export const MiddleColumn = () => {
   useEffect(() => {
     const keys = getSearchKeys() || getDailyKeys();
     showCore(...keys);
-    localStorage.innerWidth = window.innerWidth;
+    // localStorage.innerWidth = window.innerWidth;
   });
 
   return (

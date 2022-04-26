@@ -1,7 +1,7 @@
 import allAlbums from "../../albums/albums";
 import { pairIndex } from "./../context/pair-index";
 
-const shareSocial = (socialNetwork) => {
+export const shareSocial = (socialNetwork) => {
   let href;
 
   const albumIndex = localStorage.albumIndex;
@@ -38,5 +38,3 @@ const shareSocial = (socialNetwork) => {
 
   window.location.href = href;
 };
-
-export { shareSocial };
