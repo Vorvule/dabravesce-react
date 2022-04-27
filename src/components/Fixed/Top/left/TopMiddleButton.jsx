@@ -1,5 +1,5 @@
 import React from "react";
-import { showOneColumnWithId } from "../../context/showOneColumnWithId";
+import { showOneColumnWithId } from "../../../context/showOneColumnWithId";
 
 export const TopMiddleButton = () => {
   return (

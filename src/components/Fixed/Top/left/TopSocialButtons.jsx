@@ -1,5 +1,5 @@
 import React from "react";
-import { relationsListPositions } from "../../context/relationsListPositions";
+import { relationsListPositions } from "../../../context/relationsListPositions";
 import { TopButton } from "../TopButton";
 
 export const TopSocialButtons = () => {

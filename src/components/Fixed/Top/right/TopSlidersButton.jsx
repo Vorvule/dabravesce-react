@@ -1,5 +1,5 @@
 import React from "react";
-import { showOneColumnWithId } from "../../context/showOneColumnWithId";
+import { showOneColumnWithId } from "../../../context/showOneColumnWithId";
 import { TopButton } from "../TopButton";
 
 export const TopSlidersButton = () => {

@@ -1,5 +1,5 @@
 import "./App.css";
-import { Top } from "./components/Top/Top";
+import { Top } from "./components/Fixed/Top/Top";
 import { Columns } from "./components/Columns";
 import { Footer } from "./components/Fixed/Footer/Footer";
 
