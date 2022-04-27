@@ -1,12 +1,13 @@
 import React from "react";
-import { TopButton } from "../TopButton";
+import { FaButton } from "../../FaButton";
 import { showOneColumnWithId } from "../../../context/showOneColumnWithId";
 
 export const TopBarsButton = () => {
   return (
-    <TopButton
+    <FaButton
       fa="fa-bars"
       title="Змест"
+      size="w3-xlarge"
       classes="w3-border-right w3-hide-large"
       handler={() => showOneColumnWithId("LeftColumn")}
     />

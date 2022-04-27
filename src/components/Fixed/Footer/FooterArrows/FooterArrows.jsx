@@ -1,32 +1,39 @@
 import React from "react";
+import { FaButton } from "../../FaButton";
 import { nextChapter } from "./nextChapter";
 import { prevChapter } from "./prevChapter";
 
 export const FooterArrows = () => {
   return (
-    <div className="w3-center">
-      <span className="w3-large w3-padding" onClick={prevChapter}>
-        <i className="fa fa-arrow-left w3-margin"></i>
-        <strong className="w3-hide-small">Назад</strong>
-      </span>
-      <span
-        className="w3-large w3-padding"
-        onClick={() => window.scrollTo(0, 0)}
-      >
-        <i className="fa fa-chevron-up w3-margin"></i>
-        <strong className="w3-hide-medium w3-hide-small">Уверх</strong>
-      </span>
-      <span
-        className="w3-large w3-padding"
-        onClick={() => window.scrollTo(0, document.body.scrollHeight)}
-      >
-        <i className="fa fa-chevron-down w3-margin"></i>
-        <strong className="w3-hide-medium w3-hide-small">Долу</strong>
-      </span>
-      <span className="w3-large w3-padding" onClick={nextChapter}>
-        <i className="fa fa-arrow-right w3-margin"></i>
-        <strong className="w3-hide-small">Далей</strong>
-      </span>
+    <div id="Arrows" className="w3-row">
+      <FaButton
+        title="Назад"
+        strong="Назад"
+        fa="fa-arrow-left"
+        handler={() => prevChapter()}
+        classes="w3-large w3-center"
+      />
+      <FaButton
+        title="Уверх"
+        strong="Уверх"
+        fa="fa-chevron-up"
+        handler={() => window.scrollTo(0, 0)}
+        classes="w3-large w3-center"
+      />
+      <FaButton
+        title="Долу"
+        strong="Долу"
+        fa="fa-chevron-down"
+        handler={() => window.scrollTo(0, document.body.scrollHeight)}
+        classes="w3-large w3-center"
+      />
+      <FaButton
+        title="Далей"
+        strong="Далей"
+        fa="fa-arrow-right"
+        handler={() => nextChapter()}
+        classes="w3-large w3-center"
+      />
     </div>
   );
 };

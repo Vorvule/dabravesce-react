@@ -5,10 +5,10 @@ import { TopRightButtons } from "./right/TopRightButtons";
 export const Top = () => {
   return (
     <div className="w3-top">
-      <div className="w3-bar w3-blue-gray w3-left-align">
+      <header className="w3-bar w3-blue-gray">
         <TopLeftButtons />
         <TopRightButtons />
-      </div>
+      </header>
     </div>
   );
 };

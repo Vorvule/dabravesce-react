@@ -61,21 +61,30 @@ audio {
   padding-left: 0;
 }
 
-.w3-top .w3-bar-item {
+.w3-top .w3-bar-item, .w3-bottom .w3-bar-item {
   padding: 10px 20px;
 }
 
-@media screen and (max-width:992px) {
+@media screen and (max-width: 992px) {
   #MiddleColumn {
     border: none;
   }
   #MiddleButton {
-    width: calc(100vw - 72px - 72px - 2px);
+    width: calc(100vw - 72px - 72px - 20px);
   }
 }
 
-@media screen and (max-width:360px) {
+@media screen and (max-width: 360px) {
   body {
     font-size: 15px;
   }
+}
+/* 
+#Arrows {
+  position: relative;
+  left: calc(50% - 126px);
+} */
+
+#Arrows span {
+  width: 24.99%;
 }
