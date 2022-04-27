@@ -5,7 +5,7 @@ import { Relations } from "./Relations/Relations";
 
 export const RightColumn = () => {
   return (
-    <aside className="w3-col l3 w3-hide-medium w3-hide-small">
+    <aside id="RightColumn" className="w3-col l3 w3-hide-medium w3-hide-small">
       <DailyGospel />
       <Hest />
       <Relations />

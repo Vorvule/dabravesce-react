@@ -6,8 +6,9 @@ export const TopSocialButtons = () => {
   return relationsListPositions.map((position) => {
     return (
       <TopButton
-        addedClasses="w3-hide-small w3-hide-medium w3-border-right"
+      key={position.briefText}
         title={position.title}
+        addedClasses="w3-hide-small w3-hide-medium w3-border-right"
         clickHandler={() => window.open(position.url)}
         fa={position.extraClasses}
       />

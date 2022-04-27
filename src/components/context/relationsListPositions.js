@@ -39,11 +39,11 @@ export const relationsListPositions = [
     title: "Рэпазіторый на Gihub",
     url: "https://github.com/Vorvule/dabravesce-react",
     extraClasses: "fa-github",
-    fullText: "Рэпазіторый на Github",
+    fullText: "Github-рэпазіторый",
     briefText: "Github",
   },
   {
-    title: "Электронная Пошта",
+    title: "Электронная пошта",
     url: "mailto:bpbtvm@tut.by",
     extraClasses: "fa-envelope-open-o",
     fullText: "Электронная пошта",

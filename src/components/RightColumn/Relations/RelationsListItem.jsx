@@ -12,8 +12,8 @@ export const RelationsListItem = ({
   return (
     <li title={title} onClick={() => window.open(url)}>
       <i className={classes} aria-hidden="true"></i>
-      <span className="w3-hide-small w3-hide-medium">{fullText}</span>
-      <span className="w3-hide-large">{briefText}</span>
+      <span className="w3-hide-small">{fullText}</span>
+      <span className="w3-hide-large w3-hide-medium">{briefText}</span>
     </li>
   );
 };

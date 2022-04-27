@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { showDailyGospel } from "./showDailyGospel";
 import { showCore } from "../../MiddleColumn/core/showCore";
 import { getDailyKeys } from "./getDailyKeys";
-import { toggleShowCore } from "../../context/toggleShowCore";
+import { showOneColumnWithId } from "../../context/showOneColumnWithId";
 
 export const DailyGospel = () => {
   useEffect(() => {
@@ -18,11 +18,11 @@ export const DailyGospel = () => {
       <div>
         <i className="fa fa-bell-o w3-margin-right" aria-hidden="true"></i>
         <span
-          className="w3-hover-text-blue-gray"
+          className="w3-text-blue-gray"
           id="RightColumn_DailyGospel"
           onClick={() => {
             showCore(...getDailyKeys());
-            window.innerWidth < 993 && toggleShowCore();
+            window.innerWidth < 993 && showOneColumnWithId("MiddleColumn");
           }}
         ></span>
       </div>
