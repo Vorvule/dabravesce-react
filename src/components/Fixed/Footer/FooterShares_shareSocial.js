@@ -1,4 +1,4 @@
-import allAlbums from "../../albums/albums";
+import allAlbums from "../../../albums/albums";
 import { pairIndex } from "./../context/pair-index";
 
 export const shareSocial = (socialNetwork) => {

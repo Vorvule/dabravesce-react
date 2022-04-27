@@ -1,9 +1,9 @@
 import "./App.css";
 import { Top } from "./components/Top/Top";
 import { Columns } from "./components/Columns";
-import { Footer } from "./components/Footer/Footer";
+import { Footer } from "./components/Fixed/Footer/Footer";
 
-function App() {
+export function App() {
   return (
     <div className="App">
       <Top />
@@ -12,5 +12,3 @@ function App() {
     </div>
   );
 }
-
-export { App };
