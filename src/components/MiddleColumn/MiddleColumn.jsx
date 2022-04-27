@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { getSearchKeys } from "./keys/getSearchKeys";
-import { getDailyKeys } from "../Daily/getDailyKeys";
+import { getDailyKeys } from "../RightColumn/Daily/getDailyKeys";
 import { showCore } from "./core/showCore";
 
 import { ShareIcons } from "./share/ShareIcons";
@@ -10,13 +10,12 @@ export const MiddleColumn = () => {
   useEffect(() => {
     const keys = getSearchKeys() || getDailyKeys();
     showCore(...keys);
-    localStorage.innerWidth = window.innerWidth;
   });
 
   return (
     <div
       id="MiddleColumn"
-      className="w3-col l6 w3-padding w3-border-left w3-border-right"
+      className="w3-col l6 w3-padding w3-animate-top"
     >
       <h4 className="w3-center">
         <strong id="MiddleColumn_AlbumName"></strong>

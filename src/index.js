@@ -24,12 +24,12 @@ window.onpopstate = () => {
   showCore(...getSearchKeys(), false);
 };
 
-window.onresize = () => {
-  if (window.innerWidth !== +localStorage.innerWidth) {
-    window.location.reload();
-    localStorage.innerWidth = window.innerWidth;
-  }
-};
+// window.onresize = () => {
+//   if (window.innerWidth !== +localStorage.innerWidth) {
+//     window.location.reload();
+//     localStorage.innerWidth = window.innerWidth;
+//   }
+// };
 
 window.addEventListener("load", async () => {
   if (navigator.serviceWorker) {

@@ -20,9 +20,11 @@ body {
   margin: 64px 0;
 }
 
-/* For the sake of borders on low content pages like Doweddca */
+/* For the sake of borders on low content pages like Dowedca */
 #MiddleColumn {
   min-height: 82vh;
+  border-right: 1px solid lightgray;
+  border-left: 1px solid lightgray;
 }
 
 summary {
@@ -39,10 +41,6 @@ label,
   cursor: pointer;
 }
 
-.w3-ul {
-  padding-top: 4px;
-}
-
 audio {
   outline: none;
   height: 40px !important;
@@ -52,8 +50,45 @@ audio {
   z-index: 200;
 }
 
-.icon-container > div {
+.share-container > div {
   display: inline-block;
   cursor: pointer;
   width: 84px;
+}
+
+#relations li {
+  border-bottom: none;
+  padding-left: 0;
+}
+
+.w3-top .w3-bar-item, .w3-bottom .w3-bar-item {
+  padding: 10px 10px;
+}
+
+@media screen and (max-width: 992px) {
+  #MiddleColumn {
+    border: none;
+  }
+  #MiddleButton {
+    width: calc(100vw - 72px - 72px - 20px);
+  }
+}
+
+@media screen and (max-width: 360px) {
+  body {
+    font-size: 15px;
+  }
+}
+/* 
+#Arrows {
+  position: relative;
+  left: calc(50% - 126px);
+} */
+
+#Arrows span {
+  width: 25%;
+}
+
+#Arrows {
+  max-width: 500px;
 }
