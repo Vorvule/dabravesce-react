@@ -5,7 +5,7 @@ import { prevChapter } from "./prevChapter";
 
 export const FooterArrows = () => {
   return (
-    <div id="Arrows" className="w3-row">
+    <div id="Arrows" className="w3-content">
       <FaButton
         title="Назад"
         strong="Назад"
