@@ -4,6 +4,7 @@ import { showOneColumnWithId } from "../../context/showOneColumnWithId";
 export const TopMiddleButton = () => {
   return (
     <span
+      id="MiddleButton"
       title="Дабравесце"
       className="w3-bar-item w3-large w3-hide-large"
       onClick={() => handleClick("MiddleColumn")}
