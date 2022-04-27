@@ -3,7 +3,7 @@ import { shareSocial } from "./FooterShares_shareSocial";
 
 const FooterShares = () => {
   return (
-    <div className="w3-center footer-tab">
+    <div className="w3-center">
       <span
         target="_blank"
         className="w3-large w3-padding"

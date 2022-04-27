@@ -4,7 +4,7 @@ import { prevChapter } from "./prevChapter";
 
 export const FooterArrows = () => {
   return (
-    <div className="w3-center footer-tab">
+    <div className="w3-center">
       <span className="w3-large w3-padding" onClick={prevChapter}>
         <i className="fa fa-arrow-left w3-margin"></i>
         <strong className="w3-hide-small">Назад</strong>
