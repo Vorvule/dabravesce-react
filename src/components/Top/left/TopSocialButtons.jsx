@@ -1,8 +1,8 @@
 import React from "react";
-import { relationsListPositions } from "../context/relationsListPositions";
-import { TopButton } from "./TopButton";
+import { relationsListPositions } from "../../context/relationsListPositions";
+import { TopButton } from "../TopButton";
 
-export const TopLeftButtons = () => {
+export const TopSocialButtons = () => {
   return relationsListPositions.map((position) => {
     return (
       <TopButton
