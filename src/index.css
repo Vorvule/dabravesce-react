@@ -62,7 +62,7 @@ audio {
 }
 
 .w3-top .w3-bar-item, .w3-bottom .w3-bar-item {
-  padding: 10px 16px;
+  padding: 10px 10px;
 }
 
 @media screen and (max-width: 992px) {
@@ -90,5 +90,5 @@ audio {
 }
 
 #Arrows {
-  max-width: 540px;
+  max-width: 500px;
 }
