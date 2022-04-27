@@ -14,12 +14,11 @@ const listItems = () => {
   return relationsListPositions.map((position) => {
     return (
       <RelationsListItem
-        key={position.briefText}
-        title={position.title}
+        fa={position.fa}
         url={position.url}
-        extraClasses={position.extraClasses}
-        briefText={position.briefText}
-        fullText={position.fullText}
+        key={position.item}
+        item={position.item}
+        title={position.item}
       />
     );
   });

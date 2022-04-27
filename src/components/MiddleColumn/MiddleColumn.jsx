@@ -15,7 +15,7 @@ export const MiddleColumn = () => {
   return (
     <div
       id="MiddleColumn"
-      className="w3-col l6 w3-padding"
+      className="w3-col l6 w3-padding w3-animate-top"
     >
       <h4 className="w3-center">
         <strong id="MiddleColumn_AlbumName"></strong>

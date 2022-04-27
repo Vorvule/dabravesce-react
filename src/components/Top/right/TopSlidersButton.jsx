@@ -5,9 +5,9 @@ import { TopButton } from "../TopButton";
 export const TopSlidersButton = () => {
   return (
     <TopButton
-      addedClasses="w3-right w3-border-left w3-hide-large"
+      classes="w3-right w3-border-left w3-hide-large"
       title="Парады і Налады"
-      clickHandler={() => showOneColumnWithId("RightColumn")}
+      handler={() => showOneColumnWithId("RightColumn")}
       fa="fa-sliders"
     />
   );

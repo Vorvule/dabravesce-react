@@ -50,7 +50,7 @@ audio {
   z-index: 200;
 }
 
-.icon-container > div {
+.share-container > div {
   display: inline-block;
   cursor: pointer;
   width: 84px;
@@ -68,5 +68,11 @@ audio {
 @media screen and (max-width:992px) {
   #MiddleColumn {
     border: none;
+  }
+}
+
+@media screen and (max-width:360px) {
+  body {
+    font-size: 15px;
   }
 }
