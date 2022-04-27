@@ -17,14 +17,14 @@ export const DailyGospel = () => {
       <hr />
       <div>
         <i className="fa fa-bell-o w3-margin-right" aria-hidden="true"></i>
-        <span
+        <strong
           className="w3-text-blue-gray"
           id="RightColumn_DailyGospel"
           onClick={() => {
             showCore(...getDailyKeys());
             window.innerWidth < 993 && showOneColumnWithId("MiddleColumn");
           }}
-        ></span>
+        ></strong>
       </div>
       <div id="RightColumn_DailySource" className="w3-right-align"></div>
       <br />
