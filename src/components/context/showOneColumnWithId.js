@@ -1,7 +1,12 @@
 export const showOneColumnWithId = (id) => {
+  if (screenIsLarge()) return;
   hideAllColumns();
   showColumnWithId(id);
 };
+
+const screenIsLarge = () => {
+  return window.innerWidth > 992
+}
 
 const hideAllColumns = () => {
   document.getElementById("LeftColumn").classList.add("w3-hide-small");

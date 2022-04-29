@@ -8,7 +8,7 @@ export const DailyGospel = () => {
   useEffect(() => {
     showDailyGospel();
   });
-  
+
   return (
     <div className="w3-padding">
       <h4 className="w3-center">
@@ -22,7 +22,7 @@ export const DailyGospel = () => {
           id="RightColumn_DailyGospel"
           onClick={() => {
             showCore(...getDailyKeys());
-            window.innerWidth < 993 && showOneColumnWithId("MiddleColumn");
+            showOneColumnWithId("MiddleColumn");
           }}
         ></strong>
       </div>

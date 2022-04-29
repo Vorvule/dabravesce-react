@@ -10,7 +10,7 @@ export const MenuChapterList = ({ albumIndex, bookIndex, chapterList }) => {
         key={chapterIndex}
         onClick={() => {
           showCore(albumIndex, bookIndex, chapterIndex);
-          window.innerWidth < 993 && showOneColumnWithId("MiddleColumn");
+          showOneColumnWithId("MiddleColumn");
         }}
       >
         {chapterName}

@@ -19,17 +19,15 @@ ReactDOM.render(
 reportWebVitals();
 
 window.onpopstate = () => {
-  // false = when we show core from history,
-  // don't push keys there any more
+  // false = keys shouldn't be pushed to history when they are taken from there (onpopstate) to show core
   showCore(...getSearchKeys(), false);
 };
 
-// window.onresize = () => {
-//   if (window.innerWidth !== +localStorage.innerWidth) {
-//     window.location.reload();
-//     localStorage.innerWidth = window.innerWidth;
-//   }
-// };
+window.onresize = () => {
+  if (window.innerWidth > 992) {
+    document.getElementById("MiddleColumn").classList.remove("w3-hide");
+  }
+};
 
 window.addEventListener("load", async () => {
   if (navigator.serviceWorker) {
