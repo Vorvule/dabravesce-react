@@ -23,8 +23,9 @@ export const DailyGospel = () => {
           onClick={() => showCore(...getDailyKeys())}
         ></strong>
       </div>
-      
+
       <div id="RightColumn_DailySource" className="w3-right-align"></div>
+      
       <br />
     </div>
   );

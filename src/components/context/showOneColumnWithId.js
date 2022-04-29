@@ -1,5 +1,6 @@
 export const showOneColumnWithId = (id) => {
   if (screenIsLarge()) return;
+  
   hideAllColumns();
   showColumnWithId(id);
 };
