@@ -1,6 +1,5 @@
 import React from "react";
 import { showCore } from "../../MiddleColumn/core/showCore";
-import { showOneColumnWithId } from "../../context/showOneColumnWithId";
 
 export const MenuChapterList = ({ albumIndex, bookIndex, chapterList }) => {
   return chapterList.map((chapterContent, chapterIndex) => {
@@ -8,10 +7,7 @@ export const MenuChapterList = ({ albumIndex, bookIndex, chapterList }) => {
     return (
       <li
         key={chapterIndex}
-        onClick={() => {
-          showCore(albumIndex, bookIndex, chapterIndex);
-          showOneColumnWithId("MiddleColumn");
-        }}
+        onClick={() => showCore(albumIndex, bookIndex, chapterIndex)}
       >
         {chapterName}
       </li>

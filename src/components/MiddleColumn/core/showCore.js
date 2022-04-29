@@ -2,6 +2,7 @@ import { outputCore } from "./outputCore";
 import { showAudio } from "../audio/showAudio";
 import { getCore } from "./getCore";
 import { pushKeysToHistory } from "../keys/pushKeysToHistory";
+import { showOneColumnWithId } from "../../context/showOneColumnWithId";
 
 export const showCore = (
   albumIndex = 0,
@@ -12,6 +13,7 @@ export const showCore = (
   outputCore(...getCore(albumIndex, bookIndex, chapterIndex));
   showAudio(albumIndex, bookIndex, chapterIndex);
   window.scrollTo(0, 0);
+  showOneColumnWithId("MiddleColumn");
 
   keysToBePushedInHistory &&
     pushKeysToHistory(albumIndex, bookIndex, chapterIndex);
