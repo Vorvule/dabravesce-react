@@ -1,11 +1,8 @@
+const sideColumns = ["LeftColumn", "RightColumn"];
+
 export const showOneColumnWithId = (id) => {
   if (screenIsLarge()) return;
-
-  if (sideColumnVisible(id)) {
-    showOneColumnWithId("MiddleColumn");
-    return;
-  }
-
+  if (toggleShowSideColumn(id)) return;
   hideAllColumns();
   showColumnWithId(id);
 };
@@ -14,24 +11,29 @@ const screenIsLarge = () => {
   return window.innerWidth > 992;
 };
 
+const toggleShowSideColumn = (id) => {
+  if (sideColumnVisible(id)) {
+    showOneColumnWithId("MiddleColumn");
+    return true;
+  }
+};
+
 const sideColumnVisible = (id) => {
-  const isSideColumn = id === "LeftColumn" || id === "RightColumn";
-  
-  const columnIsVisible = !document
+  const isSideColumn = sideColumns.includes(id);
+
+  const isVisibleColumns = !document
     .getElementById(id)
     .classList.contains("w3-hide-small");
 
-  return isSideColumn && columnIsVisible;
+  return isSideColumn && isVisibleColumns;
 };
 
 const hideAllColumns = () => {
-  document.getElementById("LeftColumn").classList.add("w3-hide-small");
-  document.getElementById("LeftColumn").classList.add("w3-hide-medium");
-
   document.getElementById("MiddleColumn").classList.add("w3-hide");
-
-  document.getElementById("RightColumn").classList.add("w3-hide-small");
-  document.getElementById("RightColumn").classList.add("w3-hide-medium");
+  sideColumns.forEach((id) => {
+    document.getElementById(id).classList.add("w3-hide-small");
+    document.getElementById(id).classList.add("w3-hide-medium");
+  });
 };
 
 const showColumnWithId = (id) => {
