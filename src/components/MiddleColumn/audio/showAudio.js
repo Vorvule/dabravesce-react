@@ -7,7 +7,7 @@ const showAudio = (albumIndex, bookIndex, chapterIndex) => {
   const audioSource =
     allAlbums[albumIndex].text[bookIndex].text[chapterIndex].audio;
 
-  SourceElement.src = audioSource ? "/audio/" + audioSource : "";
+  SourceElement.src = audioSource && "/audio/" + audioSource;
   
   audioSource
     ? AudioElement.classList.remove("w3-hide")
