@@ -1,6 +1,6 @@
 import { allAlbums } from "../../../albums/albums";
 
-const showAudio = (albumIndex, bookIndex, chapterIndex) => {
+export const showAudio = (albumIndex, bookIndex, chapterIndex) => {
   const AudioElement = document.getElementById("AudioPlayer");
   const SourceElement = document.getElementById("AudioSource");
 
@@ -15,5 +15,3 @@ const showAudio = (albumIndex, bookIndex, chapterIndex) => {
 
   AudioElement.load();
 };
-
-export { showAudio };

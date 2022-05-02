@@ -1,6 +1,6 @@
 import React from "react";
 
-const AudioPlayer = () => {
+export const AudioPlayer = () => {
   return (
     <audio
       id="AudioPlayer"
@@ -12,5 +12,3 @@ const AudioPlayer = () => {
     </audio>
   );
 };
-
-export { AudioPlayer };

@@ -1,5 +1,5 @@
 import { allAlbums } from "../../../../albums/albums";
-import { showCore } from "../../../MiddleColumn/core/showCore";
+import { Core } from "../../../MiddleColumn/core/Core";
 
 export const nextChapter = () => {
   const albumIndex = +localStorage.albumIndex;
@@ -10,7 +10,6 @@ export const nextChapter = () => {
     allAlbums[albumIndex].text[bookIndex].text[chapterIndex + 1];
 
   if (nextChapterExists) {
-    showCore(albumIndex, bookIndex, chapterIndex + 1);
-    return;
+    Core.show(albumIndex, bookIndex, chapterIndex + 1);
   }
 };

@@ -3,8 +3,9 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import { App } from "./App";
 import { reportWebVitals } from "./reportWebVitals";
-import { getSearchKeys } from "./components/MiddleColumn/keys/getSearchKeys";
-import { showCore } from "./components/MiddleColumn/core/showCore";
+
+import { UrlPath } from "./components/MiddleColumn/keys/UrlPath";
+import { Core } from "./components/MiddleColumn/core/Core";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -20,7 +21,7 @@ reportWebVitals();
 
 window.onpopstate = () => {
   // false = keys shouldn't be pushed to history when they are taken from there (onpopstate) to show core
-  showCore(...getSearchKeys(), false);
+  Core.show(...UrlPath.getKeys(), false);
 };
 
 window.onresize = () => {

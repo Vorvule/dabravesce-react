@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
-import { getSearchKeys } from "./keys/getSearchKeys";
 import { getDailyKeys } from "../RightColumn/Daily/getDailyKeys";
-import { showCore } from "./core/showCore";
 
 import { ShareIcons } from "./share/ShareIcons";
 import { AudioPlayer } from "./audio/AudioPlayer";
+import { UrlPath } from "./keys/UrlPath";
+import { Core } from "./core/Core";
 
 export const MiddleColumn = () => {
   useEffect(() => {
-    const keys = getSearchKeys() || getDailyKeys();
-    showCore(...keys);
+    const keys = UrlPath.getKeys() || getDailyKeys();
+    Core.show(...keys);
   });
 
   return (

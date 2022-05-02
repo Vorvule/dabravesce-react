@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { showDailyGospel } from "./showDailyGospel";
-import { showCore } from "../../MiddleColumn/core/showCore";
 import { getDailyKeys } from "./getDailyKeys";
+import { Core } from "../../MiddleColumn/core/Core";
 
 export const DailyGospel = () => {
   useEffect(() => {
@@ -20,7 +20,7 @@ export const DailyGospel = () => {
         <strong
           className="w3-text-blue-gray"
           id="RightColumn_DailyGospel"
-          onClick={() => showCore(...getDailyKeys())}
+          onClick={() => Core.show(...getDailyKeys())}
         ></strong>
       </div>
 
