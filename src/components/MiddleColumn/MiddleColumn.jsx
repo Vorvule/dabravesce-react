@@ -3,8 +3,8 @@ import { getDailyKeys } from "../RightColumn/Daily/getDailyKeys";
 
 import { ShareIcons } from "./share/ShareIcons";
 import { AudioPlayer } from "./audio/AudioPlayer";
-import { UrlPath } from "./keys/UrlPath";
-import { Core } from "./core/Core";
+import { UrlPath } from "./UrlPath";
+import { Core } from "./Core";
 
 export const MiddleColumn = () => {
   useEffect(() => {

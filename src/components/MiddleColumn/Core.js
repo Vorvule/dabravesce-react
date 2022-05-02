@@ -1,7 +1,7 @@
-import { showAudio } from "../audio/showAudio";
-import { showOneColumnWithId } from "../../context/showOneColumnWithId";
-import { UrlPath } from "../keys/UrlPath";
-import { allAlbums } from "../../../albums/albums";
+import { showAudio } from "./audio/showAudio";
+import { showOneColumnWithId } from "../context/showOneColumnWithId";
+import { UrlPath } from "./UrlPath";
+import { allAlbums } from "../../albums/albums";
 
 export class Core {
   static show(albumKey = 0, bookKey = 0, chapterKey = 0, pushKeys = true) {

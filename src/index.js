@@ -4,8 +4,8 @@ import "./index.css";
 import { App } from "./App";
 import { reportWebVitals } from "./reportWebVitals";
 
-import { UrlPath } from "./components/MiddleColumn/keys/UrlPath";
-import { Core } from "./components/MiddleColumn/core/Core";
+import { UrlPath } from "./components/MiddleColumn/UrlPath";
+import { Core } from "./components/MiddleColumn/Core";
 
 ReactDOM.render(
   <React.StrictMode>

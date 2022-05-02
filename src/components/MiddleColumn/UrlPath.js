@@ -1,5 +1,5 @@
-import { pairIndex } from "../../context/pairIndex";
-import { Core } from "../core/Core";
+import { pairIndex } from "../context/pairIndex";
+import { Core } from "./Core";
 
 export class UrlPath {
   static getKeys() {

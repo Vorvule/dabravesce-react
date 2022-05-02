@@ -1,5 +1,5 @@
 import React from "react";
-import { Core } from "../../MiddleColumn/core/Core";
+import { Core } from "../../MiddleColumn/Core";
 
 export const MenuChapterList = ({ albumIndex, bookIndex, chapterList }) => {
   return chapterList.map((chapterContent, chapterIndex) => {
