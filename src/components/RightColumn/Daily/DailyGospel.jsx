@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import { showDailyGospel } from "./showDailyGospel";
-import { getDailyKeys } from "./getDailyKeys";
+
 import { Core } from "../../MiddleColumn/Core";
+import { Daily } from "./Daily";
 
 export const DailyGospel = () => {
   useEffect(() => {
-    showDailyGospel();
+    Daily.showDaily();
   });
 
   return (
@@ -20,7 +20,7 @@ export const DailyGospel = () => {
         <strong
           className="w3-text-blue-gray"
           id="RightColumn_DailyGospel"
-          onClick={() => Core.show(...getDailyKeys())}
+          onClick={() => Core.show(...Daily.getKeys())}
         ></strong>
       </div>
 

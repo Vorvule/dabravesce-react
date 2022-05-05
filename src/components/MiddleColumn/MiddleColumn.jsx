@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
-import { getDailyKeys } from "../RightColumn/Daily/getDailyKeys";
 
 import { ShareIcons } from "./share/ShareIcons";
 import { AudioPlayer } from "./audio/AudioPlayer";
 import { UrlPath } from "./UrlPath";
 import { Core } from "./Core";
+import { Daily } from "../RightColumn/Daily/Daily";
 
 export const MiddleColumn = () => {
   useEffect(() => {
-    const keys = UrlPath.getKeys() || getDailyKeys();
+    const keys = UrlPath.getKeys() || Daily.getKeys();
     Core.show(...keys);
   });
 
