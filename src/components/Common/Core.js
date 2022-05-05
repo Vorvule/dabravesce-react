@@ -1,5 +1,5 @@
 import { allAlbums } from "../../albums/albums";
-import { showOneColumnWithId } from "../context/showOneColumnWithId";
+import { Mobile } from "./Mobile";
 
 import { UrlPath } from "./UrlPath";
 
@@ -7,7 +7,7 @@ export class Core {
   static show(albumKey = 0, bookKey = 0, chapterKey = 0, pushKeys = true) {
     this.outPut(...this.get(albumKey, bookKey, chapterKey));
     this.showAudio(albumKey, bookKey, chapterKey);
-    showOneColumnWithId("MiddleColumn");
+    Mobile.showOneColumnWithId("MiddleColumn");
     window.scrollTo(0, 0);
     pushKeys && UrlPath.pushKeys(albumKey, bookKey, chapterKey);
     this.updateLocalStorage(albumKey, bookKey, chapterKey);
@@ -58,21 +58,21 @@ export class Core {
     return chapterText.reduce(reducer, "");
   }
 
-  static showAudio (albumKey, bookKey, chapterKey) {
+  static showAudio(albumKey, bookKey, chapterKey) {
     const AudioElement = document.getElementById("AudioPlayer");
     const SourceElement = document.getElementById("AudioSource");
-  
+
     const audioSource =
       allAlbums[albumKey].text[bookKey].text[chapterKey].audio;
-  
+
     SourceElement.src = audioSource && "/audio/" + audioSource;
-    
+
     audioSource
       ? AudioElement.classList.remove("w3-hide")
       : AudioElement.classList.add("w3-hide");
-  
+
     AudioElement.load();
-  };
+  }
 
   static updateLocalStorage(albumIndex, bookIndex, chapterIndex) {
     if (typeof Storage !== "undefined") {
@@ -81,5 +81,4 @@ export class Core {
       localStorage.setItem("chapterIndex", chapterIndex);
     }
   }
-  
 }

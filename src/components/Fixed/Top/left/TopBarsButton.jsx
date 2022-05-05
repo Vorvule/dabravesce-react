@@ -1,6 +1,7 @@
 import React from "react";
+
 import { FaButton } from "../../FaButton";
-import { showOneColumnWithId } from "../../../context/showOneColumnWithId";
+import { Mobile } from "../../../Common/Mobile";
 
 export const TopBarsButton = () => {
   return (
@@ -9,7 +10,7 @@ export const TopBarsButton = () => {
       title="Змест"
       size="w3-xlarge"
       classes="w3-border-right w3-hide-large"
-      handler={() => showOneColumnWithId("LeftColumn")}
+      handler={() => Mobile.showOneColumnWithId("LeftColumn")}
     />
   );
 };
