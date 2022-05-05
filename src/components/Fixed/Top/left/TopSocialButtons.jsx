@@ -1,9 +1,10 @@
 import React from "react";
-import { relationsListPositions } from "../../../context/relationsListPositions";
+
+import { iconsCollection } from "../../../Icons/iconsCollection";
 import { FaButton } from "../../FaButton";
 
 export const TopSocialButtons = () => {
-  return relationsListPositions.map((position) => {
+  return iconsCollection.map((position) => {
     return (
       <FaButton
         fa={position.fa}

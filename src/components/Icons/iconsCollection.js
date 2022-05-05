@@ -1,4 +1,4 @@
-export const relationsListPositions = [
+export const iconsCollection = [
   {
     fa: "fa-android",
     item: "Android-дачыненне",
