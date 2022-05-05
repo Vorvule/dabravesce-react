@@ -1,6 +1,6 @@
 import React from "react";
 import { TopBarsButton } from "./TopBarsButton";
-import { TopSocialButtons } from "./TopSocialButtons";
+import { TopPromotion } from "./TopPromotion";
 import { TopMiddleButton } from "./TopMiddleButton";
 import { TopMiddleLogo } from "./TopMiddleLogo";
 
@@ -8,7 +8,7 @@ export const TopLeftButtons = () => {
   return (
     <>
       <TopBarsButton />
-      <TopSocialButtons />
+      <TopPromotion />
       <TopMiddleButton />
       <TopMiddleLogo />
     </>

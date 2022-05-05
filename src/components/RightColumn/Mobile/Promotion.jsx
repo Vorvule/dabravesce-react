@@ -1,14 +1,15 @@
 import React from "react";
-import { RelationsList } from "./RelationsList";
 
-export const Relations = () => {
+import { PromotionList } from "./PromotionList";
+
+export const Promotion = () => {
   return (
     <div className="w3-padding w3-hide-large">
       <h4 className="w3-center">
-        <strong>Дачыненні</strong>
+        <strong>Распаўсюд</strong>
       </h4>
       <hr />
-      <RelationsList />
+      <PromotionList />
       <br />
     </div>
   );

@@ -1,4 +1,7 @@
-const hestKeys = [
+import { allAlbums } from "../../../albums/albums";
+import { randomInteger } from "../../context/randomInteger";
+
+const hestCollection = [
   // Matthew
 
   {
@@ -152,4 +155,42 @@ const hestKeys = [
   },
 ];
 
-export { hestKeys };
+export class Hests {
+  static showHest() {
+    const hestIndex = randomInteger(0, hestCollection.length);
+    const hestKeys = hestCollection[hestIndex];
+
+    const bookKey = hestKeys.bookKey;
+    const chapterKey = hestKeys.chapterKey;
+    const versesArray = hestKeys.verseKeys;
+
+    const album = allAlbums[0].text; // Gospel
+    const bookBriefName = album[bookKey].idBe;
+    const book = album[bookKey].text;
+    const chapterContent = book[chapterKey][1] || book[chapterKey].text;
+
+    document.getElementById("HestVerses").innerHTML = this.hestVerses(
+      versesArray,
+      chapterContent
+    );
+
+    document.getElementById("HestSource").innerHTML = this.hestSource(
+      bookBriefName,
+      chapterKey,
+      versesArray
+    );
+  }
+
+  static hestSource(bookBriefName, chapterKey, versesArray) {
+    return `${bookBriefName} ${chapterKey + 1}:${versesArray[0] + 1}`;
+  }
+
+  static hestVerses(versesArray, chapterContent) {
+    let verses = "";
+    const pattern = new RegExp(/\d+\. /);
+    versesArray.forEach((verse) => {
+      verses += chapterContent[verse].replace(pattern, "") + " ";
+    });
+    return verses;
+  }
+}

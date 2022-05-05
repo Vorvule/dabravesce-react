@@ -1,5 +1,5 @@
 import React from "react";
-import { showCore } from "../../MiddleColumn/core/showCore";
+import { Core } from "../../MiddleColumn/Core";
 
 export const MenuChapterList = ({ albumIndex, bookIndex, chapterList }) => {
   return chapterList.map((chapterContent, chapterIndex) => {
@@ -7,7 +7,7 @@ export const MenuChapterList = ({ albumIndex, bookIndex, chapterList }) => {
     return (
       <li
         key={chapterIndex}
-        onClick={() => showCore(albumIndex, bookIndex, chapterIndex)}
+        onClick={() => Core.show(albumIndex, bookIndex, chapterIndex)}
       >
         {chapterName}
       </li>

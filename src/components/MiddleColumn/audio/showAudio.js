@@ -1,13 +1,13 @@
 import { allAlbums } from "../../../albums/albums";
 
-const showAudio = (albumIndex, bookIndex, chapterIndex) => {
+export const showAudio = (albumIndex, bookIndex, chapterIndex) => {
   const AudioElement = document.getElementById("AudioPlayer");
   const SourceElement = document.getElementById("AudioSource");
 
   const audioSource =
     allAlbums[albumIndex].text[bookIndex].text[chapterIndex].audio;
 
-  SourceElement.src = audioSource ? "/audio/" + audioSource : "";
+  SourceElement.src = audioSource && "/audio/" + audioSource;
   
   audioSource
     ? AudioElement.classList.remove("w3-hide")
@@ -15,5 +15,3 @@ const showAudio = (albumIndex, bookIndex, chapterIndex) => {
 
   AudioElement.load();
 };
-
-export { showAudio };
