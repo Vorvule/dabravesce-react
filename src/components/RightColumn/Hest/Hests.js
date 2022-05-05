@@ -1,7 +1,7 @@
 import { allAlbums } from "../../../albums/albums";
 import { randomInteger } from "../../context/randomInteger";
 
-const hestKeys = [
+const hestCollection = [
   // Matthew
 
   {
@@ -157,21 +157,17 @@ const hestKeys = [
 
 export class Hests {
   static showHest() {
-    const randomIndex = randomInteger(0, hestKeys.length);
-    const chosenHestKeys = hestKeys[randomIndex];
+    const hestIndex = randomInteger(0, hestCollection.length);
+    const hestKeys = hestCollection[hestIndex];
 
-    // const albumIndex = randomHestKeys.albumKey;
-    const bookIndex = chosenHestKeys.bookKey;
-    const chapterIndex = chosenHestKeys.chapterKey;
-    const versesArray = chosenHestKeys.verseKeys;
+    const bookKey = hestKeys.bookKey;
+    const chapterKey = hestKeys.chapterKey;
+    const versesArray = hestKeys.verseKeys;
 
-    // const albumName = allAlbums[albumIndex].name;
-    const albumContent = allAlbums[0].text; // Gospel
-    const bookIdBe = albumContent[bookIndex].idBe;
-    const bookContent = albumContent[bookIndex].text;
-    // const chapterName = bookContent[chapterIndex].name;
-    const chapterContent =
-      bookContent[chapterIndex][1] || bookContent[chapterIndex].text;
+    const album = allAlbums[0].text; // Gospel
+    const bookBriefName = album[bookKey].idBe;
+    const book = album[bookKey].text;
+    const chapterContent = book[chapterKey][1] || book[chapterKey].text;
 
     document.getElementById("HestVerses").innerHTML = this.hestVerses(
       versesArray,
@@ -179,14 +175,14 @@ export class Hests {
     );
 
     document.getElementById("HestSource").innerHTML = this.hestSource(
-      bookIdBe,
-      chapterIndex,
+      bookBriefName,
+      chapterKey,
       versesArray
     );
   }
 
-  static hestSource(bookBriefName, chapterIndex, versesArray) {
-    return `${bookBriefName} ${chapterIndex + 1}:${versesArray[0] + 1}`;
+  static hestSource(bookBriefName, chapterKey, versesArray) {
+    return `${bookBriefName} ${chapterKey + 1}:${versesArray[0] + 1}`;
   }
 
   static hestVerses(versesArray, chapterContent) {
