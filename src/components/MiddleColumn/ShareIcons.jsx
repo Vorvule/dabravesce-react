@@ -1,7 +1,8 @@
 import React from "react";
 
 import { allAlbums } from "../../albums/albums";
-import { pairIndex } from "../context/pairIndex";
+
+import { Util } from "../Common/Util";
 
 export const ShareIcons = () => {
   return (
@@ -32,7 +33,9 @@ const shareTo = (socialNetwork) => {
   const chapterIndex = localStorage.chapterIndex;
 
   const keys =
-    pairIndex(albumIndex) + pairIndex(bookIndex) + pairIndex(chapterIndex);
+    Util.pairIndex(albumIndex) +
+    Util.pairIndex(bookIndex) +
+    Util.pairIndex(chapterIndex);
   // %23 = # url encoded
   const shareUrl = "https://www.dabravesce.by/index.html?k=" + keys;
 

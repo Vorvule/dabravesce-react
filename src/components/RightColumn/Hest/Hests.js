@@ -1,5 +1,6 @@
 import { allAlbums } from "../../../albums/albums";
-import { randomInteger } from "../../context/randomInteger";
+
+import { Util } from "../../Common/Util";
 
 const hestCollection = [
   // Matthew
@@ -157,7 +158,7 @@ const hestCollection = [
 
 export class Hests {
   static showHest() {
-    const hestIndex = randomInteger(0, hestCollection.length);
+    const hestIndex = Util.randomInteger(0, hestCollection.length);
     const hestKeys = hestCollection[hestIndex];
 
     const bookKey = hestKeys.bookKey;
