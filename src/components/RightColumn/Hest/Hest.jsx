@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import { showHest } from "./showHest";
+import { Hests } from "./Hests";
 
 export const Hest = () => {
   useEffect(() => {
-    showHest();
+    Hests.showHest();
   });
 
   return (
