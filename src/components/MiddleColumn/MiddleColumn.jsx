@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 import { ShareIcons } from "./share/ShareIcons";
-import { AudioPlayer } from "./audio/AudioPlayer";
+import { AudioPlayer } from "./AudioPlayer";
 import { UrlPath } from "./UrlPath";
 import { Core } from "./Core";
 import { Daily } from "../RightColumn/Daily/Daily";
