@@ -1,6 +1,7 @@
 import React from "react";
-import { showOneColumnWithId } from "../../../context/showOneColumnWithId";
+
 import { FaButton } from "../../FaButton";
+import { Mobile } from "../../../Common/Mobile";
 
 export const TopSlidersButton = () => {
   return (
@@ -8,7 +9,7 @@ export const TopSlidersButton = () => {
       classes="w3-right w3-border-left w3-hide-large"
       size="w3-xlarge"
       title="Парады і Налады"
-      handler={() => showOneColumnWithId("RightColumn")}
+      handler={() => Mobile.showOneColumnWithId("RightColumn")}
       fa="fa-sliders"
     />
   );

@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 
-import { ShareIcons } from "./share/ShareIcons";
-import { AudioPlayer } from "./audio/AudioPlayer";
-import { UrlPath } from "./UrlPath";
-import { Core } from "./Core";
+import { AudioPlayer } from "./AudioPlayer";
+import { Core } from "../Common/Core";
 import { Daily } from "../RightColumn/Daily/Daily";
+import { ShareIcons } from "./ShareIcons";
+import { UrlPath } from "../Common/UrlPath";
 
 export const MiddleColumn = () => {
   useEffect(() => {

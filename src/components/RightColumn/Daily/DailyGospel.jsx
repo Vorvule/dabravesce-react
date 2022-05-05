@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { Core } from "../../MiddleColumn/Core";
+import { Core } from "../../Common/Core";
 import { Daily } from "./Daily";
 
 export const DailyGospel = () => {

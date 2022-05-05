@@ -1,5 +1,5 @@
-import { pairIndex } from "../context/pairIndex";
 import { Core } from "./Core";
+import { Util } from "./Util";
 
 export class UrlPath {
   static getKeys() {
@@ -32,7 +32,9 @@ export class UrlPath {
   static pushKeys(albumIndex, bookIndex, chapterIndex) {
     // to History
     const searchKeys =
-      pairIndex(albumIndex) + pairIndex(bookIndex) + pairIndex(chapterIndex);
+      Util.pairIndex(albumIndex) +
+      Util.pairIndex(bookIndex) +
+      Util.pairIndex(chapterIndex);
     window.history.pushState({}, document.title, "index.html?k=" + searchKeys);
   }
 }

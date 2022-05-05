@@ -1,7 +1,31 @@
-import { allAlbums } from "../../../albums/albums";
-import { pairIndex } from "../../context/pairIndex";
+import React from "react";
 
-export const shareSocial = (socialNetwork) => {
+import { allAlbums } from "../../albums/albums";
+
+import { Util } from "../Common/Util";
+
+export const ShareIcons = () => {
+  return (
+    <div className="w3-center share-container">
+      <div className="w3-padding" onClick={() => shareTo("twitter")}>
+        <i className="fa fa-twitter w3-xlarge w3-text-blue-gray"></i>
+        <div className="w3-small">Twitter</div>
+      </div>
+
+      {/* <div className="w3-padding" onClick={() => shareSocial("telegram")}>
+        <i className="fa fa-telegram w3-xlarge w3-text-blue-gray"></i>
+        <div className="w3-small">Telegram</div>
+      </div> */}
+
+      <div className="w3-padding" onClick={() => shareTo("facebook")}>
+        <i className="fa fa-facebook w3-xlarge w3-text-blue-gray"></i>
+        <div className="w3-small">Facebook</div>
+      </div>
+    </div>
+  );
+};
+
+const shareTo = (socialNetwork) => {
   let href;
 
   const albumIndex = localStorage.albumIndex;
@@ -9,7 +33,9 @@ export const shareSocial = (socialNetwork) => {
   const chapterIndex = localStorage.chapterIndex;
 
   const keys =
-    pairIndex(albumIndex) + pairIndex(bookIndex) + pairIndex(chapterIndex);
+    Util.pairIndex(albumIndex) +
+    Util.pairIndex(bookIndex) +
+    Util.pairIndex(chapterIndex);
   // %23 = # url encoded
   const shareUrl = "https://www.dabravesce.by/index.html?k=" + keys;
 
