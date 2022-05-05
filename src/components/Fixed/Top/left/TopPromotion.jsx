@@ -3,7 +3,7 @@ import React from "react";
 import { iconsCollection } from "../../../Icons/iconsCollection";
 import { FaButton } from "../../FaButton";
 
-export const TopSocialButtons = () => {
+export const TopPromotion = () => {
   return iconsCollection.map((position) => {
     return (
       <FaButton

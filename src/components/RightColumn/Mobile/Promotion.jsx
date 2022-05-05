@@ -1,15 +1,15 @@
 import React from "react";
 
-import { IconsList } from "./IconsList";
+import { PromotionList } from "./PromotionList";
 
-export const Icons = () => {
+export const Promotion = () => {
   return (
     <div className="w3-padding w3-hide-large">
       <h4 className="w3-center">
-        <strong>Дачыненні</strong>
+        <strong>Распаўсюд</strong>
       </h4>
       <hr />
-      <IconsList />
+      <PromotionList />
       <br />
     </div>
   );

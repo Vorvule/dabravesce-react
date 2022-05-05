@@ -56,12 +56,16 @@ audio {
   width: 84px;
 }
 
-#relations li {
+#RightPromotion li {
   border-bottom: none;
   padding-left: 0;
 }
 
-.w3-top .w3-bar-item, .w3-bottom .w3-bar-item {
+.w3-top .w3-bar-item {
+  padding: 10px 20px;
+}
+
+.w3-bottom .w3-bar-item {
   padding: 10px 10px;
 }
 
@@ -69,8 +73,13 @@ audio {
   #MiddleColumn {
     border: none;
   }
+
+  .w3-top .w3-bar-item {
+    padding: 10px 16px;
+  }
+
   #MiddleButton {
-    width: calc(100vw - 72px - 72px - 20px);
+    width: calc(100vw - 64px - 64px);
   }
 }
 
@@ -79,11 +88,6 @@ audio {
     font-size: 15px;
   }
 }
-/* 
-#Arrows {
-  position: relative;
-  left: calc(50% - 126px);
-} */
 
 #Arrows span {
   width: 25%;

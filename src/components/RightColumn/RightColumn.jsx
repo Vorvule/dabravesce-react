@@ -2,7 +2,7 @@ import React from "react";
 
 import { DailyGospel } from "./Daily/DailyGospel";
 import { Hest } from "./Hest/Hest";
-import { Icons } from "../Icons/Icons";
+import { Promotion } from "./Mobile/Promotion";
 
 export const RightColumn = () => {
   return (
@@ -12,7 +12,7 @@ export const RightColumn = () => {
     >
       <DailyGospel />
       <Hest />
-      <Icons />
+      <Promotion />
     </aside>
   );
 };

@@ -1,11 +1,11 @@
 import React from "react";
 
-import { IconsListItem } from "./IconsListItem";
-import { iconsCollection } from "./iconsCollection";
+import { PromotionListItem } from "./PromotionListItem";
+import { iconsCollection } from "../../Icons/iconsCollection";
 
-export const IconsList = () => {
+export const PromotionList = () => {
   return (
-    <ul className="w3-ul" id="relations">
+    <ul className="w3-ul" id="RightPromotion">
       {listIcons()}
     </ul>
   );
@@ -14,7 +14,7 @@ export const IconsList = () => {
 const listIcons = () => {
   return iconsCollection.map((icon) => {
     return (
-      <IconsListItem
+      <PromotionListItem
         fa={icon.fa}
         url={icon.url}
         key={icon.item}
