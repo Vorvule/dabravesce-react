@@ -1,4 +1,4 @@
-const pairIndex = (index) => {
+export const pairIndex = (index) => {
   if (!index) {
     index = 0;
   }
@@ -8,5 +8,3 @@ const pairIndex = (index) => {
   }
   return index;
 };
-
-export { pairIndex };

@@ -1,6 +1,6 @@
 import React from "react";
 import { FaButton } from "../../FaButton";
-import { Core } from "../../../MiddleColumn/Core";
+import { Core } from "../../../Common/Core";
 
 export const TopHomeButton = () => {
   return (
