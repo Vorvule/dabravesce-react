@@ -8,14 +8,16 @@ export class FooterArrow {
     const bookKey = +localStorage.bookIndex;
     const chapterKey = +localStorage.chapterIndex;
 
-    const nextChapterExists = goForward
-      ? allAlbums[albumKey].text[bookKey].text[chapterKey + 1]
-      : allAlbums[albumKey].text[bookKey].text[chapterKey - 1];
-
-    if (nextChapterExists) {
+    if (this.nextChapterExists(goForward, albumKey, bookKey, chapterKey)) {
       goForward
         ? Core.show(albumKey, bookKey, chapterKey + 1)
         : Core.show(albumKey, bookKey, chapterKey - 1);
     }
+  }
+
+  static nextChapterExists(goForward, albumKey, bookKey, chapterKey) {
+    return goForward
+      ? allAlbums[albumKey].text[bookKey].text[chapterKey + 1]
+      : allAlbums[albumKey].text[bookKey].text[chapterKey - 1];
   }
 }
