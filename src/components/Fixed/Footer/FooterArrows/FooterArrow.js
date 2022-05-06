@@ -47,6 +47,7 @@ export class FooterArrow {
         newChapterKey = this.lastChapterKey(newAlbumKey, newBookKey);
       }
     }
+    
     Core.show(newAlbumKey, newBookKey, newChapterKey);
   }
 
