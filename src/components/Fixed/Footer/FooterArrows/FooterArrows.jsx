@@ -1,7 +1,7 @@
 import React from "react";
+
 import { FaButton } from "../../FaButton";
-import { nextChapter } from "./nextChapter";
-import { prevChapter } from "./prevChapter";
+import { FooterArrow } from "./FooterArrow";
 
 export const FooterArrows = () => {
   return (
@@ -10,7 +10,7 @@ export const FooterArrows = () => {
         title="Назад"
         strong="Назад"
         fa="fa-arrow-left"
-        handler={() => prevChapter()}
+        handler={() => FooterArrow.nextChapter(false)}
         classes="w3-large w3-center"
       />
       <FaButton
@@ -31,7 +31,7 @@ export const FooterArrows = () => {
         title="Далей"
         strong="Далей"
         fa="fa-arrow-right"
-        handler={() => nextChapter()}
+        handler={() => FooterArrow.nextChapter()}
         classes="w3-large w3-center"
       />
     </div>
