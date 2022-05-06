@@ -12,6 +12,17 @@ export class FooterArrow {
       goForward
         ? Core.show(albumKey, bookKey, chapterKey + 1)
         : Core.show(albumKey, bookKey, chapterKey - 1);
+      return;
+    }
+
+    const lastChapterKey =
+      !goForward && allAlbums[albumKey].text[bookKey - 1].text.length - 1;
+
+    if (this.nextBookExists(goForward, albumKey, bookKey, lastChapterKey)) {
+      goForward
+        ? Core.show(albumKey, bookKey + 1, 0)
+        : Core.show(albumKey, bookKey - 1, lastChapterKey);
+      return;
     }
   }
 
@@ -19,5 +30,11 @@ export class FooterArrow {
     return goForward
       ? allAlbums[albumKey].text[bookKey].text[chapterKey + 1]
       : allAlbums[albumKey].text[bookKey].text[chapterKey - 1];
+  }
+
+  static nextBookExists(goForward, albumKey, bookKey, lastChapterKey) {
+    return goForward
+      ? allAlbums[albumKey].text[bookKey + 1].text[0]
+      : allAlbums[albumKey].text[bookKey - 1].text[lastChapterKey];
   }
 }
