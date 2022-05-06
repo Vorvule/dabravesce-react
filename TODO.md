@@ -2,7 +2,7 @@
 
 ## Audio
 * Nachetite Apostol
-* Se Youtube'a tie Soundclouda
+* Se Youtube'a tee Soundclouda
 * Proegreavate po probelow
 
 ## Footer
@@ -25,7 +25,6 @@
 
 ## Peremennue
 * window.albumIndex etc
-* document.title = menyte?
 
 ## PWA & SEO
 * Service Worker
