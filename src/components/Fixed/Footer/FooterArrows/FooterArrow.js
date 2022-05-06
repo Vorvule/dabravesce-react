@@ -8,33 +8,57 @@ export class FooterArrow {
     const bookKey = +localStorage.bookIndex;
     const chapterKey = +localStorage.chapterIndex;
 
-    if (this.nextChapterExists(goForward, albumKey, bookKey, chapterKey)) {
-      goForward
-        ? Core.show(albumKey, bookKey, chapterKey + 1)
-        : Core.show(albumKey, bookKey, chapterKey - 1);
-      return;
-    }
+    let newChapterKey, newBookKey, newAlbumKey;
 
-    const lastChapterKey =
-      !goForward && allAlbums[albumKey].text[bookKey - 1].text.length - 1;
-
-    if (this.nextBookExists(goForward, albumKey, bookKey, lastChapterKey)) {
-      goForward
-        ? Core.show(albumKey, bookKey + 1, 0)
-        : Core.show(albumKey, bookKey - 1, lastChapterKey);
-      return;
+    if (goForward) {
+      if (chapterKey < this.lastChapterKey(albumKey, bookKey)) {
+        newAlbumKey = albumKey;
+        newBookKey = bookKey;
+        newChapterKey = chapterKey + 1;
+      } else if (bookKey < this.lastBookKey(albumKey)) {
+        newAlbumKey = albumKey;
+        newBookKey = bookKey + 1;
+        newChapterKey = 0;
+      } else if (albumKey < this.lastAlbumKey()) {
+        newAlbumKey = albumKey + 1;
+        newBookKey = 0;
+        newChapterKey = 0;
+      } else {
+        newAlbumKey = 0;
+        newBookKey = 0;
+        newChapterKey = 0;
+      }
+    } else {
+      if (chapterKey > 0) {
+        newAlbumKey = albumKey;
+        newBookKey = bookKey;
+        newChapterKey = chapterKey - 1;
+      } else if (bookKey > 0) {
+        newAlbumKey = albumKey;
+        newBookKey = bookKey - 1;
+        newChapterKey = this.lastChapterKey(albumKey, newBookKey);
+      } else if (albumKey > 0) {
+        newAlbumKey = albumKey - 1;
+        newBookKey = this.lastBookKey(newAlbumKey);
+        newChapterKey = this.lastChapterKey(newAlbumKey, newBookKey);
+      } else {
+        newAlbumKey = this.lastAlbumKey();
+        newBookKey = this.lastBookKey(newAlbumKey);
+        newChapterKey = this.lastChapterKey(newAlbumKey, newBookKey);
+      }
     }
+    Core.show(newAlbumKey, newBookKey, newChapterKey);
   }
 
-  static nextChapterExists(goForward, albumKey, bookKey, chapterKey) {
-    return goForward
-      ? allAlbums[albumKey].text[bookKey].text[chapterKey + 1]
-      : allAlbums[albumKey].text[bookKey].text[chapterKey - 1];
+  static lastChapterKey(albumKey, bookKey) {
+    return allAlbums[albumKey].text[bookKey].text.length - 1;
   }
 
-  static nextBookExists(goForward, albumKey, bookKey, lastChapterKey) {
-    return goForward
-      ? allAlbums[albumKey].text[bookKey + 1].text[0]
-      : allAlbums[albumKey].text[bookKey - 1].text[lastChapterKey];
+  static lastBookKey(albumKey) {
+    return allAlbums[albumKey].text.length - 1;
+  }
+
+  static lastAlbumKey() {
+    return allAlbums.length - 1;
   }
 }
