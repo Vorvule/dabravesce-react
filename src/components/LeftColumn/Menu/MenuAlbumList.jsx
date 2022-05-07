@@ -6,6 +6,7 @@ import { Ul } from "./Ul";
 export const MenuAlbumList = ({ albumList }) => {
   return albumList.map((albumContent, albumIndex) => {
     const id = albumContent.idEn;
+    
     return (
       <li key={id}>
         <div onClick={() => Ul.toggleShow(id)}>{albumContent.name}</div>

@@ -1,7 +1,7 @@
 const sideColumns = ["LeftColumn", "RightColumn"];
 
 export class Mobile {
-  static showOneColumnWithId(id) {
+  static showColumnById(id) {
     if (this.screenIsLarge()) return;
     if (this.toggleShowSideColumn(id)) return;
     this.hideAllColumns();
@@ -14,7 +14,7 @@ export class Mobile {
 
   static toggleShowSideColumn(id) {
     if (this.sideColumnVisible(id)) {
-      this.showOneColumnWithId("MiddleColumn");
+      this.showColumnById("MiddleColumn");
       return true;
     }
   }

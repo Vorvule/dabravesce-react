@@ -1,6 +1,6 @@
 import React from "react";
 
-const FooterSearch = () => {
+export const FooterSearch = () => {
   return (
     <div className="w3-large w3-hide">
       <input className="" id="FooterSearch" placeholder="Пошук"></input>
@@ -10,5 +10,3 @@ const FooterSearch = () => {
     </div>
   );
 };
-
-export { FooterSearch };

@@ -1,13 +1,13 @@
 import { allAlbums } from "../../albums/albums";
-import { Mobile } from "./Mobile";
 
+import { Mobile } from "./Mobile";
 import { UrlPath } from "./UrlPath";
 
 export class Core {
   static show(albumKey = 0, bookKey = 0, chapterKey = 0, pushKeys = true) {
     this.outPut(...this.get(albumKey, bookKey, chapterKey));
     this.showAudio(albumKey, bookKey, chapterKey);
-    Mobile.showOneColumnWithId("MiddleColumn");
+    Mobile.showColumnById("MiddleColumn");
     window.scrollTo(0, 0);
     pushKeys && UrlPath.pushKeys(albumKey, bookKey, chapterKey);
     this.updateLocalStorage(albumKey, bookKey, chapterKey);

@@ -4,14 +4,14 @@ import { iconsCollection } from "../../../Icons/iconsCollection";
 import { FaButton } from "../../FaButton";
 
 export const TopPromotion = () => {
-  return iconsCollection.map((position) => {
+  return iconsCollection.map((icon) => {
     return (
       <FaButton
-        fa={position.fa}
+        fa={icon.fa}
         size="w3-xlarge"
-        key={position.item}
-        title={position.item}
-        handler={() => window.open(position.url)}
+        key={icon.name}
+        title={icon.name}
+        handler={() => window.open(icon.url)}
         classes="w3-hide-small w3-hide-medium w3-border-right"
       />
     );

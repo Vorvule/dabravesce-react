@@ -9,6 +9,7 @@ export const Promotion = () => {
         <strong>Распаўсюд</strong>
       </h4>
       <hr />
+      
       <PromotionList />
       <br />
     </div>

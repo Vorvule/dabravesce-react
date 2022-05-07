@@ -17,9 +17,9 @@ const listIcons = () => {
       <PromotionListItem
         fa={icon.fa}
         url={icon.url}
-        key={icon.item}
-        item={icon.item}
-        title={icon.item}
+        key={icon.name}
+        item={icon.name}
+        title={icon.name}
       />
     );
   });

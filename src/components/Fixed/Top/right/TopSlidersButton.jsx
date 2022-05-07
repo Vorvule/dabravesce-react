@@ -9,7 +9,7 @@ export const TopSlidersButton = () => {
       classes="w3-right w3-border-left w3-hide-large"
       size="w3-xlarge"
       title="Парады і Налады"
-      handler={() => Mobile.showOneColumnWithId("RightColumn")}
+      handler={() => Mobile.showColumnById("RightColumn")}
       fa="fa-sliders"
     />
   );
