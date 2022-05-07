@@ -3,8 +3,8 @@ import React from "react";
 import { MenuChapterList } from "./MenuChapterList";
 import { Ul } from "./Ul";
 
-export const MenuBookList = ({ albumIndex, bookList }) => {
-  return bookList.map((bookContent, bookIndex) => {
+export const MenuBookList = ({ albumKey, bookList }) => {
+  return bookList.map((bookContent, bookKey) => {
     const id = bookContent.idEn;
     
     return (
@@ -12,8 +12,8 @@ export const MenuBookList = ({ albumIndex, bookList }) => {
         <div onClick={() => Ul.toggleShow(id)}>{bookContent.name}</div>
         <ul id={id} className="w3-ul w3-hide">
           <MenuChapterList
-            albumIndex={albumIndex}
-            bookIndex={bookIndex}
+            albumKey={albumKey}
+            bookKey={bookKey}
             chapterList={bookContent.text}
           />
         </ul>

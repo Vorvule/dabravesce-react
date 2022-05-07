@@ -4,6 +4,26 @@ import { Mobile } from "./Mobile";
 import { UrlPath } from "./UrlPath";
 
 export class Core {
+  static getContent(albumKey, bookKey, chapterKey) {
+    const albumName = allAlbums[albumKey].name;
+    const albumText = allAlbums[albumKey].text;
+
+    const bookName = albumText[bookKey].name;
+    const bookText = albumText[bookKey].text;
+
+    const chapterName = bookText[chapterKey].name;
+    const chapterText = bookText[chapterKey].text;
+
+    const paragraphs = this.getParagraphsJsx(chapterText);
+    return [albumName, bookName, chapterName, paragraphs];
+  }
+
+  static getParagraphsJsx(chapterText) {
+    return chapterText.map((paragraph, index) => {
+      return <p key={index}>{paragraph}</p>;
+    });
+  }
+
   static show(albumKey = 0, bookKey = 0, chapterKey = 0, pushKeys = true) {
     this.outPut(...this.get(albumKey, bookKey, chapterKey));
     this.showAudio(albumKey, bookKey, chapterKey);
@@ -13,15 +33,15 @@ export class Core {
     this.updateLocalStorage(albumKey, bookKey, chapterKey);
   }
 
-  static get(albumIndex, bookIndex, chapterIndex) {
-    const albumName = allAlbums[albumIndex].name;
-    const albumText = allAlbums[albumIndex].text;
+  static get(albumKey, bookKey, chapterKey) {
+    const albumName = allAlbums[albumKey].name;
+    const albumText = allAlbums[albumKey].text;
 
-    const bookName = albumText[bookIndex].name;
-    const bookText = albumText[bookIndex].text;
+    const bookName = albumText[bookKey].name;
+    const bookText = albumText[bookKey].text;
 
-    const chapterName = bookText[chapterIndex].name;
-    const chapterText = bookText[chapterIndex].text;
+    const chapterName = bookText[chapterKey].name;
+    const chapterText = bookText[chapterKey].text;
 
     return [albumName, bookName, chapterName, chapterText];
   }
@@ -53,7 +73,7 @@ export class Core {
 
   static getParagraphs(chapterText) {
     const reducer = (paragraphs, paragraph) =>
-      paragraphs + `<p>${paragraph}</p>`;
+      paragraphs + "<p>" + paragraph + "</p>";
 
     return chapterText.reduce(reducer, "");
   }
