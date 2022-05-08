@@ -1,13 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import { Core } from "../../Common/Core";
 import { Daily } from "./Daily";
 
 export const DailyGospel = ({ setKeys }) => {
-  useEffect(() => {
-    Daily.showDaily();
-  });
-
   return (
     <div className="w3-padding">
       <h4 className="w3-center">
@@ -18,11 +14,11 @@ export const DailyGospel = ({ setKeys }) => {
         <i className="fa fa-bell-o w3-margin-right" aria-hidden="true"></i>
         <strong
           className="w3-text-blue-gray"
-          id="RightColumn_DailyGospel"
           onClick={() => Core.setContent(setKeys, Daily.getKeys())}
-        ></strong>
+        >
+          {Daily.getLink()}
+        </strong>
       </div>
-      <div id="RightColumn_DailySource" className="w3-right-align"></div>
       <br />
     </div>
   );

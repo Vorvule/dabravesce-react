@@ -37,17 +37,6 @@ export class Core {
     this.updateLocalStorage(...keys);
   }
 
-  /* obsolete > */
-
-  static show(albumKey = 0, bookKey = 0, chapterKey = 0, pushKeys = true) {
-    this.outPut(...this.get(albumKey, bookKey, chapterKey));
-    this.showAudio(albumKey, bookKey, chapterKey);
-    Mobile.showColumnById("MiddleColumn");
-    window.scrollTo(0, 0);
-    pushKeys && UrlPath.pushKeys(albumKey, bookKey, chapterKey);
-    this.updateLocalStorage(albumKey, bookKey, chapterKey);
-  }
-
   static get(albumKey, bookKey, chapterKey) {
     const albumName = allAlbums[albumKey].name;
     const albumText = allAlbums[albumKey].text;
@@ -59,6 +48,17 @@ export class Core {
     const chapterText = bookText[chapterKey].text;
 
     return [albumName, bookName, chapterName, chapterText];
+  }
+
+  /* obsolete > */
+
+  static show(albumKey = 0, bookKey = 0, chapterKey = 0, pushKeys = true) {
+    this.outPut(...this.get(albumKey, bookKey, chapterKey));
+    this.showAudio(albumKey, bookKey, chapterKey);
+    Mobile.showColumnById("MiddleColumn");
+    window.scrollTo(0, 0);
+    pushKeys && UrlPath.pushKeys(albumKey, bookKey, chapterKey);
+    this.updateLocalStorage(albumKey, bookKey, chapterKey);
   }
 
   static outPut(albumName, bookName, chapterName, chapterText) {

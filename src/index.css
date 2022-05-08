@@ -37,7 +37,7 @@ li,
 footer span,
 .w3-top span,
 label,
-#RightColumn_DailyGospel {
+strong.w3-text-blue-gray {
   cursor: pointer;
 }
 

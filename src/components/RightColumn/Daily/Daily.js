@@ -36,10 +36,8 @@ export class Daily {
     return Math.floor(daysDifference / oneDay) - 1;
   }
 
-  static showDaily() {
+  static getLink() {
     const [, bookName, chapterName] = Core.get(...this.getKeys());
-    const dailyGospel = `${bookName}, ${chapterName}`;
-
-    document.getElementById("RightColumn_DailyGospel").innerHTML = dailyGospel;
+    return bookName + ", " + chapterName;
   }
 }
