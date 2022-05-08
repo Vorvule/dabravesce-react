@@ -23,7 +23,7 @@ export function App() {
   return (
     <div className="App">
       <Top setKeys={setKeys} />
-      <Columns keys={keys} />
+      <Columns keys={keys} setKeys={setKeys} />
       <Footer setKeys={setKeys} />
     </div>
   );
