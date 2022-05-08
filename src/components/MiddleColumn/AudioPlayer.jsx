@@ -1,8 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 export const AudioPlayer = ({ source}) => {
-  console.log("Source:", source)
-
   return (
     <audio
       id="AudioPlayer"

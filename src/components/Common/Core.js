@@ -28,10 +28,13 @@ export class Core {
     });
   }
 
-  static setContent(keys, setKeys) {
+  static setContent(setKeys, keys = [0, 0, 0], pushKeys = true) {
     setKeys(keys);
     document.getElementById("AudioPlayer").load();
 
+    window.scrollTo(0, 0);
+    pushKeys && UrlPath.pushKeys(...keys);
+    this.updateLocalStorage(...keys);
   }
 
   /* obsolete > */
