@@ -5,7 +5,6 @@ import { Core } from "../Common/Core";
 import { ShareIcons } from "./ShareIcons";
 
 export const MiddleColumn = ({ keys }) => {
-  console.log(keys)
   const [album, book, chapter, paragraphs, source] = Core.getContent(...keys);
 
   return (
