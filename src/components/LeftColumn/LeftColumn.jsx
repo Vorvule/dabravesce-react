@@ -2,7 +2,7 @@ import React from "react";
 
 import { Menu } from "./Menu/Menu";
 
-export const LeftColumn = () => {
+export const LeftColumn = ({ setKeys}) => {
   return (
     <nav id="LeftColumn" className="w3-col l3 w3-hide-small w3-hide-medium w3-animate-left">
       
@@ -12,7 +12,7 @@ export const LeftColumn = () => {
         </h4>
         <hr />
 
-        <Menu />
+        <Menu setKeys={setKeys} />
       </div>
     </nav>
   );

@@ -15,9 +15,11 @@ export class Core {
     const chapterText = bookText[chapterKey].text;
 
     const paragraphs = this.getParagraphsJsx(chapterText);
-    const source = "/audio/" + bookText[chapterKey].audio;
 
-    console.log([albumName, bookName, chapterName, paragraphs, source])
+    const audio = bookText[chapterKey].audio;
+    const source = audio ? "/audio/" + audio : null;
+
+    console.log([albumName, bookName, chapterName, paragraphs, source]);
 
     return [albumName, bookName, chapterName, paragraphs, source];
   }
@@ -30,7 +32,9 @@ export class Core {
 
   static setContent(setKeys, keys = [0, 0, 0], pushKeys = true) {
     setKeys(keys);
-    document.getElementById("AudioPlayer").load();
+
+    const player = document.getElementById("AudioPlayer");
+    player && player.load();
 
     window.scrollTo(0, 0);
     pushKeys && UrlPath.pushKeys(...keys);

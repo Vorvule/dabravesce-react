@@ -8,7 +8,7 @@ export const Columns = ({ keys, setKeys }) => {
   return (
     <div className="w3-content page-container">
       <div className="w3-row">
-        <LeftColumn />
+        <LeftColumn setKeys={setKeys} />
         <MiddleColumn keys={keys} />
         <RightColumn setKeys={setKeys} />
       </div>

@@ -1,12 +1,8 @@
 import { allAlbums } from "../../../../albums/albums";
 
-import { Core } from "../../../Common/Core";
-
 export class FooterArrow {
-  static nextChapter(goForward = true) {
-    const albumKey = +localStorage.albumIndex;
-    const bookKey = +localStorage.bookIndex;
-    const chapterKey = +localStorage.chapterIndex;
+  static nextChapter(keys, setKeys, goForward = true) {
+    const [albumKey, bookKey, chapterKey] = keys;
 
     let newChapterKey, newBookKey, newAlbumKey;
 
@@ -47,8 +43,8 @@ export class FooterArrow {
         newChapterKey = this.lastChapterKey(newAlbumKey, newBookKey);
       }
     }
-    
-    Core.show(newAlbumKey, newBookKey, newChapterKey);
+
+    setKeys([newAlbumKey, newBookKey, newChapterKey]);
   }
 
   static lastChapterKey(albumKey, bookKey) {

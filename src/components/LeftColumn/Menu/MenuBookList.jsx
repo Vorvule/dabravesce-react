@@ -3,7 +3,7 @@ import React from "react";
 import { MenuChapterList } from "./MenuChapterList";
 import { Ul } from "./Ul";
 
-export const MenuBookList = ({ albumKey, bookList }) => {
+export const MenuBookList = ({ albumKey, bookList, setKeys }) => {
   return bookList.map((bookContent, bookKey) => {
     const id = bookContent.idEn;
     
@@ -15,7 +15,7 @@ export const MenuBookList = ({ albumKey, bookList }) => {
             albumKey={albumKey}
             bookKey={bookKey}
             chapterList={bookContent.text}
-          />
+            setKeys={setKeys}          />
         </ul>
       </li>
     );

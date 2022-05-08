@@ -24,7 +24,7 @@ export function App() {
     <div className="App">
       <Top setKeys={setKeys} />
       <Columns keys={keys} setKeys={setKeys} />
-      <Footer setKeys={setKeys} />
+      <Footer keys={keys} setKeys={setKeys} />
     </div>
   );
 }
