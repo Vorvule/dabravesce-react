@@ -3,10 +3,10 @@ import React from "react";
 import { MenuChapterList } from "./MenuChapterList";
 import { Ul } from "./Ul";
 
-export const MenuBookList = ({ albumKey, bookList, setKeys }) => {
+export const MenuBookList = ({ albumKey, bookList }) => {
   return bookList.map((bookContent, bookKey) => {
     const id = bookContent.idEn;
-    
+
     return (
       <li key={id}>
         <div onClick={() => Ul.toggleShow(id)}>{bookContent.name}</div>
@@ -15,7 +15,7 @@ export const MenuBookList = ({ albumKey, bookList, setKeys }) => {
             albumKey={albumKey}
             bookKey={bookKey}
             chapterList={bookContent.text}
-            setKeys={setKeys}          />
+          />
         </ul>
       </li>
     );

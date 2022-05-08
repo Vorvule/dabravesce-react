@@ -4,8 +4,8 @@ import { allAlbums } from "../../../albums/albums";
 
 import { MenuAlbumList } from "./MenuAlbumList";
 
-export const Menu = ({ setKeys }) => (
+export const Menu = () => (
   <ul className="w3-ul">
-    <MenuAlbumList albumList={allAlbums} setKeys={setKeys} />
+    <MenuAlbumList albumList={allAlbums} />
   </ul>
 );

@@ -4,13 +4,13 @@ import { LeftColumn } from "./LeftColumn/LeftColumn";
 import { MiddleColumn } from "./MiddleColumn/MiddleColumn";
 import { RightColumn } from "./RightColumn/RightColumn";
 
-export const Columns = ({ keys, setKeys }) => {
+export const Columns = ({ keys }) => {
   return (
     <div className="w3-content page-container">
       <div className="w3-row">
-        <LeftColumn setKeys={setKeys} />
+        <LeftColumn />
         <MiddleColumn keys={keys} />
-        <RightColumn setKeys={setKeys} />
+        <RightColumn />
       </div>
     </div>
   );

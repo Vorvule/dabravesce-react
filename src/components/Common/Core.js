@@ -38,14 +38,14 @@ export class Core {
     });
   }
 
-  static setContent(setKeys, keys = [0, 0, 0], pushKeys = true) {
-    setKeys(keys);
-    Mobile.showColumnById("MiddleColumn");
+  static setContent(keys = [0, 0, 0], pushKeys = true) {
+    window.setKeys(keys);
+    window.scrollTo(0, 0);
 
     const player = document.getElementById("AudioPlayer");
     player && player.load();
 
-    window.scrollTo(0, 0);
+    Mobile.showColumnById("MiddleColumn");
     pushKeys && UrlPath.pushKeys(...keys);
   }
 

@@ -2,7 +2,7 @@ import { allAlbums } from "../../../../albums/albums";
 import { Core } from "../../../Common/Core";
 
 export class FooterArrow {
-  static nextChapter(keys, setKeys, goForward = true) {
+  static nextChapter(keys, goForward = true) {
     const [albumKey, bookKey, chapterKey] = keys;
 
     let newChapterKey, newBookKey, newAlbumKey;
@@ -45,7 +45,7 @@ export class FooterArrow {
       }
     }
 
-    Core.setContent(setKeys, [newAlbumKey, newBookKey, newChapterKey]);
+    Core.setContent([newAlbumKey, newBookKey, newChapterKey]);
   }
 
   static lastChapterKey(albumKey, bookKey) {

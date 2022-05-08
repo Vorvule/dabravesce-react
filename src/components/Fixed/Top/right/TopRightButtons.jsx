@@ -3,10 +3,10 @@ import React from "react";
 import { TopSlidersButton } from "./TopSlidersButton";
 import { TopHomeButton } from "./TopHomeButton";
 
-export const TopRightButtons = ({ setKeys}) => {
+export const TopRightButtons = () => {
   return (
     <>
-      <TopHomeButton setKeys={setKeys} />
+      <TopHomeButton />
       <TopSlidersButton />
     </>
   );

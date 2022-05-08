@@ -12,18 +12,19 @@ import { Daily } from "./components/RightColumn/Daily/Daily";
 
 export function App() {
   const [keys, setKeys] = useState(UrlPath.getKeys() || Daily.getKeys());
+  window.setKeys = setKeys;
 
+  // invoked from History
   window.onpopstate = () => {
-    // invoked from History
-    Core.setContent(setKeys, UrlPath.getKeys(), false);
-    // false means keys shouldn't be pushed to History again
+    Core.setContent(UrlPath.getKeys(), false);
+    // false: keys shouldn't be pushed to History again
   };
 
   return (
     <div className="App">
-      <Top setKeys={setKeys} />
-      <Columns keys={keys} setKeys={setKeys} />
-      <Footer keys={keys} setKeys={setKeys} />
+      <Top />
+      <Columns keys={keys} />
+      <Footer keys={keys} />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 import { Menu } from "./Menu/Menu";
 
-export const LeftColumn = ({ setKeys }) => {
+export const LeftColumn = () => {
   return (
     <nav
       id="LeftColumn"
@@ -13,8 +13,7 @@ export const LeftColumn = ({ setKeys }) => {
           <strong>Змест</strong>
         </h4>
         <hr />
-
-        <Menu setKeys={setKeys} />
+        <Menu />
       </div>
     </nav>
   );

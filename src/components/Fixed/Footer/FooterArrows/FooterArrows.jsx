@@ -3,14 +3,14 @@ import React from "react";
 import { FaButton } from "../../FaButton";
 import { FooterArrow } from "./FooterArrow";
 
-export const FooterArrows = ({ keys, setKeys }) => {
+export const FooterArrows = ({ keys }) => {
   return (
     <div id="Arrows" className="w3-content">
       <FaButton
         title="Назад"
         strong="Назад"
         fa="fa-arrow-left"
-        handler={() => FooterArrow.nextChapter(keys, setKeys, false)}
+        handler={() => FooterArrow.nextChapter(keys, false)}
         classes="w3-large w3-center"
       />
       <FaButton
@@ -31,7 +31,7 @@ export const FooterArrows = ({ keys, setKeys }) => {
         title="Далей"
         strong="Далей"
         fa="fa-arrow-right"
-        handler={() => FooterArrow.nextChapter(keys, setKeys)}
+        handler={() => FooterArrow.nextChapter(keys)}
         classes="w3-large w3-center"
       />
     </div>
