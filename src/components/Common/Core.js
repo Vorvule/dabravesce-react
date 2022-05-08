@@ -13,6 +13,7 @@ export class Core {
 
     const chapterName = bookText[chapterKey].name;
     const chapterJsx = this.getJsx(chapterName.split("<br />"));
+    
     const chapterText = bookText[chapterKey].text;
     const chapterAudio = bookText[chapterKey].audio;
 
