@@ -14,11 +14,9 @@ export function App() {
   const [keys, setKeys] = useState(UrlPath.getKeys() || Daily.getKeys());
 
   window.onpopstate = () => {
+    // invoked from History
     Core.setContent(setKeys, UrlPath.getKeys(), false);
-    // setKeys(UrlPath.getKeys());
-    // Core.show(...UrlPath.getKeys(), false);
-    // false: keys are taken from history
-    // and shouldn't be pushed there again
+    // false means keys shouldn't be pushed to History again
   };
 
   return (

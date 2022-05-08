@@ -38,7 +38,7 @@ export class Core {
 
     window.scrollTo(0, 0);
     pushKeys && UrlPath.pushKeys(...keys);
-    this.updateLocalStorage(...keys);
+    // this.updateLocalStorage(...keys);
   }
 
   static get(albumKey, bookKey, chapterKey) {
@@ -113,11 +113,11 @@ export class Core {
     AudioElement.load();
   }
 
-  static updateLocalStorage(albumIndex, bookIndex, chapterIndex) {
-    if (typeof Storage !== "undefined") {
-      localStorage.setItem("albumIndex", albumIndex);
-      localStorage.setItem("bookIndex", bookIndex);
-      localStorage.setItem("chapterIndex", chapterIndex);
-    }
-  }
+  // static updateLocalStorage(albumIndex, bookIndex, chapterIndex) {
+  //   if (typeof Storage !== "undefined") {
+  //     localStorage.setItem("albumIndex", albumIndex);
+  //     localStorage.setItem("bookIndex", bookIndex);
+  //     localStorage.setItem("chapterIndex", chapterIndex);
+  //   }
+  // }
 }

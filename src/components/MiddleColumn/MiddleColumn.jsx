@@ -20,7 +20,7 @@ export const MiddleColumn = ({ keys }) => {
       <h6 className="w3-center">
         <strong id="MiddleColumn_ChapterName">{chapter}</strong>
       </h6>
-      <ShareIcons />
+      <ShareIcons keys={keys} />
       {source && <AudioPlayer source={source} />}
       <div id="MiddleColumn_ChapterParagraphs">{paragraphs}</div>
     </div>
