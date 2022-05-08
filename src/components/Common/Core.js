@@ -5,6 +5,20 @@ import { UrlPath } from "./UrlPath";
 
 export class Core {
   static getContent(albumKey, bookKey, chapterKey) {
+    const [albumName, bookName, chapterName, chapterText, chapterAudio] =
+      this.getData(albumKey, bookKey, chapterKey);
+
+    const paragraphs = this.getParagraphsJsx(chapterText);
+    const source = chapterAudio ? "/audio/" + chapterAudio : null;
+
+    this.setTitle(bookName, chapterName);
+    this.setDescription(albumName, bookName, chapterName);
+
+    console.log([albumName, bookName, chapterName, paragraphs, source]);
+    return [albumName, bookName, chapterName, paragraphs, source];
+  }
+
+  static getData(albumKey, bookKey, chapterKey) {
     const albumName = allAlbums[albumKey].name;
     const albumText = allAlbums[albumKey].text;
 
@@ -13,15 +27,9 @@ export class Core {
 
     const chapterName = bookText[chapterKey].name;
     const chapterText = bookText[chapterKey].text;
+    const chapterAudio = bookText[chapterKey].audio;
 
-    const paragraphs = this.getParagraphsJsx(chapterText);
-
-    const audio = bookText[chapterKey].audio;
-    const source = audio ? "/audio/" + audio : null;
-
-    console.log([albumName, bookName, chapterName, paragraphs, source]);
-
-    return [albumName, bookName, chapterName, paragraphs, source];
+    return [albumName, bookName, chapterName, chapterText, chapterAudio];
   }
 
   static getParagraphsJsx(chapterText) {
@@ -32,49 +40,13 @@ export class Core {
 
   static setContent(setKeys, keys = [0, 0, 0], pushKeys = true) {
     setKeys(keys);
+    Mobile.showColumnById("MiddleColumn");
 
     const player = document.getElementById("AudioPlayer");
     player && player.load();
 
     window.scrollTo(0, 0);
     pushKeys && UrlPath.pushKeys(...keys);
-    // this.updateLocalStorage(...keys);
-  }
-
-  static get(albumKey, bookKey, chapterKey) {
-    const albumName = allAlbums[albumKey].name;
-    const albumText = allAlbums[albumKey].text;
-
-    const bookName = albumText[bookKey].name;
-    const bookText = albumText[bookKey].text;
-
-    const chapterName = bookText[chapterKey].name;
-    const chapterText = bookText[chapterKey].text;
-
-    return [albumName, bookName, chapterName, chapterText];
-  }
-
-  /* obsolete > */
-
-  static show(albumKey = 0, bookKey = 0, chapterKey = 0, pushKeys = true) {
-    this.outPut(...this.get(albumKey, bookKey, chapterKey));
-    this.showAudio(albumKey, bookKey, chapterKey);
-    Mobile.showColumnById("MiddleColumn");
-    window.scrollTo(0, 0);
-    pushKeys && UrlPath.pushKeys(albumKey, bookKey, chapterKey);
-    this.updateLocalStorage(albumKey, bookKey, chapterKey);
-  }
-
-  static outPut(albumName, bookName, chapterName, chapterText) {
-    const text = this.getParagraphs(chapterText);
-
-    document.getElementById("MiddleColumn_AlbumName").innerHTML = albumName;
-    document.getElementById("MiddleColumn_BookName").innerHTML = bookName;
-    document.getElementById("MiddleColumn_ChapterName").innerHTML = chapterName;
-    document.getElementById("MiddleColumn_ChapterParagraphs").innerHTML = text;
-
-    this.setTitle(bookName, chapterName);
-    this.setDescription(albumName, bookName, chapterName);
   }
 
   static setTitle(bookName, chapterName) {
@@ -90,11 +62,26 @@ export class Core {
       .setAttribute("content", description);
   }
 
-  static getParagraphs(chapterText) {
-    const reducer = (paragraphs, paragraph) =>
-      paragraphs + "<p>" + paragraph + "</p>";
+  /* obsolete > */
 
-    return chapterText.reduce(reducer, "");
+  static show(albumKey = 0, bookKey = 0, chapterKey = 0, pushKeys = true) {
+    this.outPut(...this.getData(albumKey, bookKey, chapterKey));
+    this.showAudio(albumKey, bookKey, chapterKey);
+    Mobile.showColumnById("MiddleColumn");
+    window.scrollTo(0, 0);
+    pushKeys && UrlPath.pushKeys(albumKey, bookKey, chapterKey);
+  }
+
+  static outPut(albumName, bookName, chapterName, chapterText) {
+    const text = this.getParagraphs(chapterText);
+
+    document.getElementById("MiddleColumn_AlbumName").innerHTML = albumName;
+    document.getElementById("MiddleColumn_BookName").innerHTML = bookName;
+    document.getElementById("MiddleColumn_ChapterName").innerHTML = chapterName;
+    document.getElementById("MiddleColumn_ChapterParagraphs").innerHTML = text;
+
+    this.setTitle(bookName, chapterName);
+    this.setDescription(albumName, bookName, chapterName);
   }
 
   static showAudio(albumKey, bookKey, chapterKey) {
@@ -112,12 +99,4 @@ export class Core {
 
     AudioElement.load();
   }
-
-  // static updateLocalStorage(albumIndex, bookIndex, chapterIndex) {
-  //   if (typeof Storage !== "undefined") {
-  //     localStorage.setItem("albumIndex", albumIndex);
-  //     localStorage.setItem("bookIndex", bookIndex);
-  //     localStorage.setItem("chapterIndex", chapterIndex);
-  //   }
-  // }
 }

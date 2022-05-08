@@ -37,7 +37,7 @@ export class Daily {
   }
 
   static getLink() {
-    const [, bookName, chapterName] = Core.get(...this.getKeys());
+    const [, bookName, chapterName] = Core.getData(...this.getKeys());
     return bookName + ", " + chapterName;
   }
 }
