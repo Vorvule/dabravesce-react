@@ -7,7 +7,7 @@ import { ShareIcons } from "./ShareIcons";
 // import { UrlPath } from "../Common/UrlPath";
 
 export const MiddleColumn = ({ keys }) => {
-  const [album, book, chapter, paragraphs] = Core.getContent(...keys);
+  const [album, book, chapter, paragraphs, source] = Core.getContent(...keys);
 
   useEffect(() => {
     // const keys = UrlPath.getKeys() || Daily.getKeys();
@@ -27,7 +27,7 @@ export const MiddleColumn = ({ keys }) => {
         <strong id="MiddleColumn_ChapterName">{chapter}</strong>
       </h6>
       <ShareIcons />
-      <AudioPlayer />
+      {source && <AudioPlayer source={source} />}
       <div id="MiddleColumn_ChapterParagraphs">{paragraphs}</div>
     </div>
   );

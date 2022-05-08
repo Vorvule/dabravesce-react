@@ -15,7 +15,9 @@ export class Core {
     const chapterText = bookText[chapterKey].text;
 
     const paragraphs = this.getParagraphsJsx(chapterText);
-    return [albumName, bookName, chapterName, paragraphs];
+    const source = "/audio/" + bookText[chapterKey].audio;
+
+    return [albumName, bookName, chapterName, paragraphs, source];
   }
 
   static getParagraphsJsx(chapterText) {

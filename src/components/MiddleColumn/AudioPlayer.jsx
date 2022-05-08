@@ -1,6 +1,7 @@
 import React from "react";
 
-export const AudioPlayer = () => {
+export const AudioPlayer = ({ source}) => {
+
   return (
     <audio
       id="AudioPlayer"
@@ -8,7 +9,7 @@ export const AudioPlayer = () => {
       controls
       preload="auto"
     >
-      <source id="AudioSource" src="" type="audio/mpeg"></source>
+      <source id="AudioSource" src={source} type="audio/mpeg"></source>
     </audio>
   );
 };
