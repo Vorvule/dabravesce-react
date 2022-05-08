@@ -7,12 +7,13 @@ import { ShareIcons } from "./ShareIcons";
 // import { UrlPath } from "../Common/UrlPath";
 
 export const MiddleColumn = ({ keys }) => {
+  console.log(keys)
   const [album, book, chapter, paragraphs, source] = Core.getContent(...keys);
 
-  useEffect(() => {
+  // useEffect(() => {
     // const keys = UrlPath.getKeys() || Daily.getKeys();
     // Core.show(...keys);
-  });
+  // });
 
   return (
     <div id="MiddleColumn" className="w3-col l6 w3-padding w3-animate-bottom">

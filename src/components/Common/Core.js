@@ -17,6 +17,8 @@ export class Core {
     const paragraphs = this.getParagraphsJsx(chapterText);
     const source = "/audio/" + bookText[chapterKey].audio;
 
+    console.log([albumName, bookName, chapterName, paragraphs, source])
+
     return [albumName, bookName, chapterName, paragraphs, source];
   }
 
@@ -25,6 +27,14 @@ export class Core {
       return <p key={index}>{paragraph}</p>;
     });
   }
+
+  static setContent(keys, setKeys) {
+    setKeys(keys);
+    document.getElementById("AudioPlayer").load();
+
+  }
+
+  /* obsolete > */
 
   static show(albumKey = 0, bookKey = 0, chapterKey = 0, pushKeys = true) {
     this.outPut(...this.get(albumKey, bookKey, chapterKey));
