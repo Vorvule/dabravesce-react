@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
 
-export const AudioPlayer = ({ source}) => {
+export const AudioPlayer = ({ source }) => {
+  const audioPlayer = useRef();
+
+  if (audioPlayer.current) audioPlayer.current.load();
+
   return (
     <audio
-      id="AudioPlayer"
       className="w3-border w3-border-grey"
-      controls
+      ref={audioPlayer}
       preload="auto"
+      controls
     >
       <source id="AudioSource" src={source} type="audio/mpeg"></source>
     </audio>

@@ -55,10 +55,6 @@ export class Core {
   static setContent(keys = [0, 0, 0], pushKeys = true) {
     window.setKeys(keys);
     window.scrollTo(0, 0);
-
-    const player = document.getElementById("AudioPlayer");
-    player && player.load();
-
     Mobile.showColumnById("MiddleColumn");
     pushKeys && UrlPath.pushKeys(...keys);
   }
