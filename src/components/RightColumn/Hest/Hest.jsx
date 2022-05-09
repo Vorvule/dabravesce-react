@@ -8,12 +8,10 @@ export const Hest = () => {
   });
 
   return (
-    <div className="w3-padding">
-      <h4 className="w3-center">
+    <>
+      <h5 className="w3-center">
         <strong>Слова Божае</strong>
-      </h4>
-
-      <hr />
+      </h5>
 
       <div>
         <i className="fa fa-quote-right w3-margin-right" aria-hidden="true"></i>
@@ -25,6 +23,6 @@ export const Hest = () => {
       </div>
       
       <br />
-    </div>
+    </>
   );
 };

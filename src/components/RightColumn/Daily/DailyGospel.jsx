@@ -5,11 +5,10 @@ import { Daily } from "./Daily";
 
 export const DailyGospel = () => {
   return (
-    <div className="w3-padding">
-      <h4 className="w3-center">
+    <>
+      <h5 className="w3-center">
         <strong>Евангелле дня</strong>
-      </h4>
-      <hr />
+      </h5>
       <div>
         <i className="fa fa-bell-o w3-margin-right" aria-hidden="true"></i>
         <strong
@@ -20,6 +19,6 @@ export const DailyGospel = () => {
         </strong>
       </div>
       <br />
-    </div>
+    </>
   );
 };
