@@ -12,7 +12,7 @@ export const RightColumn = () => {
       className="w3-col l3 w3-hide-medium w3-hide-small w3-animate-right"
     >
       <div className="w3-padding">
-        <HeaderH4 header="Дзённае" />
+        <HeaderH4 header="Дзённік" />
         <DailyGospel />
         <Hest />
         <Promotion />

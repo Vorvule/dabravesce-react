@@ -79,7 +79,7 @@ audio {
   }
 
   #MiddleButton {
-    width: calc(100vw - 64px - 64px);
+    width: calc(100vw - 64px - 64px - (100vw - 100%));
   }
 }
 
