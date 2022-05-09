@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 
+import { HeaderH5 } from "../../Headers/HeaderH5";
 import { Hests } from "./Hests";
 
 export const Hest = () => {
@@ -9,10 +10,8 @@ export const Hest = () => {
 
   return (
     <>
-      <h5 className="w3-center">
-        <strong>Слова Божае</strong>
-      </h5>
-
+      <HeaderH5 header="Слова Божае" />
+      
       <div>
         <i className="fa fa-quote-right w3-margin-right" aria-hidden="true"></i>
         <span id="HestVerses"></span>

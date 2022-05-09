@@ -1,14 +1,13 @@
 import React from "react";
 
 import { Core } from "../../Common/Core";
+import { HeaderH5 } from "../../Headers/HeaderH5";
 import { Daily } from "./Daily";
 
 export const DailyGospel = () => {
   return (
     <>
-      <h5 className="w3-center">
-        <strong>Евангелле дня</strong>
-      </h5>
+      <HeaderH5 header="Евангелле дня" />
       <div>
         <i className="fa fa-bell-o w3-margin-right" aria-hidden="true"></i>
         <strong
