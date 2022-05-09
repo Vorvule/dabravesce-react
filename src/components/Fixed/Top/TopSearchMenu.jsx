@@ -1,6 +1,6 @@
 import React from "react";
 
-const TopSearchMenu = () => {
+export const TopSearchMenu = () => {
   return (
     <div id="searchMenu" className="w3-bar-block w3-dark-gray w3-large w3-hide">
       <input
@@ -53,5 +53,3 @@ const TopSearchMenu = () => {
     </div>
   );
 };
-
-export { TopSearchMenu };

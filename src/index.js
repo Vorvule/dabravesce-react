@@ -1,11 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
 import "./index.css";
 import { App } from "./App";
-import { reportWebVitals } from "./reportWebVitals";
-
-import { UrlPath } from "./components/Common/UrlPath";
-import { Core } from "./components/Common/Core";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,16 +10,6 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
-
-window.onpopstate = () => {
-  // false = keys shouldn't be pushed to history when they are taken from there (onpopstate) to show core
-  Core.show(...UrlPath.getKeys(), false);
-};
 
 window.onresize = () => {
   if (window.innerWidth > 992) {

@@ -1,3 +1,4 @@
+import { Daily } from "../RightColumn/Daily/Daily";
 import { Core } from "./Core";
 import { Util } from "./Util";
 
@@ -14,18 +15,17 @@ export class UrlPath {
         Number.parseInt(pars.slice(4, 6)),
       ];
 
-      if (this.keysValid(keys)) {
+      if (this.keysAreValid(keys)) {
         return keys;
       }
     }
   }
 
-  static keysValid(keys) {
+  static keysAreValid(keys) {
     try {
-      const [albumName, bookName, chapterName, chapterText] = Core.get(...keys);
-      if (albumName && bookName && chapterName && chapterText) return true;
+      return Core.getData(...keys);
     } catch {
-      return false;
+      UrlPath.pushKeys(...Daily.getKeys());
     }
   }
 
@@ -35,6 +35,7 @@ export class UrlPath {
       Util.pairIndex(albumIndex) +
       Util.pairIndex(bookIndex) +
       Util.pairIndex(chapterIndex);
+
     window.history.pushState({}, document.title, "index.html?k=" + searchKeys);
   }
 }

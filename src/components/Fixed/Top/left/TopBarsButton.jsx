@@ -10,7 +10,7 @@ export const TopBarsButton = () => {
       title="Змест"
       size="w3-xlarge"
       classes="w3-border-right w3-hide-large"
-      handler={() => Mobile.showOneColumnWithId("LeftColumn")}
+      handler={() => Mobile.showColumnById("LeftColumn")}
     />
   );
 };

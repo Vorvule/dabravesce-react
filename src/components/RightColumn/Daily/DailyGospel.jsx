@@ -1,32 +1,23 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import { Core } from "../../Common/Core";
+import { HeaderH5 } from "../../Headers/HeaderH5";
 import { Daily } from "./Daily";
 
 export const DailyGospel = () => {
-  useEffect(() => {
-    Daily.showDaily();
-  });
-
   return (
-    <div className="w3-padding">
-      <h4 className="w3-center">
-        <strong>Евангелле дня</strong>
-      </h4>
-      <hr />
-
+    <>
+      <HeaderH5 header="Евангелле дня" />
       <div>
         <i className="fa fa-bell-o w3-margin-right" aria-hidden="true"></i>
         <strong
           className="w3-text-blue-gray"
-          id="RightColumn_DailyGospel"
-          onClick={() => Core.show(...Daily.getKeys())}
-        ></strong>
+          onClick={() => Core.setContent(Daily.getKeys())}
+        >
+          {Daily.getLink()}
+        </strong>
       </div>
-
-      <div id="RightColumn_DailySource" className="w3-right-align"></div>
-      
       <br />
-    </div>
+    </>
   );
 };

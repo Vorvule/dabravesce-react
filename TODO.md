@@ -5,9 +5,6 @@
 * Se Youtube'a tee Soundclouda
 * Proegreavate po probelow
 
-## Footer
-* Scrosenia navigatia
-
 ## CSS
 * Font size -> rem | vh/vw = 1% of vh/vw
 

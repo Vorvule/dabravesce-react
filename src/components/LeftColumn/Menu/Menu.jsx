@@ -1,6 +1,8 @@
 import React from "react";
-import { MenuAlbumList } from "./MenuAlbumList";
+
 import { allAlbums } from "../../../albums/albums";
+
+import { MenuAlbumList } from "./MenuAlbumList";
 
 export const Menu = () => (
   <ul className="w3-ul">

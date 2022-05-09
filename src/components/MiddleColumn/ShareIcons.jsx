@@ -4,10 +4,10 @@ import { allAlbums } from "../../albums/albums";
 
 import { Util } from "../Common/Util";
 
-export const ShareIcons = () => {
+export const ShareIcons = ({ keys }) => {
   return (
     <div className="w3-center share-container">
-      <div className="w3-padding" onClick={() => shareTo("twitter")}>
+      <div className="w3-padding" onClick={() => shareTo("twitter", keys)}>
         <i className="fa fa-twitter w3-xlarge w3-text-blue-gray"></i>
         <div className="w3-small">Twitter</div>
       </div>
@@ -17,7 +17,7 @@ export const ShareIcons = () => {
         <div className="w3-small">Telegram</div>
       </div> */}
 
-      <div className="w3-padding" onClick={() => shareTo("facebook")}>
+      <div className="w3-padding" onClick={() => shareTo("facebook", keys)}>
         <i className="fa fa-facebook w3-xlarge w3-text-blue-gray"></i>
         <div className="w3-small">Facebook</div>
       </div>
@@ -25,19 +25,17 @@ export const ShareIcons = () => {
   );
 };
 
-const shareTo = (socialNetwork) => {
+const shareTo = (socialNetwork, keys) => {
   let href;
 
-  const albumIndex = localStorage.albumIndex;
-  const bookIndex = localStorage.bookIndex;
-  const chapterIndex = localStorage.chapterIndex;
+  const [albumIndex, bookIndex, chapterIndex] = keys;
 
-  const keys =
+  const pairedKeys =
     Util.pairIndex(albumIndex) +
     Util.pairIndex(bookIndex) +
     Util.pairIndex(chapterIndex);
   // %23 = # url encoded
-  const shareUrl = "https://www.dabravesce.by/index.html?k=" + keys;
+  const shareUrl = "https://www.dabravesce.by/index.html?k=" + pairedKeys;
 
   const bookName = allAlbums[albumIndex].text[bookIndex].name;
   const chapterName =
