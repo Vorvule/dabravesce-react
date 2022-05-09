@@ -17,6 +17,11 @@ export const ShareIcons = ({ keys }) => {
         <div className="w3-small">Telegram</div>
       </div> */}
 
+      <div className="w3-padding" onClick={() => copyUrl()}>
+        <i className="fa fa-clone w3-xlarge w3-text-blue-gray"></i>
+        <div className="w3-small">Спасылка</div>
+      </div>
+
       <div className="w3-padding" onClick={() => shareTo("facebook", keys)}>
         <i className="fa fa-facebook w3-xlarge w3-text-blue-gray"></i>
         <div className="w3-small">Facebook</div>
@@ -61,4 +66,8 @@ const shareTo = (socialNetwork, keys) => {
   }
 
   document.location.href = href; // try .assign(href)
+};
+
+const copyUrl = () => {
+  navigator.clipboard.writeText(window.location.href);
 };
