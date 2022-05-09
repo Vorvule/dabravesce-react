@@ -157,29 +157,23 @@ const hestCollection = [
 ];
 
 export class Hests {
-  static showHest() {
-    const hestIndex = Util.randomInteger(0, hestCollection.length);
-    const hestKeys = hestCollection[hestIndex];
+  static getHest() {
+    const hestKey = Util.randomInteger(0, hestCollection.length);
+    const hestData = hestCollection[hestKey];
 
-    const bookKey = hestKeys.bookKey;
-    const chapterKey = hestKeys.chapterKey;
-    const versesArray = hestKeys.verseKeys;
+    const bookKey = hestData.bookKey;
+    const chapterKey = hestData.chapterKey;
+    const versesArray = hestData.verseKeys;
 
     const album = allAlbums[0].text; // Gospel
     const bookBriefName = album[bookKey].idBe;
     const book = album[bookKey].text;
-    const chapterContent = book[chapterKey][1] || book[chapterKey].text;
+    const chapterText = book[chapterKey][1] || book[chapterKey].text;
 
-    document.getElementById("HestVerses").innerHTML = this.hestVerses(
-      versesArray,
-      chapterContent
-    );
+    const verses = this.hestVerses(versesArray, chapterText);
+    const source = this.hestSource(bookBriefName, chapterKey, versesArray);
 
-    document.getElementById("HestSource").innerHTML = this.hestSource(
-      bookBriefName,
-      chapterKey,
-      versesArray
-    );
+    return [verses, source];
   }
 
   static hestSource(bookBriefName, chapterKey, versesArray) {
