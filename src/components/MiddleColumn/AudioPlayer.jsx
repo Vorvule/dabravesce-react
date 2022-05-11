@@ -7,7 +7,6 @@ export const AudioPlayer = ({ source }) => {
 
   return (
     <audio
-      className="w3-border w3-border-grey"
       ref={audioPlayer}
       preload="auto"
       controls
