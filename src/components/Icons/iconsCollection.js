@@ -25,7 +25,7 @@ export const iconsCollection = [
     url: "https://github.com/Vorvule/dabravesce-react",
   },
   {
-    fa: "fa-envelope-open-o",
+    fa: "fa-envelope",
     name: "Электронная пошта",
     url: "mailto:bpbtvm@tut.by",
   },
