@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import "./App.css";
 
@@ -11,13 +11,17 @@ import { UrlPath } from "./components/Common/UrlPath";
 import { Daily } from "./components/RightColumn/Daily/Daily";
 
 export function App() {
-  const [keys, setKeys] = useState(UrlPath.getKeys() || Daily.getKeys());
+  const startKeys = UrlPath.getKeys() || Daily.getKeys();
+  const [keys, setKeys] = useState(startKeys);
   window.setKeys = setKeys;
 
-  // from History
+  useEffect(() => {
+    UrlPath.pushKeys(...keys);
+  }, []);
+
+  // from History; keys shouldn't be pushed to History again
   window.onpopstate = () => {
     Core.setContent(UrlPath.getKeys(), false);
-    // keys shouldn't be pushed to History again
   };
 
   return (
