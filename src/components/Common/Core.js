@@ -56,7 +56,7 @@ export class Core {
     window.setKeys(keys);
     window.scrollTo(0, 0);
     Mobile.showColumnById("MiddleColumn");
-    pushKeys && UrlPath.pushKeys(...keys);
+    pushKeys && UrlPath.pushKeys(keys);
   }
 
   static setTitle(bookName, chapterName) {
