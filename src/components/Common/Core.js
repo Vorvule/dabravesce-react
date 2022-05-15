@@ -1,10 +1,12 @@
 import { allAlbums } from "../../albums/albums";
 
-import { Mobile } from "./Mobile";
+// import { Mobile } from "./Mobile";
 import { UrlPath } from "./UrlPath";
 
 export class Core {
-  static getData(albumKey, bookKey, chapterKey) {
+  static getData(keys) {
+    const [albumKey, bookKey, chapterKey] = keys;
+
     const albumName = allAlbums[albumKey].name;
     const albumText = allAlbums[albumKey].text;
 
@@ -13,7 +15,7 @@ export class Core {
 
     const chapterName = bookText[chapterKey].name;
     const chapterJsx = this.getJsx(chapterName.split("<br />"));
-    
+
     const chapterText = bookText[chapterKey].text;
     const chapterAudio = bookText[chapterKey].audio;
 
@@ -27,7 +29,7 @@ export class Core {
     ];
   }
 
-  static getContent(albumKey, bookKey, chapterKey) {
+  static getContent(keys) {
     const [
       albumName,
       bookName,
@@ -35,13 +37,15 @@ export class Core {
       chapterJsx,
       chapterText,
       chapterAudio,
-    ] = this.getData(albumKey, bookKey, chapterKey);
+    ] = this.getData(keys);
 
     const paragraphs = this.getJsx(chapterText);
-    const source = chapterAudio ? "/audio/" + chapterAudio : null;
+    const source = chapterAudio && "/audio/" + chapterAudio;
 
     this.setTitle(bookName, chapterName);
     this.setDescription(albumName, bookName, chapterName);
+    
+    window.scrollTo(0, 0);
 
     return [albumName, bookName, chapterJsx, paragraphs, source];
   }
@@ -54,8 +58,7 @@ export class Core {
 
   static setContent(keys = [0, 0, 0], pushKeys = true) {
     window.setKeys(keys);
-    window.scrollTo(0, 0);
-    Mobile.showColumnById("MiddleColumn");
+
     pushKeys && UrlPath.pushKeys(keys);
   }
 

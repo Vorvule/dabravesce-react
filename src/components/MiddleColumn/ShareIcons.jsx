@@ -70,21 +70,10 @@ const shareTo = (socialNetwork, keys) => {
 };
 
 const copyUrl = (keys) => {
-  console.log("Copy keys", keys);
-  // let dummy = document.createElement("input"),
-  //   text = window.location.href;
-
-  // document.body.appendChild(dummy);
-  // dummy.value = text;
-  // dummy.select();
-  // document.execCommand("copy");
-  // document.body.removeChild(dummy);
-
   const href = window.location.href;
   const path = UrlPath.getPath(keys);
 
   const copyUrl = href.indexOf(path) === -1 ? href + path : href;
-  
-  console.log(copyUrl);
+
   navigator.clipboard.writeText(copyUrl);
 };

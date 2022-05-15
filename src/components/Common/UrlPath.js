@@ -4,26 +4,24 @@ import { Util } from "./Util";
 
 export class UrlPath {
   static getKeys() {
-    const parameters = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(window.location.search);
 
-    if (parameters.has("k")) {
-      const pars = parameters.get("k"); // 000110
+    if (params.has("k")) {
+      const parameters = params.get("k"); // 000110
 
       const keys = [
-        Number.parseInt(pars.slice(0, 2)),
-        Number.parseInt(pars.slice(2, 4)),
-        Number.parseInt(pars.slice(4, 6)),
+        Number.parseInt(parameters.slice(0, 2)),
+        Number.parseInt(parameters.slice(2, 4)),
+        Number.parseInt(parameters.slice(4, 6)),
       ];
 
-      if (this.keysAreValid(keys)) {
-        return keys;
-      }
+      return this.keysAreValid(keys) && keys;
     }
   }
 
   static keysAreValid(keys) {
     try {
-      return Core.getData(...keys);
+      return Core.getData(keys);
     } catch {
       UrlPath.pushKeys(Daily.getKeys());
     }
