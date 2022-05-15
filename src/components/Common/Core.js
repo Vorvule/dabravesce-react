@@ -1,7 +1,7 @@
 import { allAlbums } from "../../albums/albums";
 
 // import { Mobile } from "./Mobile";
-import { UrlPath } from "./UrlPath";
+// import { UrlPath } from "./UrlPath";
 
 export class Core {
   static getData(keys) {
@@ -44,7 +44,7 @@ export class Core {
 
     this.setTitle(bookName, chapterName);
     this.setDescription(albumName, bookName, chapterName);
-    
+
     window.scrollTo(0, 0);
 
     return [albumName, bookName, chapterJsx, paragraphs, source];
@@ -54,12 +54,6 @@ export class Core {
     return dataArray.map((paragraph, index) => {
       return <p key={index}>{paragraph}</p>;
     });
-  }
-
-  static setContent(keys = [0, 0, 0], pushKeys = true) {
-    window.setKeys(keys);
-
-    pushKeys && UrlPath.pushKeys(keys);
   }
 
   static setTitle(bookName, chapterName) {

@@ -1,5 +1,4 @@
 import { allAlbums } from "../../../../albums/albums";
-import { Core } from "../../../Common/Core";
 
 export class FooterArrow {
   static nextChapter(keys, goForward = true) {
@@ -45,7 +44,7 @@ export class FooterArrow {
       }
     }
 
-    Core.setContent([newAlbumKey, newBookKey, newChapterKey]);
+    window.setKeys([newAlbumKey, newBookKey, newChapterKey]);
   }
 
   static lastChapterKey(albumKey, bookKey) {

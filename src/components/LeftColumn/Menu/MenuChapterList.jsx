@@ -1,19 +1,13 @@
 import React from "react";
 
-import { Core } from "../../Common/Core";
-
 export const MenuChapterList = ({ albumKey, bookKey, chapterList }) => {
-  return chapterList.map((chapterContent, chapterKey) => {
-    const chapterName = chapterContent.name.replace(/<br \/>.+/, "");
+  return chapterList.map((chapterText, chapterKey) => {
+    const chapterName = chapterText.name.replace(/<br \/>.+/, "");
 
     const keys = [albumKey, bookKey, chapterKey];
 
-    const onClick = () => {
-      Core.setContent(keys);
-    };
-
     return (
-      <li key={chapterKey} onClick={onClick}>
+      <li key={chapterKey} onClick={() => window.setKeys(keys)}>
         {chapterName}
       </li>
     );

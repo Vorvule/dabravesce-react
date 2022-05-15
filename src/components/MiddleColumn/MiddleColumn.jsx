@@ -6,13 +6,16 @@ import { HeaderH4 } from "../Headers/HeaderH4";
 import { HeaderH5 } from "../Headers/HeaderH5";
 import { Mobile } from "../Common/Mobile";
 import { ShareIcons } from "./ShareIcons";
+import { UrlPath } from "../Common/UrlPath";
 
 export const MiddleColumn = ({ keys }) => {
   const [album, book, chapter, paragraphs, source] = Core.getContent(keys);
 
   useEffect(() => {
     Mobile.showColumnById("MiddleColumn");
-  }, []);
+    console.log(keys)
+    !keys[3] && UrlPath.pushKeys(keys);
+  });
 
   return (
     <div id="MiddleColumn" className="w3-col l6 w3-padding w3-animate-bottom">

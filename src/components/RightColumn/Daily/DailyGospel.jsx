@@ -1,6 +1,5 @@
 import React from "react";
 
-import { Core } from "../../Common/Core";
 import { HeaderH5 } from "../../Headers/HeaderH5";
 import { Daily } from "./Daily";
 
@@ -12,7 +11,7 @@ export const DailyGospel = () => {
         <i className="fa fa-bell-o w3-margin-right" aria-hidden="true"></i>
         <strong
           className="w3-text-blue-gray"
-          onClick={() => Core.setContent(Daily.getKeys())}
+          onClick={() => window.setKeys(Daily.getKeys())}
         >
           {Daily.getLink()}
         </strong>
