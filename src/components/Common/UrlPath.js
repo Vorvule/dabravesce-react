@@ -25,17 +25,23 @@ export class UrlPath {
     try {
       return Core.getData(...keys);
     } catch {
-      UrlPath.pushKeys(...Daily.getKeys());
+      UrlPath.pushKeys(Daily.getKeys());
     }
   }
 
-  static pushKeys(albumIndex, bookIndex, chapterIndex) {
+  static pushKeys(keys) {
     // to History
+    window.history.pushState({}, document.title, this.getPath(keys));
+  }
+
+  static getPath(keys) {
+    const [albumIndex, bookIndex, chapterIndex] = keys;
+
     const searchKeys =
       Util.pairIndex(albumIndex) +
       Util.pairIndex(bookIndex) +
       Util.pairIndex(chapterIndex);
 
-    window.history.pushState({}, document.title, "index.html?k=" + searchKeys);
+    return "index.html?k=" + searchKeys;
   }
 }

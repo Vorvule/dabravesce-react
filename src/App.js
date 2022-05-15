@@ -10,14 +10,15 @@ import { Core } from "./components/Common/Core";
 import { UrlPath } from "./components/Common/UrlPath";
 import { Daily } from "./components/RightColumn/Daily/Daily";
 
-export function App() {
+export const App = () => {
   const [keys, setKeys] = useState(UrlPath.getKeys() || Daily.getKeys());
+  
   window.setKeys = setKeys;
 
-  // from History
   window.onpopstate = () => {
-    Core.setContent(UrlPath.getKeys(), false);
-    // keys shouldn't be pushed to History again
+    const pushToHistory = false;
+
+    Core.setContent(UrlPath.getKeys(), pushToHistory);
   };
 
   return (
