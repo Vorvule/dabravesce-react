@@ -1,8 +1,5 @@
 import { allAlbums } from "../../albums/albums";
 
-// import { Mobile } from "./Mobile";
-// import { UrlPath } from "./UrlPath";
-
 export class Core {
   static getData(keys) {
     const [albumKey, bookKey, chapterKey] = keys;
@@ -14,9 +11,9 @@ export class Core {
     const bookText = albumText[bookKey].text;
 
     const chapterName = bookText[chapterKey].name;
-    const chapterJsx = this.getJsx(chapterName.split("<br />"));
-
     const chapterText = bookText[chapterKey].text;
+
+    const chapterJsx = this.getJsx(chapterName.split("<br />"));
     const chapterAudio = bookText[chapterKey].audio;
 
     return [

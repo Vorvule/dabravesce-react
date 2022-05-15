@@ -1,7 +1,6 @@
 import React from "react";
 
 import { allAlbums } from "../../albums/albums";
-import { UrlPath } from "../Common/UrlPath";
 
 import { Util } from "../Common/Util";
 
@@ -18,7 +17,7 @@ export const ShareIcons = ({ keys }) => {
         <div className="w3-small">Telegram</div>
       </div> */}
 
-      <div className="w3-padding" onClick={() => copyUrl(keys)}>
+      <div className="w3-padding" onClick={() => copyUrl()}>
         <i className="fa fa-clone w3-xlarge w3-text-blue-gray"></i>
         <div className="w3-small">Спасылка</div>
       </div>
@@ -69,11 +68,6 @@ const shareTo = (socialNetwork, keys) => {
   document.location.href = href; // try .assign(href)
 };
 
-const copyUrl = (keys) => {
-  const href = window.location.href;
-  const path = UrlPath.getPath(keys);
-
-  const copyUrl = href.indexOf(path) === -1 ? href + path : href;
-
-  navigator.clipboard.writeText(copyUrl);
+const copyUrl = () => {
+  navigator.clipboard.writeText(window.location.href);
 };
