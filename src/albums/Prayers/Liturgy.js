@@ -1,6 +1,6 @@
-export const Lithurgy = [
+export const Liturgy = [
   {
-    audio: "pray/lithurgy.mp3",
+    audio: "pray/liturgy.mp3",
     name: "Бажэственная літургія Свяціцеля Іаана Златавустага",
     text: [
       "Дыякан: Благаславі, уладыка.",

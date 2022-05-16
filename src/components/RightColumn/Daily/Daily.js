@@ -1,8 +1,8 @@
-import { Core } from "../../Common/Core";
+import { allAlbums } from "../../../albums/albums";
 
 export class Daily {
   static getKeys() {
-    const zeroBasedDayOfYearIndex = this.getDayOfYearIndex();
+    const zeroBasedDayOfYearIndex = this.getDayOfTheYearIndex();
 
     if (zeroBasedDayOfYearIndex < 358) {
       const modulus = zeroBasedDayOfYearIndex % 89;
@@ -21,12 +21,12 @@ export class Daily {
     } else {
       return [0, 2, 0]; // [albumIndex, bookIndex, chapterIndex]
     }
-    // indexes 0...355 = 356 Days = 89 Gospel chapters x 4 Times
+    // indexes 0-355 = 356 Days = 89 Gospel chapters x 4 Times
     // indexes 356, 357 = Mathew 1, 2 = fit for Christmas reading
     // indexes 358/359 = Christmas Eve/Christmas = Luke, 1 till EOY
   }
 
-  static getDayOfYearIndex() {
+  static getDayOfTheYearIndex() {
     // Everything is in milliseconds
     let oneDay = 1000 * 60 * 60 * 24;
     let currentDay = new Date();
@@ -36,8 +36,15 @@ export class Daily {
     return Math.floor(daysDifference / oneDay) - 1;
   }
 
-  static getLink() {
-    const [, bookName, chapterName] = Core.getData(...this.getKeys());
+  static getNames() {
+    const [albumKey, bookKey, chapterKey] = this.getKeys();
+
+    const albumText = allAlbums[albumKey].text;
+    const bookName = albumText[bookKey].name;
+
+    const bookText = albumText[bookKey].text;
+    const chapterName = bookText[chapterKey].name;
+
     return bookName + ", " + chapterName;
   }
 }

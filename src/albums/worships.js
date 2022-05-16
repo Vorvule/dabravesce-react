@@ -1,6 +1,6 @@
 import { Acathisti } from "./Prayers/Acathisti";
 import { Canons } from "./Prayers/Canons";
-import { Lithurgy } from "./Prayers/Lithurgy";
+import { Liturgy } from "./Prayers/Liturgy";
 
 export const worships = {
   name: "Богаслужэнні",
@@ -10,8 +10,8 @@ export const worships = {
     {
       name: "Літургія",
       idBe: "Літургія",
-      idEn: "Lithurgy",
-      text: Lithurgy,
+      idEn: "Liturgy",
+      text: Liturgy,
     },
     {
       name: "Каноны",

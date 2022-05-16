@@ -1,29 +1,28 @@
+import { allAlbums } from "../../albums/albums";
+
 import { Daily } from "../RightColumn/Daily/Daily";
-import { Core } from "./Core";
 import { Util } from "./Util";
 
 export class UrlPath {
   static getKeys() {
-    const parameters = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(window.location.search);
 
-    if (parameters.has("k")) {
-      const pars = parameters.get("k"); // 000110
+    if (params.has("k")) {
+      const parameters = params.get("k"); // 000110
 
       const keys = [
-        Number.parseInt(pars.slice(0, 2)),
-        Number.parseInt(pars.slice(2, 4)),
-        Number.parseInt(pars.slice(4, 6)),
+        Number.parseInt(parameters.slice(0, 2)),
+        Number.parseInt(parameters.slice(2, 4)),
+        Number.parseInt(parameters.slice(4, 6)),
       ];
 
-      if (this.keysAreValid(keys)) {
-        return keys;
-      }
+      return this.keysAreValid(keys) && keys;
     }
   }
 
   static keysAreValid(keys) {
     try {
-      return Core.getData(...keys);
+      return this.verifyKeys(keys);
     } catch {
       UrlPath.pushKeys(Daily.getKeys());
     }
@@ -43,5 +42,10 @@ export class UrlPath {
       Util.pairIndex(chapterIndex);
 
     return "index.html?k=" + searchKeys;
+  }
+
+  static verifyKeys(keys) {
+    const [albumKey, bookKey, chapterKey] = keys;
+    return allAlbums[albumKey].text[bookKey].text[chapterKey].text;
   }
 }
