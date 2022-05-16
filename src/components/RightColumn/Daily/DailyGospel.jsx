@@ -13,7 +13,7 @@ export const DailyGospel = () => {
           className="w3-text-blue-gray"
           onClick={() => window.setKeys(Daily.getKeys())}
         >
-          {Daily.getLink()}
+          {Daily.getNames()}
         </strong>
       </div>
       <br />

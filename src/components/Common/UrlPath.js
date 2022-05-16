@@ -1,5 +1,6 @@
+import { allAlbums } from "../../albums/albums";
+
 import { Daily } from "../RightColumn/Daily/Daily";
-import { Core } from "./Core";
 import { Util } from "./Util";
 
 export class UrlPath {
@@ -21,7 +22,7 @@ export class UrlPath {
 
   static keysAreValid(keys) {
     try {
-      return Core.getData(keys);
+      return this.verifyKeys(keys);
     } catch {
       UrlPath.pushKeys(Daily.getKeys());
     }
@@ -41,5 +42,10 @@ export class UrlPath {
       Util.pairIndex(chapterIndex);
 
     return "index.html?k=" + searchKeys;
+  }
+
+  static verifyKeys(keys) {
+    const [albumKey, bookKey, chapterKey] = keys;
+    return allAlbums[albumKey].text[bookKey].text[chapterKey].text;
   }
 }

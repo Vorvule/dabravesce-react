@@ -9,8 +9,14 @@ import { ShareIcons } from "./ShareIcons";
 import { UrlPath } from "../Common/UrlPath";
 
 export const MiddleColumn = ({ keys }) => {
-  const [albumName, bookName, chapterName, chapterJsx, paragraphs, source] =
-    Core.getContent(keys);
+  const [
+    albumName,
+    bookName,
+    chapterName,
+    chapterJsx,
+    paragraphs,
+    audioSource,
+  ] = Core.getContent(keys);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -30,7 +36,7 @@ export const MiddleColumn = ({ keys }) => {
       </h6>
 
       <ShareIcons keys={keys} />
-      {source && <AudioPlayer source={source} />}
+      {audioSource && <AudioPlayer source={audioSource} />}
 
       <div>{paragraphs}</div>
     </div>

@@ -1,4 +1,4 @@
-import { Core } from "../../Common/Core";
+import { allAlbums } from "../../../albums/albums";
 
 export class Daily {
   static getKeys() {
@@ -36,8 +36,15 @@ export class Daily {
     return Math.floor(daysDifference / oneDay) - 1;
   }
 
-  static getLink() {
-    const [, bookName, chapterName] = Core.getData(this.getKeys());
+  static getNames() {
+    const [albumKey, bookKey, chapterKey] = this.getKeys();
+
+    const albumText = allAlbums[albumKey].text;
+    const bookName = albumText[bookKey].name;
+
+    const bookText = albumText[bookKey].text;
+    const chapterName = bookText[chapterKey].name;
+
     return bookName + ", " + chapterName;
   }
 }

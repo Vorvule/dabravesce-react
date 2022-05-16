@@ -1,7 +1,7 @@
 import { allAlbums } from "../../albums/albums";
 
 export class Core {
-  static getData(keys) {
+  static getContent(keys) {
     const [albumKey, bookKey, chapterKey] = keys;
 
     const albumName = allAlbums[albumKey].name;
@@ -11,35 +11,22 @@ export class Core {
     const bookText = albumText[bookKey].text;
 
     const chapterName = bookText[chapterKey].name;
-    const chapterText = bookText[chapterKey].text;
+    const chapterNameJsx = this.getJsx(chapterName.split("<br />"));
 
-    const chapterJsx = this.getJsx(chapterName.split("<br />"));
+    const chapterText = bookText[chapterKey].text;
+    const paragraphsJsx = this.getJsx(chapterText);
+
     const chapterAudio = bookText[chapterKey].audio;
+    const audioSource = chapterAudio && "/audio/" + chapterAudio;
 
     return [
       albumName,
       bookName,
       chapterName,
-      chapterJsx,
-      chapterText,
-      chapterAudio,
+      chapterNameJsx,
+      paragraphsJsx,
+      audioSource,
     ];
-  }
-
-  static getContent(keys) {
-    const [
-      albumName,
-      bookName,
-      chapterName,
-      chapterJsx,
-      chapterText,
-      chapterAudio,
-    ] = this.getData(keys);
-
-    const paragraphs = this.getJsx(chapterText);
-    const source = chapterAudio && "/audio/" + chapterAudio;
-
-    return [albumName, bookName, chapterName, chapterJsx, paragraphs, source];
   }
 
   static getJsx(dataArray) {
