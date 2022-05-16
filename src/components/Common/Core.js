@@ -39,11 +39,7 @@ export class Core {
     const paragraphs = this.getJsx(chapterText);
     const source = chapterAudio && "/audio/" + chapterAudio;
 
-    this.setTitle(bookName, chapterName);
-    this.setDescription(albumName, bookName, chapterName);
-
-
-    return [albumName, bookName, chapterJsx, paragraphs, source];
+    return [albumName, bookName, chapterName, chapterJsx, paragraphs, source];
   }
 
   static getJsx(dataArray) {
