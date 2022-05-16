@@ -16,9 +16,10 @@ export const App = () => {
   const [keys, setKeys] = useState(urlKeys || dailyKeys);
 
   window.onpopstate = () => {
-    setKeys([...urlKeys, true]);
+    const keysFromHistory = true
+    setKeys([...urlKeys, keysFromHistory]);
   };
-  
+
   window.setKeys = setKeys;
 
   return (

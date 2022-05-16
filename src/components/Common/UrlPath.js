@@ -24,11 +24,11 @@ export class UrlPath {
     try {
       return this.verifyKeys(keys);
     } catch {
-      UrlPath.pushKeys(Daily.getKeys());
+      UrlPath.pushKeysToHistory(Daily.getKeys());
     }
   }
 
-  static pushKeys(keys) {
+  static pushKeysToHistory(keys) {
     // to History
     window.history.pushState({}, document.title, this.getPath(keys));
   }

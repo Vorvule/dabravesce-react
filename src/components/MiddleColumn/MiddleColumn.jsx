@@ -21,9 +21,12 @@ export const MiddleColumn = ({ keys }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
     Mobile.showColumnById("MiddleColumn");
+
     Core.setTitle(bookName, chapterName);
     Core.setDescription(albumName, bookName, chapterName);
-    !keys[3] && UrlPath.pushKeys(keys);
+    
+    const keysFromHistory = keys[3];
+    !keysFromHistory && UrlPath.pushKeysToHistory(keys);
   });
 
   return (
