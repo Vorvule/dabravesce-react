@@ -12,6 +12,7 @@ export const MiddleColumn = ({ keys }) => {
   const [album, book, chapter, paragraphs, source] = Core.getContent(keys);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     Mobile.showColumnById("MiddleColumn");
     console.log(keys)
     !keys[3] && UrlPath.pushKeys(keys);

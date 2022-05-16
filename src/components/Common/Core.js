@@ -42,7 +42,6 @@ export class Core {
     this.setTitle(bookName, chapterName);
     this.setDescription(albumName, bookName, chapterName);
 
-    window.scrollTo(0, 0);
 
     return [albumName, bookName, chapterJsx, paragraphs, source];
   }
