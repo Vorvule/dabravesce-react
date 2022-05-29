@@ -4,7 +4,7 @@ import { AudioPlayer } from "./AudioPlayer";
 import { Core } from "../Common/Core";
 import { HeaderH4 } from "../Headers/HeaderH4";
 import { HeaderH5 } from "../Headers/HeaderH5";
-import { Mobile } from "../Common/Mobile";
+import { Cols } from "../Common/Cols";
 import { ShareIcons } from "./ShareIcons";
 import { Keys } from "../Common/Keys";
 
@@ -20,7 +20,7 @@ export const MiddleColumn = ({ keys }) => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    Mobile.showColumnById("MiddleColumn");
+    Cols.showColumnById("MiddleColumn");
 
     Core.setTitle(bookName, chapterName);
     Core.setDescription(albumName, bookName, chapterName);

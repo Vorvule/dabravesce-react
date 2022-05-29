@@ -1,13 +1,21 @@
 const sideColumns = ["LeftColumn", "RightColumn"];
 
-export class Mobile {
+export class Cols {
   static showColumnById(id) {
     if (this.screenIsLarge()) return;
     if (this.toggleShowSideColumn(id)) return;
-    
-    this.hideAllColumns();
+
+    this.hideAll();
     this.showColumnWithId(id);
   }
+
+  static getInitial() {
+    return this.screenIsLarge()
+      ? { left: true, middle: true, right: true }
+      : { left: false, middle: true, right: false };
+  }
+
+  // helpers:
 
   static screenIsLarge() {
     return window.innerWidth > 992;
@@ -30,7 +38,7 @@ export class Mobile {
     return isSideColumn && isVisibleColumns;
   }
 
-  static hideAllColumns() {
+  static hideAll() {
     document.getElementById("MiddleColumn").classList.add("w3-hide");
     sideColumns.forEach((id) => {
       document.getElementById(id).classList.add("w3-hide-small");

@@ -7,9 +7,10 @@ import { Columns } from "./components/Columns";
 import { Footer } from "./components/Fixed/Footer/Footer";
 
 import { Keys } from "./components/Common/Keys";
+import { Cols } from "./components/Common/Cols";
 
 export const App = () => {
-  const [cols, setCols] = useState(/*Mobile.getCols()*/);
+  const [cols, setCols] = useState(Cols.getInitial());
   window.setCols = setCols;
 
   const [keys, setKeys] = useState(Keys.getInitial());
@@ -20,16 +21,16 @@ export const App = () => {
     setKeys([...Keys.getKeys(), keysFromHistory]);
   };
 
-  window.onresize = () => {
-    if (window.innerWidth > 992) {
-      document.getElementById("MiddleColumn").classList.remove("w3-hide");
-    }
-  };
+  // window.onresize = () => {
+  //   if (window.innerWidth > 992) {
+  //     document.getElementById("MiddleColumn").classList.remove("w3-hide");
+  //   }
+  // };
 
   return (
     <div className="App">
       <Top />
-      <Columns keys={keys} />
+      <Columns keys={keys} cols={cols} />
       <Footer keys={keys} />
     </div>
   );
