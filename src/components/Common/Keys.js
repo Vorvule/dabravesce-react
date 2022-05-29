@@ -3,7 +3,7 @@ import { allAlbums } from "../../albums/albums";
 import { Daily } from "../RightColumn/Daily/Daily";
 import { Util } from "./Util";
 
-export class UrlPath {
+export class Keys {
   static getKeys() {
     const params = new URLSearchParams(window.location.search);
 
@@ -20,17 +20,25 @@ export class UrlPath {
     }
   }
 
+  static pushToHistory(keys) {
+    window.history.pushState({}, document.title, this.getPath(keys));
+  }
+
+  static getInitial() {
+    const urlKeys = this.getKeys();
+    const dailyKeys = Daily.getKeys();
+
+    return urlKeys || dailyKeys;
+  }
+
+  // helpers:
+
   static keysAreValid(keys) {
     try {
       return this.verifyKeys(keys);
     } catch {
-      UrlPath.pushKeysToHistory(Daily.getKeys());
+      this.pushToHistory(Daily.getKeys());
     }
-  }
-
-  static pushKeysToHistory(keys) {
-    // to History
-    window.history.pushState({}, document.title, this.getPath(keys));
   }
 
   static getPath(keys) {

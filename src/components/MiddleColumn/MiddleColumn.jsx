@@ -6,7 +6,7 @@ import { HeaderH4 } from "../Headers/HeaderH4";
 import { HeaderH5 } from "../Headers/HeaderH5";
 import { Mobile } from "../Common/Mobile";
 import { ShareIcons } from "./ShareIcons";
-import { UrlPath } from "../Common/UrlPath";
+import { Keys } from "../Common/Keys";
 
 export const MiddleColumn = ({ keys }) => {
   const [
@@ -24,9 +24,9 @@ export const MiddleColumn = ({ keys }) => {
 
     Core.setTitle(bookName, chapterName);
     Core.setDescription(albumName, bookName, chapterName);
-    
+
     const keysFromHistory = keys[3];
-    !keysFromHistory && UrlPath.pushKeysToHistory(keys);
+    !keysFromHistory && Keys.pushToHistory(keys);
   });
 
   return (

@@ -4,6 +4,7 @@ export class Mobile {
   static showColumnById(id) {
     if (this.screenIsLarge()) return;
     if (this.toggleShowSideColumn(id)) return;
+    
     this.hideAllColumns();
     this.showColumnWithId(id);
   }
