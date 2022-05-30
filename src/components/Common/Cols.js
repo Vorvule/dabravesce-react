@@ -1,19 +1,20 @@
 const sideColumns = ["LeftColumn", "RightColumn"];
 
+const allCols = { left: true, middle: true, right: true };
+const middleCol = { left: false, middle: true, right: false };
+
 export class Cols {
-  static showColumnById(id) {
-    if (this.screenIsLarge()) return;
-    if (this.toggleShowSideColumn(id)) return;
-
-    this.hideAll();
-    this.showColumnWithId(id);
-  }
-
   static getInitial() {
-    return this.screenIsLarge()
-      ? { left: true, middle: true, right: true }
-      : { left: false, middle: true, right: false };
+    return this.screenIsLarge() ? allCols : middleCol;
   }
+
+  // static showColumnById(id) {
+  //   if (this.screenIsLarge()) return;
+  //   if (this.toggleShowSideColumn(id)) return;
+
+  //   this.hideAll();
+  //   this.showColumnWithId(id);
+  // }
 
   // helpers:
 
@@ -21,12 +22,12 @@ export class Cols {
     return window.innerWidth > 992;
   }
 
-  static toggleShowSideColumn(id) {
-    if (this.sideColumnVisible(id)) {
-      this.showColumnById("MiddleColumn");
-      return true;
-    }
-  }
+  // static toggleShowSideColumn(id) {
+  //   if (this.sideColumnVisible(id)) {
+  //     this.showColumnById("MiddleColumn");
+  //     return true;
+  //   }
+  // }
 
   static sideColumnVisible(id) {
     const isSideColumn = sideColumns.includes(id);

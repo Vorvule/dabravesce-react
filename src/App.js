@@ -11,9 +11,9 @@ import { Cols } from "./components/Common/Cols";
 
 export const App = () => {
   const [cols, setCols] = useState(Cols.getInitial());
-  window.setCols = setCols;
-
   const [keys, setKeys] = useState(Keys.getInitial());
+
+  window.setCols = setCols;
   window.setKeys = setKeys;
 
   window.onpopstate = () => {
@@ -21,11 +21,11 @@ export const App = () => {
     setKeys([...Keys.getKeys(), keysFromHistory]);
   };
 
-  // window.onresize = () => {
-  //   if (window.innerWidth > 992) {
-  //     document.getElementById("MiddleColumn").classList.remove("w3-hide");
-  //   }
-  // };
+  window.onresize = () => {
+    window.innerWidth > 992
+      ? setCols({ left: true, middle: true, right: true })
+      : setCols({ left: false, middle: true, right: false });
+  };
 
   return (
     <div className="App">

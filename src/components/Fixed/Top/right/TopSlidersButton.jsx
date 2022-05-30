@@ -1,16 +1,17 @@
 import React from "react";
 
 import { FaButton } from "../../FaButton";
-import { Cols } from "../../../Common/Cols";
 
 export const TopSlidersButton = () => {
+  const rightCol = { left: false, middle: false, right: true };
+
   return (
     <FaButton
       classes="w3-right w3-border-left w3-hide-large"
-      size="w3-xlarge"
       title="Парады і Налады"
-      handler={() => Cols.showColumnById("RightColumn")}
+      size="w3-xlarge"
       fa="fa-sliders"
+      handler={() => window.setCols(rightCol)}
     />
   );
 };
