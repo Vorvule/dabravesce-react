@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import { Cols } from "./Common/Cols";
 
 import { LeftColumn } from "./LeftColumn/LeftColumn";
 import { MiddleColumn } from "./MiddleColumn/MiddleColumn";
 import { RightColumn } from "./RightColumn/RightColumn";
+
+import { Cols } from "./Common/Cols";
 
 export const Columns = ({ keys, cols }) => {
   useEffect(() => {

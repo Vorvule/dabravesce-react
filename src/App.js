@@ -29,7 +29,7 @@ export const App = () => {
 
   return (
     <div className="App">
-      <Top />
+      <Top cols={cols} />
       <Columns keys={keys} cols={cols} />
       <Footer keys={keys} />
     </div>
