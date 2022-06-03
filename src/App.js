@@ -18,7 +18,7 @@ export const App = () => {
 
   window.onpopstate = () => {
     const keysFromHistory = true;
-    setKeys([...Keys.getKeys(), keysFromHistory]);
+    setKeys([...Keys.getKeysFromUrl(), keysFromHistory]);
   };
 
   window.onresize = () => {

@@ -18,11 +18,13 @@ export const MiddleColumn = ({ keys }) => {
   ] = Core.getContent(keys);
 
   useEffect(() => {
+    const keysFromHistory = keys[3];
+
     Core.setTitle(bookName, chapterName);
     Core.setDescription(albumName, bookName, chapterName);
 
     window.scrollTo(0, 0);
-    !keys[3] && Keys.pushToHistory(keys);
+    !keysFromHistory && Keys.pushIntoHistory(keys);
   });
 
   return (

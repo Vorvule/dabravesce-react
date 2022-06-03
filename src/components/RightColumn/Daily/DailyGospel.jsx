@@ -11,7 +11,7 @@ export const DailyGospel = () => {
         <i className="fa fa-bell-o w3-margin-right" aria-hidden="true"></i>
         <strong
           className="w3-text-blue-gray"
-          onClick={() => window.setKeys(Daily.getKeys())}
+          onClick={() => window.setKeys(Daily.getDailyKeys())}
         >
           {Daily.getNames()}
         </strong>

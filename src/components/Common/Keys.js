@@ -4,7 +4,7 @@ import { Daily } from "../RightColumn/Daily/Daily";
 import { Util } from "./Util";
 
 export class Keys {
-  static getKeys() {
+  static getKeysFromUrl() {
     const params = new URLSearchParams(window.location.search);
 
     if (params.has("k")) {
@@ -20,13 +20,13 @@ export class Keys {
     }
   }
 
-  static pushToHistory(keys) {
+  static pushIntoHistory(keys) {
     window.history.pushState({}, document.title, this.getPath(keys));
   }
 
   static getInitial() {
-    const urlKeys = this.getKeys();
-    const dailyKeys = Daily.getKeys();
+    const urlKeys = this.getKeysFromUrl();
+    const dailyKeys = Daily.getDailyKeys();
 
     return urlKeys || dailyKeys;
   }
@@ -36,9 +36,7 @@ export class Keys {
   static keysAreValid(keys) {
     try {
       return this.verifyKeys(keys);
-    } catch {
-      this.pushToHistory(Daily.getKeys());
-    }
+    } catch {}
   }
 
   static getPath(keys) {
