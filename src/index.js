@@ -11,12 +11,6 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-window.onresize = () => {
-  if (window.innerWidth > 992) {
-    document.getElementById("MiddleColumn").classList.remove("w3-hide");
-  }
-};
-
 window.addEventListener("load", async () => {
   if (navigator.serviceWorker) {
     try {

@@ -3,11 +3,11 @@ import React from "react";
 import { TopSlidersButton } from "./TopSlidersButton";
 import { TopHomeButton } from "./TopHomeButton";
 
-export const TopRightButtons = () => {
+export const TopRightButtons = ({ cols }) => {
   return (
     <>
       <TopHomeButton />
-      <TopSlidersButton />
+      <TopSlidersButton cols={cols} />
     </>
   );
 };

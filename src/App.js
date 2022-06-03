@@ -6,25 +6,31 @@ import { Top } from "./components/Fixed/Top/Top";
 import { Columns } from "./components/Columns";
 import { Footer } from "./components/Fixed/Footer/Footer";
 
-import { Daily } from "./components/RightColumn/Daily/Daily";
-import { UrlPath } from "./components/Common/UrlPath";
+import { Keys } from "./components/Common/Keys";
+import { Cols } from "./components/Common/Cols";
 
 export const App = () => {
-  const urlKeys = UrlPath.getKeys();
-  const dailyKeys = Daily.getKeys();
+  const [cols, setCols] = useState(Cols.getInitial());
+  const [keys, setKeys] = useState(Keys.getInitial());
 
-  const [keys, setKeys] = useState(urlKeys || dailyKeys);
+  window.setCols = setCols;
+  window.setKeys = setKeys;
 
   window.onpopstate = () => {
-    setKeys([...urlKeys, true]);
+    const keysFromHistory = true;
+    setKeys([...Keys.getKeysFromUrl(), keysFromHistory]);
   };
-  
-  window.setKeys = setKeys;
+
+  window.onresize = () => {
+    window.innerWidth > 992
+      ? setCols({ left: true, middle: true, right: true })
+      : setCols({ left: false, middle: true, right: false });
+  };
 
   return (
     <div className="App">
-      <Top />
-      <Columns keys={keys} />
+      <Top cols={cols} />
+      <Columns keys={keys} cols={cols} />
       <Footer keys={keys} />
     </div>
   );

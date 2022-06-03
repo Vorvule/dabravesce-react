@@ -5,10 +5,10 @@ import { TopPromotion } from "./TopPromotion";
 import { TopMiddleButton } from "./TopMiddleButton";
 import { TopMiddleLogo } from "./TopMiddleLogo";
 
-export const TopLeftButtons = () => {
+export const TopLeftButtons = ({ cols }) => {
   return (
     <>
-      <TopBarsButton />
+      <TopBarsButton cols={cols} />
       <TopPromotion />
       <TopMiddleButton />
       <TopMiddleLogo />

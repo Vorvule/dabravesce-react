@@ -1,7 +1,7 @@
 import { allAlbums } from "../../../albums/albums";
 
 export class Daily {
-  static getKeys() {
+  static getDailyKeys() {
     const zeroBasedDayOfYearIndex = this.getDayOfTheYearIndex();
 
     if (zeroBasedDayOfYearIndex < 358) {
@@ -37,7 +37,7 @@ export class Daily {
   }
 
   static getNames() {
-    const [albumKey, bookKey, chapterKey] = this.getKeys();
+    const [albumKey, bookKey, chapterKey] = this.getDailyKeys();
 
     const albumText = allAlbums[albumKey].text;
     const bookName = albumText[bookKey].name;

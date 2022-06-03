@@ -3,8 +3,8 @@ import { allAlbums } from "../../albums/albums";
 import { Daily } from "../RightColumn/Daily/Daily";
 import { Util } from "./Util";
 
-export class UrlPath {
-  static getKeys() {
+export class Keys {
+  static getKeysFromUrl() {
     const params = new URLSearchParams(window.location.search);
 
     if (params.has("k")) {
@@ -20,17 +20,23 @@ export class UrlPath {
     }
   }
 
+  static pushIntoHistory(keys) {
+    window.history.pushState({}, document.title, this.getPath(keys));
+  }
+
+  static getInitial() {
+    const urlKeys = this.getKeysFromUrl();
+    const dailyKeys = Daily.getDailyKeys();
+
+    return urlKeys || dailyKeys;
+  }
+
+  // helpers:
+
   static keysAreValid(keys) {
     try {
       return this.verifyKeys(keys);
-    } catch {
-      UrlPath.pushKeys(Daily.getKeys());
-    }
-  }
-
-  static pushKeys(keys) {
-    // to History
-    window.history.pushState({}, document.title, this.getPath(keys));
+    } catch {}
   }
 
   static getPath(keys) {
