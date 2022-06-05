@@ -1,25 +1,19 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
 import "./index.css";
 import { App } from "./App";
 
-ReactDOM.render(
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
 
-window.addEventListener("load", async () => {
-  if (navigator.serviceWorker) {
-    try {
-      const regInfo = await navigator.serviceWorker.register(
-        "./service-worker.js"
-      );
-      console.log("Service Worker register success", regInfo);
-    } catch (e) {
-      console.log("Service Worker register fail");
-    }
-  }
-});
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://cra.link/PWA
+serviceWorkerRegistration.register();

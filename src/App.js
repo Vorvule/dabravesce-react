@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-import "./App.css";
-
 import { Top } from "./components/Fixed/Top/Top";
 import { Columns } from "./components/Columns";
 import { Footer } from "./components/Fixed/Footer/Footer";
