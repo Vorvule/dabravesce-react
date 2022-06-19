@@ -31,7 +31,7 @@ export class Core {
 
   static getJsx(dataArray) {
     return dataArray.map((paragraph, index) => {
-      return <p key={index}>{paragraph}</p>;
+      return paragraph.length ? <p key={index}>{paragraph}</p> : <br />;
     });
   }
 
