@@ -2,7 +2,7 @@ import React from "react";
 
 export const MenuChapterList = ({ albumKey, bookKey, chapterList }) => {
   return chapterList.map((chapterText, chapterKey) => {
-    const chapterName = chapterText.name.replace(/<br \/>.+/, "");
+    const chapterName = chapterText.name.replace(/ \| .+/, "");
 
     const keys = [albumKey, bookKey, chapterKey];
 

@@ -11,7 +11,7 @@ export class Core {
     const bookText = albumText[bookKey].text;
 
     const chapterName = bookText[chapterKey].name;
-    const chapterNameJsx = this.getJsx(chapterName.split("<br />"));
+    const chapterNameJsx = this.getJsx(chapterName.split(" | "));
 
     const chapterText = bookText[chapterKey].text;
     const paragraphsJsx = this.getJsx(chapterText);
@@ -31,12 +31,12 @@ export class Core {
 
   static getJsx(dataArray) {
     return dataArray.map((paragraph, index) => {
-      return <p key={index}>{paragraph}</p>;
+      return paragraph.length ? <p key={index}>{paragraph}</p> : <br />;
     });
   }
 
   static setTitle(bookName, chapterName) {
-    const chapter = chapterName.split("<br />")[0];
+    const chapter = chapterName.split(" | ")[0];
     const title = "Дабравесце — " + bookName + ", " + chapter;
     document.title = title;
   }
